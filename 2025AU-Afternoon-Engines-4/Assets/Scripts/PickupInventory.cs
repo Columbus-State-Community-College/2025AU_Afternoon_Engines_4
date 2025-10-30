@@ -20,7 +20,9 @@ public class PickupInventory : MonoBehaviour
     [Tooltip("This is where the object will be held at. Create an empty object, set it near the player, and then bring it over to this empty spot.")] 
     public Transform holdPoint;
     public float throwForce = 500f;
+    [Tooltip("Objects with this tag can be picked up")] 
     public string ObjectTag1 = "Pickup1";
+    [Tooltip("Objects with this tag can be picked up")]
     public string ObjectTag2 = "PickUp2";
 
     private GameObject currentPickupTarget;
