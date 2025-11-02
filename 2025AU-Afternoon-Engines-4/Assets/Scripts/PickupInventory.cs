@@ -33,6 +33,9 @@ public class PickupInventory : MonoBehaviour
 
     public TMP_Text inventoryDisplayText;
 
+    // Added to be able to switch isTrigger on the collider off/on so it can collide with the "PuzzleLock" (a Rigid body is also needed for it to work)
+    private Collider colliderTrigger;
+
     void Start()
     {
         inventoryDisplayText.gameObject.SetActive(false);
@@ -112,6 +115,9 @@ public class PickupInventory : MonoBehaviour
         heldObject.transform.localPosition = Vector3.zero;
         heldObject.transform.localRotation = Quaternion.identity;
 
+        colliderTrigger = heldObject.GetComponent<Collider>();
+        colliderTrigger.isTrigger = false;
+
         Rigidbody rb = heldObject.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -123,6 +129,9 @@ public class PickupInventory : MonoBehaviour
 
     void DropObject()
     {
+        colliderTrigger = heldObject.GetComponent<Collider>();
+        colliderTrigger.isTrigger = true;
+
         heldObject.transform.SetParent(null);
 
         Rigidbody rb = heldObject.GetComponent<Rigidbody>();
@@ -137,6 +146,9 @@ public class PickupInventory : MonoBehaviour
 
     void ThrowObject()
     {
+        //colliderTrigger = heldObject.GetComponent<Collider>();
+        //colliderTrigger.isTrigger = true;
+
         heldObject.transform.SetParent(null);
 
         Rigidbody rb = heldObject.GetComponent<Rigidbody>();
