@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Pickupable
   - PickUp2
+  - Key01
+  - Key02
   layers:
   - Default
   - TransparentFX

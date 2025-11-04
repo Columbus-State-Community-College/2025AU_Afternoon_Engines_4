@@ -146,8 +146,8 @@ public class PickupInventory : MonoBehaviour
 
     void ThrowObject()
     {
-        //colliderTrigger = heldObject.GetComponent<Collider>();
-        //colliderTrigger.isTrigger = true;
+        colliderTrigger = heldObject.GetComponent<Collider>();
+        colliderTrigger.isTrigger = true;
 
         heldObject.transform.SetParent(null);
 
