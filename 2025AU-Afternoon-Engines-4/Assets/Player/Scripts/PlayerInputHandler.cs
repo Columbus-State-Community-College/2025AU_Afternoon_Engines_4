@@ -13,7 +13,7 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] private string move = "Move";
     [SerializeField] private string look = "Look";
     //[SerializeField] private string hold = "Hold";
-    //[SerializeField] private string interact = "Interact";
+    [SerializeField] private string interact = "Interact";
     //[SerializeField] private string crouch = "Crouch";
     [SerializeField] private string jump = "Jump";
     //[SerializeField] private string previous = "Previous";
@@ -23,7 +23,7 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction moveAction;
     private InputAction lookAction;
     //private InputAction holdAction;
-    //private InputAction interactAction;
+    private InputAction interactAction;
     //private InputAction crouchAction;
     private InputAction jumpAction;
     //private InputAction previousAction;
@@ -32,21 +32,26 @@ public class PlayerInputHandler : MonoBehaviour
 
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
+    public bool InteractTriggered { get; private set; }
     public bool JumpTriggered { get; private set; }
     public bool SprintTriggered { get; private set; }
+    
 
     private void Awake()
     {
         InputActionMap mapReference = playerControls.FindActionMap(actionMapName);
         moveAction = mapReference.FindAction(move);
         lookAction = mapReference.FindAction(look);
+        interactAction = mapReference.FindAction(interact);
         jumpAction = mapReference.FindAction(jump);
         sprintAction = mapReference.FindAction(sprint);
+        
 
-        SubscriveActionValuesToInputEvents();
+
+        SubscribeActionValuesToInputEvents();
     }
 
-    private void SubscriveActionValuesToInputEvents()
+    private void SubscribeActionValuesToInputEvents()
     {
         moveAction.performed += inputInfo => MoveInput = inputInfo.ReadValue<Vector2>();
         moveAction.canceled += inputInfo => MoveInput = Vector2.zero;
@@ -54,11 +59,16 @@ public class PlayerInputHandler : MonoBehaviour
         lookAction.performed += inputInfo => LookInput = inputInfo.ReadValue<Vector2>();
         lookAction.canceled += inputInfo => LookInput = Vector2.zero;
 
+        interactAction.performed += inputInfo => InteractTriggered = true;
+        interactAction.canceled += inputInfo => InteractTriggered = false;
+
         jumpAction.performed += inputInfo => JumpTriggered = true;
         jumpAction.canceled += inputInfo => JumpTriggered = false;
 
         sprintAction.performed += inputInfo => SprintTriggered = true;
         sprintAction.canceled += inputInfo => SprintTriggered = false;
+
+        
     }
 
     private void OnEnable()

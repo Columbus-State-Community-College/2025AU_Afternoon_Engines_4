@@ -1,12 +1,29 @@
 using UnityEngine;
 
+/* Add the IInteractable class + the Interact() function to interactable objects to allow them to be interacted with.
+for example, if used on a the player, the class would be "MonoBehavior, IInteractable" and
+have an Interact() function outlining what the interaction does. Example:
+
+public class [script name] : MonoBehaviour, IInteractable
+{
+    void IInteractable.Interact()
+    {
+        // what happens when something is interacted with
+    }
+}
+*/
+public interface IInteractable
+{
+    public void Interact();
+}
+
 public class FirstPersonController : MonoBehaviour
 {
     [Header("Movement Speeds")]
     [SerializeField] private float walkSpeed = 3.0f;
     [SerializeField] private float sprintMultiplier = 2.0f;
 
-    
+
     [Header("Jump Parameters")]
     [SerializeField] private float jumpForce = 5.0f;
     [SerializeField] private float gravityMultiplier = 1.0f;
@@ -14,6 +31,10 @@ public class FirstPersonController : MonoBehaviour
     [Header("Look Parameters")]
     [SerializeField] private float mouseSensitivity = 0.1f;
     [SerializeField] private float upDownLookRange = 80.0f;
+
+    [Header("Interact Parameters")]
+    [SerializeField] private Transform InteractorSource;
+    [SerializeField] private float InteractRange = 3.0f;
 
     [Header("References")]
     [SerializeField] private CharacterController characterController;
@@ -24,7 +45,7 @@ public class FirstPersonController : MonoBehaviour
     private float verticalRotation;
     // if sprint is triggered, multiply walkSpeed by sprintMultiplier, otherwise maintain walkSpeed (multiply it by 1)
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +58,7 @@ public class FirstPersonController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
+        HandleInteraction();
     }
 
     private Vector3 CalculateWorldDirection()
@@ -83,7 +105,7 @@ public class FirstPersonController : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation - rotationAmount, -upDownLookRange, upDownLookRange);
         mainCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0); // this helps prevent whole player from spinning when looking up and down
     }
-    
+
     private void HandleRotation()
     {
         float mouseXRotation = playerInputHandler.LookInput.x * mouseSensitivity;
@@ -91,5 +113,22 @@ public class FirstPersonController : MonoBehaviour
 
         ApplyHorizontalRotation(mouseXRotation);
         ApplyVerticalRotation(mouseYRotation);
+    }
+
+    private void HandleInteraction()
+    {
+        if (playerInputHandler.InteractTriggered)
+        {
+            
+            Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
+            if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
+            {
+                if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                {
+                    // Debug.Log(hitInfo.collider.gameObject.name); // use to figure out what game object you're interacting with
+                    interactObj.Interact();
+                }
+            }
+        }
     }
 }

@@ -39,7 +39,7 @@
                     "id": "f86d0860-1d55-4474-9622-891dbd6245c4",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "Press(pressPoint=1)",
                     "initialStateCheck": false
                 },
                 {

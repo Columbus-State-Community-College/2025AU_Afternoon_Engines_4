@@ -333,6 +333,8 @@ MonoBehaviour:
   gravityMultiplier: 1
   mouseSensitivity: 0.1
   upDownLookRange: 80
+  InteractorSource: {fileID: 4684471405801762352}
+  InteractRange: 3
   characterController: {fileID: 1900030128590154932}
   mainCamera: {fileID: 3786069616473337458}
   playerInputHandler: {fileID: 8172701533369116017}
@@ -384,5 +386,6 @@ MonoBehaviour:
   actionMapName: Player
   move: Move
   look: Look
+  interact: Interact
   jump: Jump
   sprint: Sprint
