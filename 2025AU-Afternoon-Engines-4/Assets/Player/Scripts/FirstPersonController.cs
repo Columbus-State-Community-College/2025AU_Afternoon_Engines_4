@@ -41,14 +41,21 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private PlayerInputHandler playerInputHandler;
 
+    [Header("Cooldown Timer")]
+    [SerializeField] private float InteractionCooldown = 0.2f;
+    private float interactionCooldownTimer = 0.0f;
+    private bool interactionPermitted = true;
+
     private Vector3 currentMovement;
     private float verticalRotation;
     // if sprint is triggered, multiply walkSpeed by sprintMultiplier, otherwise maintain walkSpeed (multiply it by 1)
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        interactionCooldownTimer = InteractionCooldown;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -117,9 +124,9 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleInteraction()
     {
-        if (playerInputHandler.InteractTriggered)
+        if (playerInputHandler.InteractTriggered && interactionPermitted)
         {
-            
+
             Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
             if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
             {
@@ -127,7 +134,17 @@ public class FirstPersonController : MonoBehaviour
                 {
                     // Debug.Log(hitInfo.collider.gameObject.name); // use to figure out what game object you're interacting with
                     interactObj.Interact();
+                    interactionCooldownTimer = InteractionCooldown;
+                    interactionPermitted = false;
                 }
+            }
+        }
+        else
+        {
+            interactionCooldownTimer -= Time.deltaTime;
+            if (interactionCooldownTimer <= 0.0f)
+            {
+                interactionPermitted = true;
             }
         }
     }
