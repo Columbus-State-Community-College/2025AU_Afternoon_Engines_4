@@ -3455,35 +3455,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
   m_PrefabInstance: {fileID: 803505535}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &763655712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763655707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78713af80728fd44a5156c0b878cba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupRange: 2
-  pickupKey: 323
-  throwKey: 324
-  storeKey: 101
-  cycleKey: 113
-  holdPoint: {fileID: 365217462}
-  throwForce: 100
-  ObjectTag1: Key01
-  ObjectTag2: Key02
-  PuzzleViewTag1: Joystick
-  exitPuzzleViewKey: 306
-  inventoryDisplayText: {fileID: 1724873194}
-  PuzzleView1ControlsText: {fileID: 320401386}
-  Player: {fileID: 763655707}
-  PlayerCamera: {fileID: 1093134611}
-  PuzzleViewCamera1: {fileID: 115250975}
-  PuzzleViewManager: {fileID: 786183574}
 --- !u!1 &781159917
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,6 +3558,66 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 763655707}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: cycleKey
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: storeKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: holdPoint
+      value: 
+      objectReference: {fileID: 365217462}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: ObjectTag1
+      value: Key01
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: ObjectTag2
+      value: Key02
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: throwForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: PlayerCamera
+      value: 
+      objectReference: {fileID: 1093134611}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: PuzzleViewTag1
+      value: Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: PuzzleViewCamera1
+      value: 
+      objectReference: {fileID: 115250975}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: PuzzleViewManager
+      value: 
+      objectReference: {fileID: 786183574}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: exitPuzzleViewKey
+      value: 306
+      objectReference: {fileID: 0}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: inventoryDisplayText
+      value: 
+      objectReference: {fileID: 1724873194}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: PuzzleView1ControlsText
+      value: 
+      objectReference: {fileID: 320401386}
     - target: {fileID: 3463969974966175428, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3645,10 +3676,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 365217462}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4819260905712991083, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 763655712}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
 --- !u!1 &829360928
 GameObject:

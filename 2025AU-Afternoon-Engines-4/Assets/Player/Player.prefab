@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 4949847662533552039}
   - component: {fileID: 1900030128590154932}
   - component: {fileID: 178113761074837362}
+  - component: {fileID: 547752402032282857}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -338,6 +339,36 @@ MonoBehaviour:
   characterController: {fileID: 1900030128590154932}
   mainCamera: {fileID: 3786069616473337458}
   playerInputHandler: {fileID: 8172701533369116017}
+  InteractionCooldown: 0.2
+--- !u!114 &547752402032282857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819260905712991083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78713af80728fd44a5156c0b878cba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupRange: 2
+  pickupKey: 323
+  throwKey: 324
+  storeKey: 304
+  cycleKey: 306
+  holdPoint: {fileID: 0}
+  throwForce: 500
+  ObjectTag1: Pickup1
+  ObjectTag2: PickUp2
+  PuzzleViewTag1: Object1
+  exitPuzzleViewKey: 97
+  inventoryDisplayText: {fileID: 0}
+  PuzzleView1ControlsText: {fileID: 0}
+  Player: {fileID: 0}
+  PlayerCamera: {fileID: 0}
+  PuzzleViewCamera1: {fileID: 0}
+  PuzzleViewManager: {fileID: 0}
 --- !u!1 &5392440994952497953
 GameObject:
   m_ObjectHideFlags: 0
