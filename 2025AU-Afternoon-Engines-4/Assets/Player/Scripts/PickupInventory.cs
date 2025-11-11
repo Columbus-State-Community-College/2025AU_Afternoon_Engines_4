@@ -3,27 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PickupInventory : MonoBehaviour
+public class PickupInventory : MonoBehaviour, IInteractable
 {
-    [Tooltip("A lower number will require you to be closer to the object to pick it up, while a higher number will allow you to pick up an object from farther away.")] 
-    public float pickupRange = 2f;
-    [Header("Object Pickup and Inventory Keys")]
-    [Header("Key to pick up an object")]
-    public KeyCode pickupKey = KeyCode.Mouse0;
-    [Header("Key to throw an object")]
-    public KeyCode throwKey = KeyCode.Mouse1;
-    [Header("Key to store an object into the inventory")]
-    public KeyCode storeKey = KeyCode.LeftShift;
-    [Header("Key to switch between different stored objects")]
-    [Tooltip("Objects stored in the inventory can be switched between one another, so you can take out what you need into the playfield.")] 
-    public KeyCode cycleKey = KeyCode.LeftControl;
+    //[Tooltip("A lower number will require you to be closer to the object to pick it up, while a higher number will allow you to pick up an object from farther away.")] 
+    //public float pickupRange = 2f; <--- unused right now, but will use for future raycasting.
+        // Keybinds now set in the editor via the PlayerInput(Input Action Asset) thingy
     [Tooltip("This is where the object will be held at. Create an empty object, set it near the player, and then bring it over to this empty spot.")] 
     public Transform holdPoint;
     public float throwForce = 500f;
     [Tooltip("Objects with this tag can be picked up")] 
-    public string ObjectTag1 = "Pickup1";
-    [Tooltip("Objects with this tag can be picked up")]
-    public string ObjectTag2 = "PickUp2";
+    public string[] objectTagArray;
+    [Tooltip("Objects with this tag will bring you to a Puzzle View.")]
+    public string[] PuzzleViewTagArray;
+    [Tooltip("This key will allow you to exit the Puzzle view and you'll be back to the player's view.")] 
+    public KeyCode exitPuzzleViewKey = KeyCode.A;
 
     private GameObject currentPickupTarget;
     private GameObject heldObject;
@@ -32,6 +25,13 @@ public class PickupInventory : MonoBehaviour
     private int selectedInventoryIndex = 0;
 
     public TMP_Text inventoryDisplayText;
+    public TMP_Text PuzzleView1ControlsText;
+    public GameObject Player;
+    public GameObject PlayerCamera;
+    [SerializeField] private PlayerInputHandler playerInputHandler;
+    public GameObject PuzzleViewCamera1;
+    public GameObject PuzzleViewManager;
+    public InventoryManager inventoryManager;
 
     // Added to be able to switch isTrigger on the collider off/on so it can collide with the "PuzzleLock" (a Rigid body is also needed for it to work)
     private Collider colliderTrigger;
@@ -39,11 +39,17 @@ public class PickupInventory : MonoBehaviour
     void Start()
     {
         inventoryDisplayText.gameObject.SetActive(false);
+        PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
+    }
+
+    void IInteractable.Interact()
+    {
+        // what happens when something is interacted with
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(pickupKey))
+        if (playerInputHandler.InteractTriggered)
         {
             if (heldObject != null)
             {
@@ -53,14 +59,16 @@ public class PickupInventory : MonoBehaviour
             {
                 PickupObject(currentPickupTarget);
             }
+            playerInputHandler.InteractTriggered = false;
         }
 
-        if (Input.GetKeyDown(throwKey) && heldObject != null)
+        if (playerInputHandler.DropTriggered && heldObject != null)
         {
             ThrowObject();
+            playerInputHandler.DropTriggered = false;
         }
 
-        if (Input.GetKeyDown(storeKey))
+        if (playerInputHandler.StoreTriggered)
         {
             if (heldObject != null)
             {
@@ -70,61 +78,83 @@ public class PickupInventory : MonoBehaviour
             {
                 RetrieveFromInventory();
             }
+            playerInputHandler.StoreTriggered = false;
         }
 
-        if (Input.GetKeyDown(cycleKey) && inventory.Count > 0)
+        if (playerInputHandler.CycleTriggered && inventory.Count > 0)
         {
             InventoryCycle();
+            playerInputHandler.CycleTriggered = false;
+        }
+
+        if (Input.GetKeyDown(exitPuzzleViewKey))
+        {
+            ExitPuzzleView1();
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(ObjectTag1))
+        if (CheckTagArray(other.gameObject.tag, objectTagArray))
         {
             currentPickupTarget = other.gameObject;
             Debug.Log("Object in range: " + other.name);
         }
 
-        else if (other.CompareTag(ObjectTag2))
+        else if (CheckTagArray(other.gameObject.tag, PuzzleViewTagArray))
         {
             currentPickupTarget = other.gameObject;
-            Debug.Log("Object in range: " + other.name);
+            Debug.Log("I think this object has a puzzle that goes with it!");
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(ObjectTag1) && other.gameObject == currentPickupTarget)
-        {
-            currentPickupTarget = null;
-            Debug.Log("Object out of range: " + other.name);
-        }
-
-        else if (other.CompareTag(ObjectTag2) && other.gameObject == currentPickupTarget)
+        if (CheckTagArray(other.gameObject.tag, objectTagArray) && other.gameObject == currentPickupTarget)
         {
             currentPickupTarget = null;
             Debug.Log("Object out of range: " + other.name);
         }
     }
 
+    bool CheckTagArray(string otherTag, string[] tagArray)
+    {
+        foreach (string tag in tagArray)
+        {
+            if (tag == otherTag)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     void PickupObject(GameObject objectPickup)
     {
         heldObject = objectPickup;
-        heldObject.transform.SetParent(holdPoint);
-        heldObject.transform.localPosition = Vector3.zero;
-        heldObject.transform.localRotation = Quaternion.identity;
 
-        colliderTrigger = heldObject.GetComponent<Collider>();
-        colliderTrigger.isTrigger = false;
-
-        Rigidbody rb = heldObject.GetComponent<Rigidbody>();
-        if (rb != null)
+        if (CheckTagArray(heldObject.gameObject.tag, PuzzleViewTagArray))
         {
-            rb.isKinematic = true;
+            DropObject();
+            Player.GetComponent<FirstPersonController>().enabled = false;
+            PuzzleView1();
         }
 
-        Debug.Log("Picked up: " + heldObject.name);
+        else {
+
+            heldObject.transform.SetParent(holdPoint);
+            heldObject.transform.localPosition = Vector3.zero;
+            heldObject.transform.localRotation = Quaternion.identity;
+            colliderTrigger = heldObject.GetComponent<Collider>();
+            colliderTrigger.isTrigger = false;
+
+            Rigidbody rb = heldObject.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+            }
+            Debug.Log("Picked up: " + heldObject.name);
+        }
     }
 
     void DropObject()
@@ -212,7 +242,9 @@ public class PickupInventory : MonoBehaviour
     {
         if (inventory.Count > 0)
         {
-            inventoryDisplayText.text = "Selected: " + inventory[selectedInventoryIndex].name;
+            inventoryDisplayText.text = inventory[selectedInventoryIndex].name;
+            inventoryManager.CycleSelectorPosition(selectedInventoryIndex);
+            inventoryManager.InstantiateInventoryItem(inventoryDisplayText, selectedInventoryIndex);
         }
     }
 
@@ -220,5 +252,22 @@ public class PickupInventory : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         inventoryDisplayText.gameObject.SetActive(false);
+    }
+
+    void PuzzleView1()
+    {
+        PuzzleView1ControlsText.gameObject.SetActive(true);
+        PuzzleViewManager.GetComponent<PuzzleView1>().enabled = true;
+        PlayerCamera.SetActive(false);
+        PuzzleViewCamera1.SetActive(true);
+    }
+
+    void ExitPuzzleView1()
+    {
+        PuzzleView1ControlsText.gameObject.SetActive(false);
+        PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
+        Player.GetComponent<FirstPersonController>().enabled = true;
+        PlayerCamera.SetActive(true);
+        PuzzleViewCamera1.SetActive(false);
     }
 }

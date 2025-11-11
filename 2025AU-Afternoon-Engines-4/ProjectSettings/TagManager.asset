@@ -9,6 +9,9 @@ TagManager:
   - PickUp2
   - Key01
   - Key02
+  - Object1
+  - Cake
+  - Joystick
   layers:
   - Default
   - TransparentFX

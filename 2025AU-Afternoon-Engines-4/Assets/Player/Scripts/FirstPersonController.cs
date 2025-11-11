@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 /* Add the IInteractable class + the Interact() function to interactable objects to allow them to be interacted with.
 for example, if used on a the player, the class would be "MonoBehavior, IInteractable" and
@@ -34,21 +35,29 @@ public class FirstPersonController : MonoBehaviour
 
     [Header("Interact Parameters")]
     [SerializeField] private Transform InteractorSource;
-    [SerializeField] private float InteractRange = 3.0f;
+    [SerializeField] private float InteractRange = 2.0f;
 
     [Header("References")]
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private Image reticle;
+
+    [Header("Cooldown Timer")]
+    [SerializeField] private float InteractionCooldown = 0.2f;
+    private float interactionCooldownTimer = 0.0f;
+    private bool interactionPermitted = true;
 
     private Vector3 currentMovement;
     private float verticalRotation;
     // if sprint is triggered, multiply walkSpeed by sprintMultiplier, otherwise maintain walkSpeed (multiply it by 1)
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        interactionCooldownTimer = InteractionCooldown;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -117,18 +126,50 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleInteraction()
     {
-        if (playerInputHandler.InteractTriggered)
+        Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
+        //if()
+
+        //if (playerInputHandler.InteractTriggered && interactionPermitted)
+        //{   
+        if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
         {
-            
-            Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
-            if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
+            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
             {
-                if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                reticle.color = Color.green;
+                if (playerInputHandler.InteractTriggered && interactionPermitted)
                 {
                     // Debug.Log(hitInfo.collider.gameObject.name); // use to figure out what game object you're interacting with
                     interactObj.Interact();
+                    interactionCooldownTimer = InteractionCooldown;
+                    interactionPermitted = false;
                 }
+                else
+                {
+                    interactionCooldownTimer -= Time.deltaTime;
+                    if (interactionCooldownTimer <= 0.0f)
+                    {
+                        interactionPermitted = true;
+                    }
+                }
+
+            }
+            else
+            {
+                reticle.color = Color.red;
             }
         }
+        else
+        {
+            reticle.color = Color.red;
+        }
+        //}
+        /*else
+        {
+            interactionCooldownTimer -= Time.deltaTime;
+            if (interactionCooldownTimer <= 0.0f)
+            {
+                interactionPermitted = true;
+            }
+        }*/
     }
 }

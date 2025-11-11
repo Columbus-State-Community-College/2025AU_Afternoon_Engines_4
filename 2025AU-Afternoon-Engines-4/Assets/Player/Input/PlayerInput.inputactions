@@ -64,7 +64,7 @@
                     "name": "Previous",
                     "type": "Button",
                     "id": "8e6593a8-4bd8-4c9e-a072-c140b2b52828",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -82,6 +82,33 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "72f6cd40-26b0-4093-8a94-1f5e6e8419b9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Store",
+                    "type": "Button",
+                    "id": "1356bcdd-eb10-4af1-8e28-cbbb3101f51c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Drop",
+                    "type": "Button",
+                    "id": "29439ed1-c990-4f2f-abbd-5a23804e8b3e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cycle",
+                    "type": "Button",
+                    "id": "3aac2ad7-df0e-43b6-89e7-f07133f9104a",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -433,7 +460,7 @@
                 {
                     "name": "",
                     "id": "ffff626e-203f-468b-be8a-beddd6fe45dc",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -471,6 +498,39 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3170a8eb-2761-4636-91ef-3bcf51c19cb2",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Store",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "16e7ed6f-79bf-423e-b6cf-94eb3e30eeca",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a02258c-bbd4-4a88-b7b8-b2f1ed512106",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cycle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
