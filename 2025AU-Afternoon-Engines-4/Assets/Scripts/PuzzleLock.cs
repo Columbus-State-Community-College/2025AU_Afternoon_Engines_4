@@ -18,6 +18,9 @@ public class PuzzleLock : MonoBehaviour
     // Leaving it as such instead of changing to private incase it becomes useful later
     [HideInInspector]
     public bool puzzleCompleted = false;
+    //[HideInInspector]
+    //public Diction
+
 
     void Start()
     {
@@ -61,6 +64,10 @@ public class PuzzleLock : MonoBehaviour
                 linkedMovementScript.linkedPuzzleCompleted = true;
             }
             puzzleCompleted = true;
+            MainManager.Instance.ProgressTracker["puzzle01"] = true;
+            //for testing
+            var puzzle01value = MainManager.Instance.ProgressTracker["puzzle01"];
+            Debug.Log("puzzle01 is now tracked as " + puzzle01value);
         }
     }
 }
