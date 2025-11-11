@@ -31,6 +31,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
     [SerializeField] private PlayerInputHandler playerInputHandler;
     public GameObject PuzzleViewCamera1;
     public GameObject PuzzleViewManager;
+    public InventoryManager inventoryManager;
 
     // Added to be able to switch isTrigger on the collider off/on so it can collide with the "PuzzleLock" (a Rigid body is also needed for it to work)
     private Collider colliderTrigger;
@@ -241,7 +242,9 @@ public class PickupInventory : MonoBehaviour, IInteractable
     {
         if (inventory.Count > 0)
         {
-            inventoryDisplayText.text = "Selected: " + inventory[selectedInventoryIndex].name;
+            inventoryDisplayText.text = inventory[selectedInventoryIndex].name;
+            inventoryManager.CycleSelectorPosition(selectedInventoryIndex);
+            inventoryManager.InstantiateInventoryItem(inventoryDisplayText, selectedInventoryIndex);
         }
     }
 
