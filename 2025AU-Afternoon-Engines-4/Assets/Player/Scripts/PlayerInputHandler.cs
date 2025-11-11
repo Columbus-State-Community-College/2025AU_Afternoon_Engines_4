@@ -19,6 +19,10 @@ public class PlayerInputHandler : MonoBehaviour
     //[SerializeField] private string previous = "Previous";
     //[SerializeField] private string next = "Next";
     [SerializeField] private string sprint = "Sprint";
+    [SerializeField] private string store = "Store";
+    // Had to name the "throw" action as "drop" because unity apperantly uses "throw" for something
+    [SerializeField] private string drop = "Drop";
+    [SerializeField] private string cycle = "Cycle";
 
     private InputAction moveAction;
     private InputAction lookAction;
@@ -29,12 +33,18 @@ public class PlayerInputHandler : MonoBehaviour
     //private InputAction previousAction;
     //private InputAction nextAction;
     private InputAction sprintAction;
+    private InputAction storeAction;
+    private InputAction dropAction;
+    private InputAction cycleAction;
 
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
-    public bool InteractTriggered { get; private set; }
+    public bool InteractTriggered { get; set; }
     public bool JumpTriggered { get; private set; }
     public bool SprintTriggered { get; private set; }
+    public bool StoreTriggered { get; set; }
+    public bool DropTriggered { get; set; }
+    public bool CycleTriggered { get; set; }
     
 
     private void Awake()
@@ -45,8 +55,9 @@ public class PlayerInputHandler : MonoBehaviour
         interactAction = mapReference.FindAction(interact);
         jumpAction = mapReference.FindAction(jump);
         sprintAction = mapReference.FindAction(sprint);
-        
-
+        storeAction = mapReference.FindAction(store);
+        dropAction = mapReference.FindAction(drop);
+        cycleAction = mapReference.FindAction(cycle);
 
         SubscribeActionValuesToInputEvents();
     }
@@ -68,7 +79,14 @@ public class PlayerInputHandler : MonoBehaviour
         sprintAction.performed += inputInfo => SprintTriggered = true;
         sprintAction.canceled += inputInfo => SprintTriggered = false;
 
-        
+        storeAction.performed += inputInfo => StoreTriggered = true;
+        storeAction.canceled += inputInfo => StoreTriggered = false;
+
+        dropAction.performed += inputInfo => DropTriggered = true;
+        dropAction.canceled += inputInfo => DropTriggered = false;
+
+        cycleAction.performed += inputInfo => CycleTriggered = true;
+        cycleAction.canceled += inputInfo => CycleTriggered = false;
     }
 
     private void OnEnable()

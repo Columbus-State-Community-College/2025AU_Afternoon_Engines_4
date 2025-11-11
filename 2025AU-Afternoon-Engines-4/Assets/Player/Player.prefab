@@ -113,7 +113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 9}
+  m_AnchoredPosition: {x: 4.999878, y: 9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &982817406258465908
@@ -958,7 +958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 3
   sprintMultiplier: 2
-  jumpForce: 5
+  jumpForce: 4
   gravityMultiplier: 1
   mouseSensitivity: 0.1
   upDownLookRange: 80
@@ -981,21 +981,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78713af80728fd44a5156c0b878cba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupRange: 2
-  pickupKey: 323
-  throwKey: 324
-  storeKey: 101
-  cycleKey: 113
   holdPoint: {fileID: 2994746541154584440}
   throwForce: 100
-  ObjectTag1: 
-  ObjectTag2: 
-  PuzzleViewTag1: 
+  objectTagArray:
+  - Key01
+  - Key02
+  PuzzleViewTagArray:
+  - Joystick
   exitPuzzleViewKey: 306
   inventoryDisplayText: {fileID: 7389273306602633541}
   PuzzleView1ControlsText: {fileID: 5385186438198650301}
   Player: {fileID: 4819260905712991083}
   PlayerCamera: {fileID: 3463969974966175428}
+  playerInputHandler: {fileID: 8172701533369116017}
   PuzzleViewCamera1: {fileID: 0}
   PuzzleViewManager: {fileID: 0}
 --- !u!1 &5295876149920993542
@@ -1156,6 +1154,9 @@ MonoBehaviour:
   interact: Interact
   jump: Jump
   sprint: Sprint
+  store: Store
+  drop: Drop
+  cycle: Cycle
 --- !u!1 &6355639120365553566
 GameObject:
   m_ObjectHideFlags: 0

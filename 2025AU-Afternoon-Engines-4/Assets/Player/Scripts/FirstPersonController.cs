@@ -158,6 +158,10 @@ public class FirstPersonController : MonoBehaviour
                 reticle.color = Color.red;
             }
         }
+        else
+        {
+            reticle.color = Color.red;
+        }
         //}
         /*else
         {
