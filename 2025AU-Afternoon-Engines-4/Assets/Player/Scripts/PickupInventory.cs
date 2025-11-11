@@ -91,6 +91,8 @@ public class PickupInventory : MonoBehaviour, IInteractable
         {
             ExitPuzzleView1();
         }
+
+        inventoryManager.UpdateInventoryUI(inventory);
     }
 
     void OnTriggerEnter(Collider other)
@@ -213,6 +215,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
         {
             selectedInventoryIndex %= inventory.Count;
         }
+        inventoryManager.CycleSelectorPosition(selectedInventoryIndex);
 
         obj.SetActive(true);
         heldObject = obj;
@@ -244,7 +247,6 @@ public class PickupInventory : MonoBehaviour, IInteractable
         {
             inventoryDisplayText.text = inventory[selectedInventoryIndex].name;
             inventoryManager.CycleSelectorPosition(selectedInventoryIndex);
-            inventoryManager.InstantiateInventoryItem(inventoryDisplayText, selectedInventoryIndex);
         }
     }
 

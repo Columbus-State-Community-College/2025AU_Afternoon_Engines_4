@@ -1085,7 +1085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec04f3cb7042a34f893d1b7f66192c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotBar: {fileID: 2865423249933376780}
   hotBarSelector: {fileID: 1390835416211589098}
 --- !u!1 &5295876149920993542
 GameObject:
