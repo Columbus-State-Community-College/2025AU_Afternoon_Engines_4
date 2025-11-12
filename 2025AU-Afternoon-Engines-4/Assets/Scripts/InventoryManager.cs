@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEditor;
+//using UnityEditor;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -25,7 +25,7 @@ public class InventoryManager : MonoBehaviour
 
     public void InstantiateInventoryItem(GameObject item, int position)
     {
-        GetItemThumbnail(item);
+        //GetItemThumbnail(item);
         Image itemThumbnail = Instantiate(hotBarSelector, hotBarSelector.transform.parent);
         itemThumbnail.rectTransform.sizeDelta = new Vector2(spriteSize, spriteSize);
         itemThumbnail.sprite = thumbnail;
@@ -35,8 +35,8 @@ public class InventoryManager : MonoBehaviour
 
     public void GetItemThumbnail(GameObject item)
     {
-        Texture2D tempThumbnail = AssetPreview.GetMiniThumbnail(item);
-        thumbnail = Sprite.Create(tempThumbnail, new Rect(0, 0, spriteSize, spriteSize), new Vector2(1, 1), 100);
+        //Texture2D tempThumbnail = AssetPreview.GetMiniThumbnail(item);
+        //thumbnail = Sprite.Create(tempThumbnail, new Rect(0, 0, spriteSize, spriteSize), new Vector2(1, 1), 100);
     }
 
     public void UpdateInventoryUI(List<GameObject> inventory)
