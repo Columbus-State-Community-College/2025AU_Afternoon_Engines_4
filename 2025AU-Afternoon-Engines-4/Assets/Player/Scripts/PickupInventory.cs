@@ -33,6 +33,16 @@ public class PickupInventory : MonoBehaviour, IInteractable
     public GameObject PuzzleViewManager;
     public InventoryManager inventoryManager;
 
+
+    [Header("Sounds")]
+    [Tooltip("Create a new empty object that has an audio source with it and drag the object into one of the slots in the inspector.")]
+    public AudioSource ThrowSound;
+    public AudioSource ShuffleSound;
+    public AudioSource PuzzleViewEnter;
+    public AudioSource PuzzleViewExit;
+    public AudioSource PutAwaySound;
+    public AudioSource TakeOutSound;
+
     // Added to be able to switch isTrigger on the collider off/on so it can collide with the "PuzzleLock" (a Rigid body is also needed for it to work)
     private Collider colliderTrigger;
 
@@ -65,6 +75,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
         if (playerInputHandler.DropTriggered && heldObject != null)
         {
             ThrowObject();
+            ThrowSound.Play();
             playerInputHandler.DropTriggered = false;
         }
 
@@ -73,10 +84,12 @@ public class PickupInventory : MonoBehaviour, IInteractable
             if (heldObject != null)
             {
                 StoreHeldObject();
+                PutAwaySound.Play();
             }
             else if (inventory.Count > 0)
             {
                 RetrieveFromInventory();
+                TakeOutSound.Play();
             }
             playerInputHandler.StoreTriggered = false;
         }
@@ -84,12 +97,14 @@ public class PickupInventory : MonoBehaviour, IInteractable
         if (playerInputHandler.CycleTriggered && inventory.Count > 0)
         {
             InventoryCycle();
+            ShuffleSound.Play();
             playerInputHandler.CycleTriggered = false;
         }
 
         if (Input.GetKeyDown(exitPuzzleViewKey))
         {
             ExitPuzzleView1();
+            PuzzleViewExit.Play();
         }
 
         inventoryManager.UpdateInventoryUI(inventory);
@@ -140,6 +155,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
             DropObject();
             Player.GetComponent<FirstPersonController>().enabled = false;
             PuzzleView1();
+            PuzzleViewEnter.Play();
         }
 
         else {

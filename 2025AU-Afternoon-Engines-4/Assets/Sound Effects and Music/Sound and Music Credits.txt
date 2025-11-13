@@ -1,7 +1,3 @@
-"Peaceful Town"
-Haruta
-https://opengameart.org/content/peaceful-town-1
-
 "Underwater Arena"
 jdee
 https://opengameart.org/content/underwater-arena
