@@ -3451,10 +3451,6 @@ PrefabInstance:
       propertyPath: RunningSound
       value: 
       objectReference: {fileID: 1881249259}
-    - target: {fileID: 178113761074837362, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: MovementSound
-      value: 
-      objectReference: {fileID: 1881249259}
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: ThrowSound
       value: 
@@ -3531,18 +3527,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7497707755578266352, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8172701533369116017, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: JumpSound
-      value: 
-      objectReference: {fileID: 1343701166}
-    - target: {fileID: 8172701533369116017, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: MovementSound
-      value: 
-      objectReference: {fileID: 1881249259}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

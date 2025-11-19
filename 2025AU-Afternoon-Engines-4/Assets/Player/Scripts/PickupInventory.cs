@@ -5,8 +5,8 @@ using TMPro;
 
 public class PickupInventory : MonoBehaviour, IInteractable
 {
-    //[Tooltip("A lower number will require you to be closer to the object to pick it up, while a higher number will allow you to pick up an object from farther away.")] 
-    //public float pickupRange = 2f; <--- unused right now, but will use for future raycasting.
+    [Tooltip("A lower number will require you to be closer to the object to pick it up, while a higher number will allow you to pick up an object from farther away.")] 
+    public float pickupRange = 2f;
         // Keybinds now set in the editor via the PlayerInput(Input Action Asset) thingy
     [Tooltip("This is where the object will be held at. Create an empty object, set it near the player, and then bring it over to this empty spot.")] 
     public Transform holdPoint;
@@ -43,13 +43,12 @@ public class PickupInventory : MonoBehaviour, IInteractable
     public AudioSource PutAwaySound;
     public AudioSource TakeOutSound;
 
-    // Added to be able to switch isTrigger on the collider off/on so it can collide with the "PuzzleLock" (a Rigid body is also needed for it to work)
-    private Collider colliderTrigger;
-
     void Start()
     {
         inventoryDisplayText.gameObject.SetActive(false);
         PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
+        currentPickupTarget = null;
+        heldObject = null;
     }
 
     void IInteractable.Interact()
@@ -65,9 +64,14 @@ public class PickupInventory : MonoBehaviour, IInteractable
             {
                 DropObject();
             }
-            else if (currentPickupTarget != null)
+            else if (currentPickupTarget == null)
             {
-                PickupObject(currentPickupTarget);
+                DetectObject();
+                if (currentPickupTarget != null)
+                {
+                    PickupObject(currentPickupTarget);
+                    currentPickupTarget = null;
+                }
             }
             playerInputHandler.InteractTriggered = false;
         }
@@ -94,10 +98,18 @@ public class PickupInventory : MonoBehaviour, IInteractable
             playerInputHandler.StoreTriggered = false;
         }
 
-        if (playerInputHandler.CycleTriggered && inventory.Count > 0)
+        if (playerInputHandler.CycleTriggered)
         {
-            InventoryCycle();
-            ShuffleSound.Play();
+            if (!inventoryManager.inventoryOpen && inventory.Count > 0)
+            {
+                InventoryCycle();
+                ShuffleSound.Play();
+            }
+            else
+            {
+                inventoryManager.CycleSelectorPosition(inventoryManager.inventorySelectorPosition);
+            }
+
             playerInputHandler.CycleTriggered = false;
         }
 
@@ -107,30 +119,60 @@ public class PickupInventory : MonoBehaviour, IInteractable
             PuzzleViewExit.Play();
         }
 
+        if (playerInputHandler.InventoryTriggered)
+        {
+            if (!inventoryManager.inventoryOpen)
+            {
+                inventoryManager.OpenInventory();
+                playerInputHandler.OnDisable();
+            }
+            else
+            {
+                inventoryManager.CloseInventory();
+                playerInputHandler.OnEnable();
+            }
+            playerInputHandler.InventoryTriggered = false;
+        }
+
+        if (playerInputHandler.SwapTriggered)
+        {
+            inventoryManager.inventorySwap = true;
+            if (!inventoryManager.inventoryOpen && inventory.Count > 0)
+            {
+                inventoryManager.SendToInventory(inventory[selectedInventoryIndex]);
+                inventory.RemoveAt(selectedInventoryIndex);
+                selectedInventoryIndex--;
+                if (selectedInventoryIndex < 0) { selectedInventoryIndex = 0; }
+                inventoryManager.CycleSelectorPosition(selectedInventoryIndex);
+            }
+            else if (inventoryManager.inventoryOpen && inventory.Count < 8 && inventoryManager.mainInventoryItems.Count > 0)
+            {
+                GameObject temp = inventoryManager.SendToHotBar();
+                inventory.Add(temp);
+            }
+            else { Debug.Log("Hot Bar Full, Can't Swap"); }
+            inventoryManager.inventorySwap = false;
+            playerInputHandler.SwapTriggered = false;
+        }
+
         inventoryManager.UpdateInventoryUI(inventory);
     }
 
-    void OnTriggerEnter(Collider other)
+    void DetectObject()
     {
-        if (CheckTagArray(other.gameObject.tag, objectTagArray))
+        if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out RaycastHit hit, pickupRange))
         {
-            currentPickupTarget = other.gameObject;
-            Debug.Log("Object in range: " + other.name);
-        }
+            if (CheckTagArray(hit.collider.gameObject.tag, objectTagArray))
+            {
+                currentPickupTarget = hit.collider.gameObject;
+                Debug.Log("hit");
+            }
 
-        else if (CheckTagArray(other.gameObject.tag, PuzzleViewTagArray))
-        {
-            currentPickupTarget = other.gameObject;
-            Debug.Log("I think this object has a puzzle that goes with it!");
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (CheckTagArray(other.gameObject.tag, objectTagArray) && other.gameObject == currentPickupTarget)
-        {
-            currentPickupTarget = null;
-            Debug.Log("Object out of range: " + other.name);
+            else if (CheckTagArray(hit.collider.gameObject.tag, PuzzleViewTagArray))
+            {
+                currentPickupTarget = hit.collider.gameObject;
+                Debug.Log("hit");
+            }
         }
     }
 
@@ -163,8 +205,6 @@ public class PickupInventory : MonoBehaviour, IInteractable
             heldObject.transform.SetParent(holdPoint);
             heldObject.transform.localPosition = Vector3.zero;
             heldObject.transform.localRotation = Quaternion.identity;
-            colliderTrigger = heldObject.GetComponent<Collider>();
-            colliderTrigger.isTrigger = false;
 
             Rigidbody rb = heldObject.GetComponent<Rigidbody>();
             if (rb != null)
@@ -177,9 +217,6 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
     void DropObject()
     {
-        colliderTrigger = heldObject.GetComponent<Collider>();
-        colliderTrigger.isTrigger = true;
-
         heldObject.transform.SetParent(null);
 
         Rigidbody rb = heldObject.GetComponent<Rigidbody>();
@@ -194,9 +231,6 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
     void ThrowObject()
     {
-        colliderTrigger = heldObject.GetComponent<Collider>();
-        colliderTrigger.isTrigger = true;
-
         heldObject.transform.SetParent(null);
 
         Rigidbody rb = heldObject.GetComponent<Rigidbody>();
@@ -210,11 +244,18 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
     void StoreHeldObject()
     {
-        inventory.Add(heldObject);
+        if (inventory.Count < 8)
+        {
+            inventory.Add(heldObject);
+            Debug.Log("Stored in hotbar: " + heldObject.name);
+        }
+        else
+        {
+            inventoryManager.SendToInventory(heldObject);
+            Debug.Log("Hot Bar is Full!");
+        }
         heldObject.SetActive(false);
         heldObject.transform.SetParent(null);
-
-        Debug.Log("Stored in inventory: " + heldObject.name);
         heldObject = null;
     }
 
