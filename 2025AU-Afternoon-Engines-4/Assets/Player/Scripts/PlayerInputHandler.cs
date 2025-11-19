@@ -23,6 +23,8 @@ public class PlayerInputHandler : MonoBehaviour
     // Had to name the "throw" action as "drop" because unity apperantly uses "throw" for something
     [SerializeField] private string drop = "Drop";
     [SerializeField] private string cycle = "Cycle";
+    [SerializeField] private string inventory = "Inventory";
+    [SerializeField] private string swap = "Swap";
 
     private InputAction moveAction;
     private InputAction lookAction;
@@ -36,6 +38,8 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction storeAction;
     private InputAction dropAction;
     private InputAction cycleAction;
+    private InputAction inventoryAction;
+    private InputAction swapAction;
 
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
@@ -45,6 +49,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool StoreTriggered { get; set; }
     public bool DropTriggered { get; set; }
     public bool CycleTriggered { get; set; }
+    public bool InventoryTriggered { get; set; }
+    public bool SwapTriggered { get; set; }
     
 
     private void Awake()
@@ -58,6 +64,8 @@ public class PlayerInputHandler : MonoBehaviour
         storeAction = mapReference.FindAction(store);
         dropAction = mapReference.FindAction(drop);
         cycleAction = mapReference.FindAction(cycle);
+        inventoryAction = mapReference.FindAction(inventory);
+        swapAction = mapReference.FindAction(swap);
 
         SubscribeActionValuesToInputEvents();
     }
@@ -87,16 +95,58 @@ public class PlayerInputHandler : MonoBehaviour
 
         cycleAction.performed += inputInfo => CycleTriggered = true;
         cycleAction.canceled += inputInfo => CycleTriggered = false;
+
+        inventoryAction.performed += inputInfo => InventoryTriggered = true;
+        inventoryAction.canceled += inputInfo => InventoryTriggered = false;
+
+        swapAction.performed += inputInfo => SwapTriggered = true;
+        swapAction.canceled += inputInfo => SwapTriggered = false;
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
-        playerControls.FindActionMap(actionMapName).Enable();
+        //playerControls.FindActionMap(actionMapName).Enable();
+        moveAction.Enable();
+        lookAction.Enable();
+        interactAction.Enable();
+        jumpAction.Enable();
+        sprintAction.Enable();
+        storeAction.Enable();
+        dropAction.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
-        playerControls.FindActionMap(actionMapName).Disable();
+        //playerControls.FindActionMap(actionMapName).Disable();
+        moveAction.Disable();
+        lookAction.Disable();
+        interactAction.Disable();
+        jumpAction.Disable();
+        sprintAction.Disable();
+        storeAction.Disable();
+        dropAction.Disable();
+    }
+
+    public void ActivateUIActionMap(bool activateUIControls)
+    {
+        
+        //int numOfActionMaps = playerControls.actionMaps.Count;
+
+        if (activateUIControls)
+        {
+            playerControls.FindActionMap("Player").Disable();
+            playerControls.FindActionMap("UI").Enable();
+            Cursor.visible = true;
+            
+            
+        }
+        else
+        {
+            playerControls.FindActionMap("UI").Disable();
+            playerControls.FindActionMap("Player").Enable();
+            Cursor.visible = false;
+        }
+        
     }
 
 }
