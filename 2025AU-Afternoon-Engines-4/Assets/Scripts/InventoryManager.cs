@@ -4,11 +4,15 @@ using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
+    [Tooltip("Put the hotbar selector / highlighter from the UI here")]
     public Image hotBarSelector;
+    [Tooltip("Put the main inventory from the UI here")]
     public GameObject mainInventory;
+    [Tooltip("Put the PreviewCamera object from the Player prefab here")]
     public Camera previewCamera;
     private int[] hotBarPositionX = { -505, -353, -209, -66, 80, 224, 365, 515 };
     private int hotBarPositionY = -9;
+    // Repeats because that was easier than trying to make an algorithm for it
     private int[] mainInventoryPositionX = { -480, -328, -184, -41, 105, 249, 390, 540, -480, -328, -184, -41, 105, 249, 390, 540, -480, -328, -184, -41, 105, 249, 390, 540 };
     private int[] mainInventoryPositionY = { 120, 230, 350 };
     private Sprite spriteThumbnail;
@@ -30,12 +34,15 @@ public class InventoryManager : MonoBehaviour
     {
         // Ensures the selector always starts at the first slot
         CycleSelectorPosition(0);
+        // Hides the main inventory initially
         mainInventory.SetActive(false);
+        // Gets the "Canvas" element of the UI to be able to access all the other UI elements
         parentUI = mainInventory.transform.parent.gameObject;
     }
 
     public void OpenInventory()
     {
+        // On opening the inventory hide every other UI element, then show every item stored in the main inventory, and then show the main inventory
         foreach (Transform uiElement in parentUI.transform)
         {
             uiElement.gameObject.SetActive(false);
@@ -53,9 +60,11 @@ public class InventoryManager : MonoBehaviour
 
     public void CloseInventory()
     {
+        // On closing the inventory show every other UI element (Use the if statement for exceptions that should stay hidden), then hide every item stored in the main inventory, and then hide the main inventory
         foreach (Transform uiElement in parentUI.transform)
         {
-            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen") // this makes sure these arent enabled erroneously
+            // This makes sure these arent enabled erroneously
+            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen" || uiElement.gameObject.name != "Timer_Text" || uiElement.gameObject.name != "PuzzleView1Controls_Text")
             {
                 uiElement.gameObject.SetActive(true);
             }
@@ -73,6 +82,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SendToInventory(GameObject item)
     {
+        // position calculates the X-axis of the slot the item will be sent to
         int position = 0;
         position = mainInventoryItems.Count % 8;
         InstantiateInventoryItem(item, position);
@@ -81,6 +91,7 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject SendToHotBar()
     {
+        // Gets the GameObject that is being sent, removes it from the main inventory, destroys its saved image thumbnail, resets the selector to one position to the left, return the GameObject that will be added to the hotbar
         GameObject temp = mainInventoryItems[inventorySelectorPosition];
         mainInventoryItems.RemoveAt(inventorySelectorPosition);
         GameObject.Destroy(inventorySlotsUsed[inventorySelectorPosition].gameObject);
@@ -91,17 +102,19 @@ public class InventoryManager : MonoBehaviour
         return temp;
     }
 
-    // Hot Bar Functions
     public void CycleSelectorPosition(int position)
     {
+        // Moves the selector to the next slot
         if (position < 0) { position = 0; }
 
         if (!inventoryOpen)
         {
+            // For the hotbar the position math is done in PickUpInventory.cs (and is simpler)
             hotBarSelector.rectTransform.anchoredPosition = new Vector3(hotBarPositionX[position], hotBarPositionY, 0); 
         }
         else
         {
+            // Math for deciding the selector position (X & Y axis) in the main inventory
             inventorySelectorPosition = position;
             inventorySelectorPosition++;
             if (inventorySelectorPosition >= mainInventoryItems.Count) { inventorySelectorPosition = 0; }
@@ -116,6 +129,10 @@ public class InventoryManager : MonoBehaviour
 
     public void InstantiateInventoryItem(GameObject item, int position)
     {
+        // Goes through the whole process of making the thumbnail images
+        // GetItemThumbnail() returns a Texture2D variable
+        // CreateItemImage() turns that into a sprite variable, and then an image variable
+        // If statement is used to determine where the thumbnail image goes
         Texture2D tempThumbnail = GetItemThumbnail(item);
         CreateItemImage(tempThumbnail);
         itemThumbnail.name = item.name;
@@ -140,6 +157,8 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateInventoryUI(List<GameObject> inventory)
     {
+        // Currently called every frame in the PickUpInventory.cs Update() function | on the week 4 task list to change this
+        // Iterates through every hotbar thumbnail image, destroying thumbnails for items that are no longer stored, and repositioning thumbnails for items still there
         foreach (Image uiItem in hotBarSlotsUsed)
         {
             if (uiItem != null)
@@ -158,6 +177,7 @@ public class InventoryManager : MonoBehaviour
 
         if (inventoryOpen)
         {
+            // Iterates through every main inventory thumbnail image, destroying thumbnails for items that are no longer stored, and repositioning thumbnails for items still there
             foreach (Image uiItem in inventorySlotsUsed)
             {
                 if (uiItem != null)

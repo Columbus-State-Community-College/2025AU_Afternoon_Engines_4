@@ -58,8 +58,10 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
     void Update()
     {
+        // Checks for left clicks | picking up items
         if (playerInputHandler.InteractTriggered)
         {
+            // Might be able to simplify this after it was changed to raycasts idk
             if (heldObject != null)
             {
                 DropObject();
@@ -73,9 +75,11 @@ public class PickupInventory : MonoBehaviour, IInteractable
                     currentPickupTarget = null;
                 }
             }
+            // Set all this "Triggered" to false to simulate a single keyDown() (AKA if you hold it down it won't keep firing)
             playerInputHandler.InteractTriggered = false;
         }
 
+        // Checks for right clicks | throwing items
         if (playerInputHandler.DropTriggered && heldObject != null)
         {
             ThrowObject();
@@ -83,6 +87,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
             playerInputHandler.DropTriggered = false;
         }
 
+        // Checks for "E" presses | storing items
         if (playerInputHandler.StoreTriggered)
         {
             if (heldObject != null)
@@ -98,8 +103,10 @@ public class PickupInventory : MonoBehaviour, IInteractable
             playerInputHandler.StoreTriggered = false;
         }
 
+        // Checks for "F" presses | cycling through items / inventory UI
         if (playerInputHandler.CycleTriggered)
         {
+            // Slightly confusing that the hotbar is called inventory in this script | will probably change this week (4)
             if (!inventoryManager.inventoryOpen && inventory.Count > 0)
             {
                 InventoryCycle();
@@ -119,6 +126,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
             PuzzleViewExit.Play();
         }
 
+        // Checks for "I" presses | opens and closes main inventory
         if (playerInputHandler.InventoryTriggered)
         {
             if (!inventoryManager.inventoryOpen)
@@ -134,6 +142,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
             playerInputHandler.InventoryTriggered = false;
         }
 
+        // Checks for "Tab" presses | swaps items between hotbar and main inventory or vice versa
         if (playerInputHandler.SwapTriggered)
         {
             inventoryManager.inventorySwap = true;
@@ -155,6 +164,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
             playerInputHandler.SwapTriggered = false;
         }
 
+        // Updates the hotbar &/or main inventory UI everyframe
         inventoryManager.UpdateInventoryUI(inventory);
     }
 

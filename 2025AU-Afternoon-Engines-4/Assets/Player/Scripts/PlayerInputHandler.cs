@@ -1,6 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Basic how to add new controls
+// - Add a new keybind in the unity editor: PlayerInput(Input Action Asset)
+// - Create a new string variable with what you named that keybind
+// - Create a new InputAction variable for it
+// - Create a new bool variable for it
+// - Add its mapReference to the Awake() function
+// - Add its InputAction & bool variables to the SubscribeActionValuesToInputEvents() function
 public class PlayerInputHandler : MonoBehaviour
 {
     [Header("Input Action Asset")]
@@ -105,6 +112,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnEnable()
     {
+        // Currently solely used by the InventoryManager.cs to disable/enable non-inventory controls
         //playerControls.FindActionMap(actionMapName).Enable();
         moveAction.Enable();
         lookAction.Enable();
@@ -117,6 +125,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnDisable()
     {
+        // Currently solely used by the InventoryManager.cs to disable/enable non-inventory controls
         //playerControls.FindActionMap(actionMapName).Disable();
         moveAction.Disable();
         lookAction.Disable();
