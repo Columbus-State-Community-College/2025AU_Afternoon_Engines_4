@@ -5,7 +5,7 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
 
-    public Dictionary<string, bool> ProgressTracker = new Dictionary<string, bool>();// an enum for tracking if a flag/puzzle has been completed: 0 is false, 1 is true, anything else is an invalid input and will cause problems
+    public Dictionary<string, bool> ProgressTracker = new Dictionary<string, bool>();// a dictionary for tracking if a flag/puzzle has been completed
 
 
     private void Awake()

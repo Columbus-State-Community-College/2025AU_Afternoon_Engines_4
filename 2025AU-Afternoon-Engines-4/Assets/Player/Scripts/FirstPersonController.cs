@@ -48,6 +48,10 @@ public class FirstPersonController : MonoBehaviour
     private float interactionCooldownTimer = 0.0f;
     private bool interactionPermitted = true;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioSource JumpSound;
+    [SerializeField] private AudioSource RunningSound;
+
     private Vector3 currentMovement;
     private float verticalRotation;
     // if sprint is triggered, multiply walkSpeed by sprintMultiplier, otherwise maintain walkSpeed (multiply it by 1)
@@ -68,6 +72,21 @@ public class FirstPersonController : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleInteraction();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            RunningSound.Play();
+        }
+
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            RunningSound.Stop();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            JumpSound.Play();       
+        }
     }
 
     private Vector3 CalculateWorldDirection()
