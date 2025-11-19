@@ -7,6 +7,7 @@ public class MainManager : MonoBehaviour
 
     public Dictionary<string, bool> ProgressTracker = new Dictionary<string, bool>();// a dictionary for tracking if a flag/puzzle has been completed
 
+    [SerializeField] private PlayerInputHandler playerInputHandler;
 
     private void Awake()
     {
@@ -27,6 +28,16 @@ public class MainManager : MonoBehaviour
             ProgressTracker.Add("puzzle01", false);
             ProgressTracker.Add("puzzle02", false);
         }
+
+        /* initialize true variable targets
+        {
+            WinScreen = WinScreen.GetComponentsInChildren();
+        }*/
+        
+    }
+
+    public void GameWin()
+    {
         
     }
 

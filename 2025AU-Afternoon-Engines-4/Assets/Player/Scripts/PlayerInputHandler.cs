@@ -127,4 +127,26 @@ public class PlayerInputHandler : MonoBehaviour
         dropAction.Disable();
     }
 
+    public void ActivateUIActionMap(bool activateUIControls)
+    {
+        
+        //int numOfActionMaps = playerControls.actionMaps.Count;
+
+        if (activateUIControls)
+        {
+            playerControls.FindActionMap("Player").Disable();
+            playerControls.FindActionMap("UI").Enable();
+            Cursor.visible = true;
+            
+            
+        }
+        else
+        {
+            playerControls.FindActionMap("UI").Disable();
+            playerControls.FindActionMap("Player").Enable();
+            Cursor.visible = false;
+        }
+        
+    }
+
 }

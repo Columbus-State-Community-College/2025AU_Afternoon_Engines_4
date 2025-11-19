@@ -8,6 +8,8 @@ public class GameTimer : MonoBehaviour
     public TextMeshProUGUI timerText;
     private bool timerIsRunning = false;
 
+    [SerializeField] private UIElements _UIElements;
+
     void Start()
     {
         timerIsRunning = true;
@@ -42,6 +44,6 @@ public class GameTimer : MonoBehaviour
     {
         timerText.text = "Game Over!";
         Time.timeScale = 0; // Pause the game
-        // Possible Idea: SceneManager.LoadScene("GameOverScene"); // Load up a new scene when you get a game over
+        _UIElements.LoseGame();// Possible Idea: SceneManager.LoadScene("GameOverScene"); // Load up a new scene when you get a game over
     }
 }

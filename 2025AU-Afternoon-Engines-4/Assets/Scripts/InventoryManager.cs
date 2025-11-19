@@ -55,7 +55,11 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (Transform uiElement in parentUI.transform)
         {
-            uiElement.gameObject.SetActive(true);
+            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen") // this makes sure these arent enabled erroneously
+            {
+                uiElement.gameObject.SetActive(true);
+            }
+            
         }
         foreach (Image thumbnail in inventorySlotsUsed)
         {

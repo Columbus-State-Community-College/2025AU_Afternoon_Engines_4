@@ -1,7 +1,19 @@
 using UnityEngine;
 
-public class WinScreenScript : MonoBehaviour
+public class EndScreenScript : MonoBehaviour
 {
+    [SerializeField] private PlayerInputHandler inputHandlerObject;
+
+
+    void OnBecameVisible()
+    {
+        inputHandlerObject.ActivateUIActionMap(true);
+    }
+
+    void OnBecameInvisible()
+    {
+        inputHandlerObject.ActivateUIActionMap(false);
+    }
 
     // add in an enabled state and disabled state, provide button event functions
 
