@@ -42,10 +42,13 @@ public class InventoryManager : MonoBehaviour
 
     public void OpenInventory()
     {
-        // On opening the inventory hide every other UI element, then show every item stored in the main inventory, and then show the main inventory
+        // On opening the inventory hide every other UI element (Use the if statement for exceptions that should stay shown), then show every item stored in the main inventory, and then show the main inventory
         foreach (Transform uiElement in parentUI.transform)
         {
-            uiElement.gameObject.SetActive(false);
+            if (uiElement.gameObject.name != "Timer_Text")
+            {
+                uiElement.gameObject.SetActive(false);
+            }
         }
         foreach (Image thumbnail in inventorySlotsUsed)
         {
@@ -64,7 +67,7 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform uiElement in parentUI.transform)
         {
             // This makes sure these arent enabled erroneously
-            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen" || uiElement.gameObject.name != "Timer_Text" || uiElement.gameObject.name != "PuzzleView1Controls_Text")
+            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen" || uiElement.gameObject.name != "PuzzleView1Controls_Text")
             {
                 uiElement.gameObject.SetActive(true);
             }
