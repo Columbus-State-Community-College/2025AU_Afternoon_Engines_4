@@ -73,19 +73,29 @@ public class FirstPersonController : MonoBehaviour
         HandleRotation();
         HandleInteraction();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2))
         {
             RunningSound.Play();
         }
 
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.JoystickButton2))
         {
             RunningSound.Stop();
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             JumpSound.Play();       
+        }
+
+        else if (Input.GetKeyDown(KeyCode.JoystickButton7))
+        {
+            mouseSensitivity = 3.2f;
+        }
+
+        else if (Input.GetKeyUp(KeyCode.JoystickButton7))
+        {
+            mouseSensitivity = 0.1f;
         }
     }
 

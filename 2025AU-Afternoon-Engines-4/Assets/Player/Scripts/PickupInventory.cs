@@ -17,6 +17,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
     public string[] PuzzleViewTagArray;
     [Tooltip("This key will allow you to exit the Puzzle view and you'll be back to the player's view.")] 
     public KeyCode exitPuzzleViewKey = KeyCode.A;
+    public KeyCode exitPuzzleViewGamepad = KeyCode.JoystickButton8;
 
     private GameObject currentPickupTarget;
     private GameObject heldObject;
@@ -120,7 +121,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
             playerInputHandler.CycleTriggered = false;
         }
 
-        if (Input.GetKeyDown(exitPuzzleViewKey))
+        if (Input.GetKeyDown(exitPuzzleViewKey) || Input.GetKeyDown(exitPuzzleViewGamepad))
         {
             ExitPuzzleView1();
             PuzzleViewExit.Play();

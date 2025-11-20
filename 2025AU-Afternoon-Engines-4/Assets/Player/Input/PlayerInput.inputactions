@@ -401,7 +401,7 @@
                 {
                     "name": "",
                     "id": "a8d4d775-87ba-43e5-9658-9b0ba1f39348",
-                    "path": "<Gamepad>/leftStickPress",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -532,8 +532,30 @@
                 },
                 {
                     "name": "",
+                    "id": "9c06b96c-8897-44ed-8cd7-47fc7dfa155f",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Store",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "16e7ed6f-79bf-423e-b6cf-94eb3e30eeca",
                     "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f039bb29-c374-4afc-a7a1-e57f39277a9a",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -554,6 +576,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6dcbaa2b-16f5-45e7-be2e-6bec9d076622",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cycle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bcf288d9-3db0-40ba-91e1-ba1d3957942a",
                     "path": "<Keyboard>/i",
                     "interactions": "",
@@ -565,8 +598,30 @@
                 },
                 {
                     "name": "",
+                    "id": "603ae6f7-6d65-488f-8f80-118c41191da0",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0d8b78bb-4352-4a6c-a92f-3df77ca8bad1",
                     "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7460150a-257d-487a-80a1-ec75131a7610",
+                    "path": "<Gamepad>/leftStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

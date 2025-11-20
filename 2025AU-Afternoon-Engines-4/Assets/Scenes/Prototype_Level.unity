@@ -672,6 +672,71 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1397270498090056213, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
   m_PrefabInstance: {fileID: 714364673096735737}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &115250976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7421448491833530328, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
+  m_PrefabInstance: {fileID: 714364673096735737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &115250980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115250975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 115250976}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!82 &128394690 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7565550803224622805, guid: 1eca276bf6a3ec34c93145622385a35a, type: 3}
@@ -3502,6 +3567,10 @@ PrefabInstance:
       propertyPath: RunningSound
       value: 
       objectReference: {fileID: 1881249259}
+    - target: {fileID: 178113761074837362, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: mouseSensitivity
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: ThrowSound
       value: 
@@ -3534,9 +3603,80 @@ PrefabInstance:
       propertyPath: PuzzleViewManager
       value: 
       objectReference: {fileID: 786183574}
+    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: exitPuzzleViewGamepad
+      value: 341
+      objectReference: {fileID: 0}
+    - target: {fileID: 830295731363975393, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4819260905712991083, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385186438198650301, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_text
+      value: 'Left Arrow, Y Button: Move Cake Left
+
+        Right Arrow, A Button:
+        Move Cake Right
+
+        Up Arrow, X Button: Move Cake Forwards
+
+        Down
+        Arrow, B Button: Move Cake Backwards
+
+        A, Left Trigger Button: Move
+        Cake Up
+
+        S, Right Trigger Button: Move Cake Down
+
+        Left Control,
+        Right Stick Press: Exit the Puzzle View'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385186438198650301, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385186438198650301, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_margin.w
+      value: -321.02066
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385186438198650301, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_margin.x
+      value: -505.36627
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385186438198650301, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703024920182001795, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_text
+      value: 'WASD, Left Stick  - Movement
+
+        Move Mouse, Right Stick - Move
+        Camera
+
+        Left Shift, Y Button - Sprint
+
+        Space, B Button -
+        Jump
+
+        Left Click, X Button - Pick Up/Drop Object
+
+        E, Left
+        Shoulder Button - Store/Take Out Object
+
+        Right Click, Right Shoulder
+        Button - Throw Object
+
+        F, A Button - Cycle Inventory
+
+        Right
+        Trigger Button - Move Camera Faster
+
+        I, Select Button - Pull Up Inventory'
       objectReference: {fileID: 0}
     - target: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3577,6 +3717,10 @@ PrefabInstance:
     - target: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497707755578266352, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10790,6 +10934,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 117048943048331152, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 584233767107970157, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9166641
@@ -10830,6 +10978,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2457551788685567496, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
+      propertyPath: m_Antialiasing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457551788685567496, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6735916892801563123, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
       propertyPath: CakeObject
       value: 
@@ -10841,7 +10997,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1397270498090056213, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 115250980}
   m_SourcePrefab: {fileID: 100100000, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
 --- !u!1001 &2884741378841495565
 PrefabInstance:
