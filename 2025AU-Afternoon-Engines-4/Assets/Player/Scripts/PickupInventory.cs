@@ -27,10 +27,13 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
     public TMP_Text inventoryDisplayText;
     public TMP_Text PuzzleView1ControlsText;
+    public TMP_Text PuzzleView2ControlsText;
+    public TMP_Text ManikinPartCheckerText;
     public GameObject Player;
     public GameObject PlayerCamera;
     [SerializeField] private PlayerInputHandler playerInputHandler;
     public GameObject PuzzleViewCamera1;
+    public GameObject PuzzleViewCamera2;
     public GameObject PuzzleViewManager;
     public InventoryManager inventoryManager;
 
@@ -48,6 +51,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
     {
         inventoryDisplayText.gameObject.SetActive(false);
         PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
+        PuzzleViewManager.GetComponent<PuzzleView2>().enabled = false;
         currentPickupTarget = null;
         heldObject = null;
     }
@@ -123,7 +127,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
         if (Input.GetKeyDown(exitPuzzleViewKey) || Input.GetKeyDown(exitPuzzleViewGamepad))
         {
-            ExitPuzzleView1();
+            ExitPuzzleView();
             PuzzleViewExit.Play();
         }
 
@@ -207,8 +211,10 @@ public class PickupInventory : MonoBehaviour, IInteractable
         {
             DropObject();
             Player.GetComponent<FirstPersonController>().enabled = false;
-            PuzzleView1();
             PuzzleViewEnter.Play();
+            
+            // PuzzleView1();
+            PuzzleView2();
         }
 
         else {
@@ -332,12 +338,25 @@ public class PickupInventory : MonoBehaviour, IInteractable
         PuzzleViewCamera1.SetActive(true);
     }
 
-    void ExitPuzzleView1()
+    void PuzzleView2()
+    {
+        ManikinPartCheckerText.gameObject.SetActive(true);
+        PuzzleView2ControlsText.gameObject.SetActive(true);
+        PuzzleViewManager.GetComponent<PuzzleView2>().enabled = true;
+        PlayerCamera.SetActive(false);
+        PuzzleViewCamera2.SetActive(true);
+    }
+
+    void ExitPuzzleView()
     {
         PuzzleView1ControlsText.gameObject.SetActive(false);
+        PuzzleView2ControlsText.gameObject.SetActive(false);
+        ManikinPartCheckerText.gameObject.SetActive(false);
         PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
+        PuzzleViewManager.GetComponent<PuzzleView2>().enabled = false;
         Player.GetComponent<FirstPersonController>().enabled = true;
         PlayerCamera.SetActive(true);
         PuzzleViewCamera1.SetActive(false);
+        PuzzleViewCamera2.SetActive(false);
     }
 }

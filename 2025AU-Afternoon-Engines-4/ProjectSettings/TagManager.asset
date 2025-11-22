@@ -12,6 +12,17 @@ TagManager:
   - Object1
   - Cake
   - Joystick
+  - LeftArm
+  - LeftArmPart
+  - RightArmPart
+  - RightArm
+  - LeftLegPart
+  - RightLegPart
+  - LeftLeg
+  - RightLeg
+  - Head
+  - HeadPart
+  - Binoculars
   layers:
   - Default
   - TransparentFX

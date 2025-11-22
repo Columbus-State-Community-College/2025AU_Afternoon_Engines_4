@@ -30,3 +30,15 @@ https://freesound.org/people/Vilkas_Sound/sounds/463394/
 "Cartoon Pop (Distorted)"
 unfa
 https://freesound.org/people/unfa/sounds/245646/
+
+"Game Over Trumpet SFX aka (losetrumpet)"
+0new4y
+https://opengameart.org/content/game-over-trumpet-sfx
+
+"Well Done"
+qudodup
+https://opengameart.org/content/well-done
+
+"Correct Bell aka (bell)"
+Fupi
+https://opengameart.org/content/correct-bell
