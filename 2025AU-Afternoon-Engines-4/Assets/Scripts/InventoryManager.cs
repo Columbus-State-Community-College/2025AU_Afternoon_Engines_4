@@ -56,7 +56,7 @@ public class InventoryManager : MonoBehaviour
         }
 
         hotBarSelector.transform.gameObject.SetActive(true);
-        hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[0], mainInventoryPositionY[0], 0);
+        hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[0], mainInventoryPositionY[0] - 15, 0);
         mainInventory.SetActive(true);
         inventoryOpen = true;
     }
@@ -105,9 +105,9 @@ public class InventoryManager : MonoBehaviour
         return temp;
     }
 
+    // Moves the selector to the next slot
     public void CycleSelectorPosition(int position)
     {
-        // Moves the selector to the next slot
         if (position < 0) { position = 0; }
 
         if (!inventoryOpen)
@@ -123,10 +123,10 @@ public class InventoryManager : MonoBehaviour
             if (inventorySelectorPosition >= mainInventoryItems.Count) { inventorySelectorPosition = 0; }
 
             int positionY = 0;
-            if (inventorySelectorPosition <= 8) { positionY = 0; }
-            else if (inventorySelectorPosition <= 16) { positionY = 1; }
+            if (inventorySelectorPosition <= 7) { positionY = 0; }
+            else if (inventorySelectorPosition <= 15) { positionY = 1; }
             else { positionY = 2; }
-            hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[inventorySelectorPosition], mainInventoryPositionY[positionY], 0);
+            hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[inventorySelectorPosition], mainInventoryPositionY[positionY] - 15, 0);
         }
     }
 
@@ -149,8 +149,8 @@ public class InventoryManager : MonoBehaviour
         else
         {
             int positionY = 0;
-            if (mainInventoryItems.Count < 8) { positionY = 0; }
-            else if (mainInventoryItems.Count < 16) { positionY = 1; }
+            if (position < 8) { positionY = 0; }
+            else if (position < 16) { positionY = 1; }
             else { positionY = 2; }
             itemThumbnail.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[position], mainInventoryPositionY[positionY], 0);
             if (!inventoryOpen) { itemThumbnail.transform.gameObject.SetActive(false); }

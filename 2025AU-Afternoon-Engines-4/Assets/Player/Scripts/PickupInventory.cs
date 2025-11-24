@@ -106,6 +106,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
                 TakeOutSound.Play();
             }
             playerInputHandler.StoreTriggered = false;
+            inventoryManager.UpdateInventoryUI(inventory);
         }
 
         // Checks for "F" presses | cycling through items / inventory UI
@@ -145,13 +146,14 @@ public class PickupInventory : MonoBehaviour, IInteractable
                 playerInputHandler.OnEnable();
             }
             playerInputHandler.InventoryTriggered = false;
+            inventoryManager.UpdateInventoryUI(inventory);
         }
 
         // Checks for "Tab" presses | swaps items between hotbar and main inventory or vice versa
         if (playerInputHandler.SwapTriggered)
         {
             inventoryManager.inventorySwap = true;
-            if (!inventoryManager.inventoryOpen && inventory.Count > 0)
+            if (!inventoryManager.inventoryOpen && inventory.Count > 0 && inventoryManager.mainInventoryItems.Count < 24)
             {
                 inventoryManager.SendToInventory(inventory[selectedInventoryIndex]);
                 inventory.RemoveAt(selectedInventoryIndex);
@@ -163,14 +165,18 @@ public class PickupInventory : MonoBehaviour, IInteractable
             {
                 GameObject temp = inventoryManager.SendToHotBar();
                 inventory.Add(temp);
+                selectedInventoryIndex--;
+                if (selectedInventoryIndex < 0) { selectedInventoryIndex = 0; }
+                inventoryManager.CycleSelectorPosition(selectedInventoryIndex);
             }
             else { Debug.Log("Hot Bar Full, Can't Swap"); }
             inventoryManager.inventorySwap = false;
             playerInputHandler.SwapTriggered = false;
+            inventoryManager.UpdateInventoryUI(inventory);
         }
 
-        // Updates the hotbar &/or main inventory UI everyframe
-        inventoryManager.UpdateInventoryUI(inventory);
+        // Updates the hotbar &/or main inventory UI | Previously was everyframe, now it only does when an action that changes the inventory is taken
+        //inventoryManager.UpdateInventoryUI(inventory);
     }
 
     void DetectObject()
@@ -261,19 +267,25 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
     void StoreHeldObject()
     {
+        // If hotbar has less than 8 items, send to hotbar
         if (inventory.Count < 8)
         {
             inventory.Add(heldObject);
             Debug.Log("Stored in hotbar: " + heldObject.name);
+            heldObject.SetActive(false);
+            heldObject.transform.SetParent(null);
+            heldObject = null;
         }
-        else
+        // Else, If main inventory has less than 24 items, send to main inventory
+        else if(inventoryManager.mainInventoryItems.Count < 24)
         {
             inventoryManager.SendToInventory(heldObject);
-            Debug.Log("Hot Bar is Full!");
+            Debug.Log("Hot Bar is Full! Sending to Main Inventory.");
+            heldObject.SetActive(false);
+            heldObject.transform.SetParent(null);
+            heldObject = null;
         }
-        heldObject.SetActive(false);
-        heldObject.transform.SetParent(null);
-        heldObject = null;
+        // Else-else nothing happens
     }
 
     void RetrieveFromInventory()
