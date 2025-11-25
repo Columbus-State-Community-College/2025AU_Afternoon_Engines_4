@@ -149,6 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInputHandler: {fileID: 0}
+  PauseScreen: {fileID: 0}
+  WinScreen: {fileID: 421891300473777390, guid: 7e80a41a209cba749960a5c1e4331b36, type: 3}
+  LoseScreen: {fileID: 3688392811743516615, guid: 75a17970808202f45a64d6eea5c2e4cb, type: 3}
 --- !u!4 &18063754
 Transform:
   m_ObjectHideFlags: 0

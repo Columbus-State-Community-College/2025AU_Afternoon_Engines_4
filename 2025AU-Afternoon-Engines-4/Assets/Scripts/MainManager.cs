@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
@@ -8,6 +11,13 @@ public class MainManager : MonoBehaviour
     public Dictionary<string, bool> ProgressTracker = new Dictionary<string, bool>();// a dictionary for tracking if a flag/puzzle has been completed
 
     [SerializeField] private PlayerInputHandler playerInputHandler;
+
+    [Header("Game-Pausing Screens")]
+    [SerializeField] private GameObject PauseScreen;
+    [SerializeField] private GameObject WinScreen;
+    [SerializeField] private GameObject LoseScreen;
+
+    public static bool isPaused;
 
     private void Awake()
     {
@@ -21,31 +31,74 @@ public class MainManager : MonoBehaviour
 
     }
 
+    // Brackets used for IDE organization in several instances
     private void Start()
     {
-        // for tracking progress, brackets for organization in IDE
+        //set pause state
+        isPaused = false;
+
+        // for tracking progress
         {
             ProgressTracker.Add("puzzle01", false);
             ProgressTracker.Add("puzzle02", false);
         }
 
-        /* initialize true variable targets
+        // Prepare Game-Pausing Screens
         {
-            WinScreen = WinScreen.GetComponentsInChildren();
-        }*/
-        
-    }
-
-    public void GameWin()
-    {
-        
-    }
-
-    /*private void Start()
-    {
-        if (MainManager.Instance != null)
-        {
-            //this would be in the Start() method of other scripts
+            PauseScreen.SetActive(false);
+            WinScreen.SetActive(false);
+            LoseScreen.SetActive(false);
         }
-    }*/
+        
+    }
+
+    void Update()
+    {
+        if (!isPaused)  // while not paused
+        {
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else            // while paused
+        {
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    public void PauseGameScreen()
+    {
+        // TODO
+    }
+
+    public void WinGameScreen()
+    {
+        WinScreen.SetActive(true);
+    }
+
+    public void LoseGameScreen()
+    {
+        LoseScreen.SetActive(true);
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("MainMenu");
+        /* TODO reset progress
+        foreach (var item in ProgressTracker)
+        {
+            // 
+        }*/
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+
+    
+
+
 }
