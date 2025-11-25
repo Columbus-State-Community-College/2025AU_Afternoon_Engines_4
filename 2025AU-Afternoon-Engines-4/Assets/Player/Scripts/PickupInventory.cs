@@ -118,11 +118,6 @@ public class PickupInventory : MonoBehaviour, IInteractable
                 InventoryCycle();
                 ShuffleSound.Play();
             }
-            else
-            {
-                inventoryManager.CycleSelectorPosition(inventoryManager.inventorySelectorPosition);
-            }
-
             playerInputHandler.CycleTriggered = false;
         }
 
@@ -147,6 +142,12 @@ public class PickupInventory : MonoBehaviour, IInteractable
             }
             playerInputHandler.InventoryTriggered = false;
             inventoryManager.UpdateInventoryUI(inventory);
+        }
+
+        // If the main inventory is open, run the navigation controls for it | (Arrow Keys / D-Pad)
+        if (inventoryManager.inventoryOpen)
+        {
+            inventoryManager.MainInventoryControls();
         }
 
         // Checks for "Tab" presses | swaps items between hotbar and main inventory or vice versa
@@ -197,7 +198,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
         }
     }
 
-    bool CheckTagArray(string otherTag, string[] tagArray)
+    public bool CheckTagArray(string otherTag, string[] tagArray)
     {
         foreach (string tag in tagArray)
         {
@@ -219,7 +220,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
             Player.GetComponent<FirstPersonController>().enabled = false;
             PuzzleViewEnter.Play();
             
-            // PuzzleView1();
+            //PuzzleView1();
             PuzzleView2();
         }
 

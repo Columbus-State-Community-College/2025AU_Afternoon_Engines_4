@@ -46,7 +46,7 @@ public class FirstPersonController : MonoBehaviour
     [Header("Cooldown Timer")]
     [SerializeField] private float InteractionCooldown = 0.2f;
     private float interactionCooldownTimer = 0.0f;
-    private bool interactionPermitted = true;
+    //private bool interactionPermitted = true;
 
     [Header("Sounds")]
     [SerializeField] private AudioSource JumpSound;
@@ -56,6 +56,7 @@ public class FirstPersonController : MonoBehaviour
     private float verticalRotation;
     // if sprint is triggered, multiply walkSpeed by sprintMultiplier, otherwise maintain walkSpeed (multiply it by 1)
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
+    private PickupInventory pickUpScript;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -64,6 +65,8 @@ public class FirstPersonController : MonoBehaviour
         interactionCooldownTimer = InteractionCooldown;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        pickUpScript = gameObject.GetComponent<PickupInventory>();
     }
 
     // Update is called once per frame
@@ -162,7 +165,7 @@ public class FirstPersonController : MonoBehaviour
         //{   
         if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
         {
-            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+            /*if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
             {
                 reticle.color = Color.green;
                 if (playerInputHandler.InteractTriggered && interactionPermitted)
@@ -180,7 +183,12 @@ public class FirstPersonController : MonoBehaviour
                         interactionPermitted = true;
                     }
                 }
+            }*/
 
+            // Checks the "can I pick this up" tags in the PickupInventory.cs script | should be an easier and foolproof method 
+            if (pickUpScript.CheckTagArray(hitInfo.collider.gameObject.tag, pickUpScript.objectTagArray))
+            {
+                reticle.color = Color.green;
             }
             else
             {

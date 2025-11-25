@@ -115,19 +115,49 @@ public class InventoryManager : MonoBehaviour
             // For the hotbar the position math is done in PickUpInventory.cs (and is simpler)
             hotBarSelector.rectTransform.anchoredPosition = new Vector3(hotBarPositionX[position], hotBarPositionY, 0); 
         }
-        else
-        {
-            // Math for deciding the selector position (X & Y axis) in the main inventory
-            inventorySelectorPosition = position;
-            inventorySelectorPosition++;
-            if (inventorySelectorPosition >= mainInventoryItems.Count) { inventorySelectorPosition = 0; }
+    }
 
-            int positionY = 0;
-            if (inventorySelectorPosition <= 7) { positionY = 0; }
-            else if (inventorySelectorPosition <= 15) { positionY = 1; }
-            else { positionY = 2; }
-            hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[inventorySelectorPosition], mainInventoryPositionY[positionY] - 15, 0);
+    // Controls for main inventory navigation
+    public void MainInventoryControls()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow) || (Input.GetKeyDown(KeyCode.JoystickButton0)))
+        {
+            inventorySelectorPosition -= 8;
+            MainInventoryNavigation();
         }
+
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.JoystickButton3)))
+        {
+            inventorySelectorPosition += 8;
+            MainInventoryNavigation();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || (Input.GetKeyDown(KeyCode.JoystickButton2)))
+        {
+            inventorySelectorPosition--;
+            MainInventoryNavigation();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || (Input.GetKeyDown(KeyCode.JoystickButton1)))
+        {
+            inventorySelectorPosition++;
+            MainInventoryNavigation();
+        }
+    }
+
+    // Math for deciding the selector position (X & Y axis) in the main inventory
+    void MainInventoryNavigation()
+    {
+        // If the position is "above" the inventory amount, send it to the first slot
+        // Else If the position is "below" the inventory amount, send it to the last slot
+        if (inventorySelectorPosition >= mainInventoryItems.Count) { inventorySelectorPosition = 0; }
+        else if (inventorySelectorPosition < 0) { inventorySelectorPosition = mainInventoryItems.Count - 1; }
+
+        int positionY = 0;
+        if (inventorySelectorPosition <= 7) { positionY = 0; }
+        else if (inventorySelectorPosition <= 15) { positionY = 1; }
+        else { positionY = 2; }
+        hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[inventorySelectorPosition], mainInventoryPositionY[positionY] - 15, 0);
     }
 
     public void InstantiateInventoryItem(GameObject item, int position)
