@@ -10,6 +10,8 @@ public class PuzzleLinkedMovement : MonoBehaviour
     public bool willRotate = false;
     [Tooltip("Activates the moving logic")]
     public bool willMove = false;
+    [Tooltip("Uses an animation instead of manually setting the movement / rotation (disables them)")]
+    public bool willAnimate = false;
 
     [Header("Rotation Controls")]
     [Tooltip("Rotation speed")]
@@ -30,41 +32,80 @@ public class PuzzleLinkedMovement : MonoBehaviour
     public float movementY = 0;
     [Tooltip("Z-axis movement")]
     public float movementZ = 0;
+
+    [Header("Audio Controls")]
+    [Tooltip("Place audio file here")]
+    public AudioClip soundEffect;
+    private AudioSource soundEffectSource;
+    [Tooltip("Sound effect volume (0.0 to 1.0)")]
+    public float effectVolume = 1;
+    [Tooltip("If the effect plays localcally (unchecked = it plays globally)")]
+    public bool isLocal = true;
+    [Tooltip("Play sound effect on movement completion (or unchecked for on movement start (aka puzzle completion))")]
+    public bool playOnCompletion = false;
+    private bool soundPlayed = false;
+
     private Vector3 objectPosition;
-    private Vector3 objectRotationPosition;
-    private Vector3 rotationCalc;
     private Quaternion rotationTarget;
     private Vector3 movementCalc;
+    private Animation animationSource;
 
     private bool scriptCompleted = false;
     private bool rotationCompleted = false;
     private bool movementCompleted = false;
+    private bool animationCompleted = false;
     [HideInInspector]
     public bool linkedPuzzleCompleted = false;
 
     void Start()
     {
-        objectPosition = gameObject.transform.position;
-        objectRotationPosition = gameObject.transform.eulerAngles;
-        movementCalc = new Vector3(movementX, movementY, movementZ) + objectPosition;
-        rotationCalc = new Vector3(rotationX, rotationY, rotationZ) + objectRotationPosition;
-        rotationTarget = Quaternion.Euler(rotationCalc);
+        // Audio configuration
+        SetupSoundEffect();
+
+        // Movement configuration
+        if (!willAnimate)
+        {
+            objectPosition = gameObject.transform.position;
+            movementCalc = new Vector3(movementX, movementY, movementZ) + objectPosition;
+            rotationTarget = transform.rotation * Quaternion.Euler(rotationX, rotationY, rotationZ);
+        }
+        else
+        {
+            animationSource = GetComponent<Animation>();
+        }
     }
 
     void Update()
     {
         if (linkedPuzzleCompleted && !scriptCompleted)
         {
-            if (willRotate && !rotationCompleted)
+            if (willRotate && !rotationCompleted && !willAnimate)
             {
                 ObjectRotation();
             }
-            if (willMove && !movementCompleted)
+            else { rotationCompleted = true; }
+
+            if (willMove && !movementCompleted && !willAnimate)
             {
                 ObjectMovement();
             }
-            else
+            else { movementCompleted = true; }
+
+            if (!soundPlayed && !playOnCompletion)
             {
+                PlaySoundEffect();
+            }
+
+            if (willAnimate && !animationCompleted)
+            {
+                animationSource.Play();
+                animationCompleted = true;
+            }
+            else { animationCompleted = true; }
+
+            if (rotationCompleted && movementCompleted && animationCompleted)
+            {
+                PlaySoundEffect();
                 scriptCompleted = true;
             }
         }
@@ -93,6 +134,36 @@ public class PuzzleLinkedMovement : MonoBehaviour
         {
             movementCompleted = true;
             gameObject.transform.position = movementCalc;
+        }
+    }
+
+    void SetupSoundEffect()
+    {
+        if (soundEffect != null)
+        {
+            soundEffectSource = gameObject.AddComponent<AudioSource>();
+            soundEffectSource.volume = effectVolume;
+            soundEffectSource.clip = soundEffect;
+            if (isLocal)
+            {
+                soundEffectSource.spatialBlend = 1.0f;
+                soundEffectSource.rolloffMode = AudioRolloffMode.Linear;
+                soundEffectSource.minDistance = 1.0f;
+                soundEffectSource.maxDistance = 25.0f;
+            }
+            else
+            {
+                soundEffectSource.spatialBlend = 0.0f;
+            }
+        }
+    }
+
+    void PlaySoundEffect()
+    {
+        if (soundEffect != null)
+        {
+            soundEffectSource.PlayOneShot(soundEffect);
+            soundPlayed = true;
         }
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 // Put this script onto the "lock" that will accept the "keys"
 // The lock has to be an "isTrigger" collider
@@ -11,8 +12,8 @@ public class PuzzleLock : MonoBehaviour
     public int keyTotalAmount = 1;
     private int keyCurrentAmount = 0;
     [Tooltip("Link the GameObject that will move when this puzzle is completed (& has the movement script on it)")]
-    public GameObject linkedMovementObject;
-    private PuzzleLinkedMovement linkedMovementScript;
+    public List<GameObject> linkedMovementObjects = new List<GameObject>();
+    private List<PuzzleLinkedMovement> linkedMovementScript = new List<PuzzleLinkedMovement>();
 
     // Originally was gonna use this variable for linking (thats why its public & hidden) but never used it for that
     // Leaving it as such instead of changing to private incase it becomes useful later
@@ -21,12 +22,16 @@ public class PuzzleLock : MonoBehaviour
     //[HideInInspector]
     //public Diction
 
-
     void Start()
     {
-        if (linkedMovementObject != null)
+        if (linkedMovementObjects != null)
         {
-            linkedMovementScript = linkedMovementObject.GetComponent<PuzzleLinkedMovement>();
+            int i = 0;
+            foreach (GameObject movementObject in linkedMovementObjects)
+            {
+                linkedMovementScript.Add(movementObject.GetComponent<PuzzleLinkedMovement>());
+                i++;
+            }
         }
     }
 
@@ -59,9 +64,11 @@ public class PuzzleLock : MonoBehaviour
         }
         else
         {
-            if (linkedMovementObject != null)
+            int i = 0;
+            foreach (GameObject movementObject in linkedMovementObjects)
             {
-                linkedMovementScript.linkedPuzzleCompleted = true;
+                linkedMovementScript[i].linkedPuzzleCompleted = true;
+                i++;
             }
             puzzleCompleted = true;
             MainManager.Instance.ProgressTracker["puzzle01"] = true;
