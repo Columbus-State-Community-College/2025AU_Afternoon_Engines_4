@@ -43,12 +43,17 @@ public class MainManager : MonoBehaviour
             ProgressTracker.Add("puzzle02", false);
         }
 
-        // Prepare Game-Pausing Screens
+        /*/ Prepare Game-Pausing Screens
         {
+            //PauseScreen = Instantiate(PauseScreen);
+            //WinScreen = Instantiate(WinScreen);
+            //LoseScreen = Instantiate(LoseScreen);
             PauseScreen.SetActive(false);
             WinScreen.SetActive(false);
             LoseScreen.SetActive(false);
-        }
+            
+            
+        }*/
         
     }
 
@@ -70,7 +75,18 @@ public class MainManager : MonoBehaviour
 
     public void PauseGameScreen()
     {
-        // TODO
+        Debug.LogAssertion("MainManager hears the pause call");
+        if (!isPaused)
+        {
+            PauseScreen.SetActive(true);
+            isPaused = true;
+        }
+        else
+        {
+            PauseScreen.SetActive(false);
+            isPaused = false;
+        }
+        
     }
 
     public void WinGameScreen()
