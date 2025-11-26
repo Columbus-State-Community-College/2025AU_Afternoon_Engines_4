@@ -1181,12 +1181,16 @@ MonoBehaviour:
   PuzzleViewTagArray:
   - Joystick
   exitPuzzleViewKey: 306
+  exitPuzzleViewGamepad: 338
   inventoryDisplayText: {fileID: 7389273306602633541}
   PuzzleView1ControlsText: {fileID: 5385186438198650301}
+  PuzzleView2ControlsText: {fileID: 0}
+  ManikinPartCheckerText: {fileID: 0}
   Player: {fileID: 4819260905712991083}
   PlayerCamera: {fileID: 3463969974966175428}
   playerInputHandler: {fileID: 8172701533369116017}
   PuzzleViewCamera1: {fileID: 0}
+  PuzzleViewCamera2: {fileID: 0}
   PuzzleViewManager: {fileID: 0}
   inventoryManager: {fileID: 7224823850876644837}
   ThrowSound: {fileID: 7086609095620752464}
