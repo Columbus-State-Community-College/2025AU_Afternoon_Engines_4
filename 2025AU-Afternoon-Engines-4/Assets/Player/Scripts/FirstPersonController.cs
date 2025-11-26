@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -75,6 +76,7 @@ public class FirstPersonController : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleInteraction();
+        HandlePauseMenu();
 
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.JoystickButton2))
         {
@@ -208,5 +210,14 @@ public class FirstPersonController : MonoBehaviour
                 interactionPermitted = true;
             }
         }*/
+    }
+
+    private void HandlePauseMenu()
+    {
+        if (playerInputHandler.PauseTriggered)
+        {
+            MainManager.Instance.PauseGameScreen();
+            Debug.LogAssertion("Game Pause input detected");
+        }
     }
 }

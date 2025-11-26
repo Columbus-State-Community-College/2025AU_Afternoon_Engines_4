@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c4658d07934f54894434f24c63b3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThisScreen: {fileID: 421891300473777390}
   inputHandlerObject: {fileID: 0}
 --- !u!1 &1100195837682512492
 GameObject:

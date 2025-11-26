@@ -32,6 +32,7 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField] private string cycle = "Cycle";
     [SerializeField] private string inventory = "Inventory";
     [SerializeField] private string swap = "Swap";
+    [SerializeField] private string pause = "PauseMenu";
 
     private InputAction moveAction;
     private InputAction lookAction;
@@ -47,6 +48,7 @@ public class PlayerInputHandler : MonoBehaviour
     private InputAction cycleAction;
     private InputAction inventoryAction;
     private InputAction swapAction;
+    private InputAction pauseAction;
 
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
@@ -58,6 +60,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool CycleTriggered { get; set; }
     public bool InventoryTriggered { get; set; }
     public bool SwapTriggered { get; set; }
+    public bool PauseTriggered { get; set; }
     
 
     private void Awake()
@@ -73,6 +76,7 @@ public class PlayerInputHandler : MonoBehaviour
         cycleAction = mapReference.FindAction(cycle);
         inventoryAction = mapReference.FindAction(inventory);
         swapAction = mapReference.FindAction(swap);
+        pauseAction = mapReference.FindAction(pause);
 
         SubscribeActionValuesToInputEvents();
     }
@@ -108,6 +112,9 @@ public class PlayerInputHandler : MonoBehaviour
 
         swapAction.performed += inputInfo => SwapTriggered = true;
         swapAction.canceled += inputInfo => SwapTriggered = false;
+
+        pauseAction.performed += inputInfo => PauseTriggered = true;
+        pauseAction.canceled += inputInfo => PauseTriggered = false;
     }
 
     public void OnEnable()
@@ -121,6 +128,7 @@ public class PlayerInputHandler : MonoBehaviour
         sprintAction.Enable();
         storeAction.Enable();
         dropAction.Enable();
+        pauseAction.Enable();
     }
 
     public void OnDisable()
@@ -134,6 +142,7 @@ public class PlayerInputHandler : MonoBehaviour
         sprintAction.Disable();
         storeAction.Disable();
         dropAction.Disable();
+        pauseAction.Disable();
     }
 
     public void ActivateUIActionMap(bool activateUIControls)
@@ -145,7 +154,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             playerControls.FindActionMap("Player").Disable();
             playerControls.FindActionMap("UI").Enable();
-            Cursor.visible = true;
+            //Cursor.visible = true;
             
             
         }
@@ -153,7 +162,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             playerControls.FindActionMap("UI").Disable();
             playerControls.FindActionMap("Player").Enable();
-            Cursor.visible = false;
+            //Cursor.visible = false;
         }
         
     }
