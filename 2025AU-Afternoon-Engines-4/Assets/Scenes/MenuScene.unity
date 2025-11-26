@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3a3eb3a141e747ae2c39587048eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Prototype_Level
+  Scene: AsylumLevelScene00
   firstMenuItem: {fileID: 1544402932}
   startButtonUnselected: {fileID: 1544402934}
   exitButtonUnselected: {fileID: 947841058}

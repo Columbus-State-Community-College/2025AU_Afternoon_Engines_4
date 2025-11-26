@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Prototype_Level.unity
-    guid: ffa703e094e48ff41822837fa6308259
+    path: Assets/Scenes/AsylumLevelScene00.unity
+    guid: e98f236267375984f9d562604b9ba3fa
+  - enabled: 1
+    path: Assets/Scenes/WaterLevelScene01.unity
+    guid: f41372a87f9a2214d88c2bc5d9b2ad43
   - enabled: 1
     path: Assets/Scenes/WildWestLevelScene02.unity
     guid: 528110e32454bc54b87cbe66e74ac67b
+  - enabled: 1
+    path: Assets/Scenes/VampireLevelScene03.unity
+    guid: 1914c5901ae93fa4e831bca1763e8692
+  - enabled: 1
+    path: Assets/Scenes/Prototype_Level.unity
+    guid: ffa703e094e48ff41822837fa6308259
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 399f8094c7c4cd14da332818784db1ef, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
