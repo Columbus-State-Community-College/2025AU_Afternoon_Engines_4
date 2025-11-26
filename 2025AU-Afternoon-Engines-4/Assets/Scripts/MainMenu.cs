@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
@@ -10,7 +11,12 @@ public class MainMenu : MonoBehaviour
     public string Scene;
     public GameObject firstMenuItem;
     public Button startButtonUnselected;
+    public Button creditsButtonUnselected;
     public Button exitButtonUnselected;
+    public TMP_Text textChange;
+    public TMP_Text creditsTitle;
+    public GameObject makersCreditsText;
+    public GameObject soundCreditsText;
     private Color newColor = Color.blue;
 
     void Start()
@@ -32,6 +38,13 @@ public class MainMenu : MonoBehaviour
             startButtonUnselected.colors = cb;
         }
 
+        if (creditsButtonUnselected != null)
+        {
+            ColorBlock cb = creditsButtonUnselected.colors;
+            cb.normalColor = newColor;
+            creditsButtonUnselected.colors = cb;
+        }
+
         if (exitButtonUnselected != null)
         {
             ColorBlock cb = exitButtonUnselected.colors;
@@ -44,6 +57,49 @@ public class MainMenu : MonoBehaviour
     {
         InputSystem.EnableDevice(Mouse.current);
         SceneManager.LoadScene(Scene);
+    }
+
+    public void CreditsMenu()
+    {
+        creditsTitle.text = "---Credits---";
+
+        if (startButtonUnselected != null)
+        {
+            startButtonUnselected.interactable = false;
+        }
+
+        if (exitButtonUnselected != null)
+        {
+            exitButtonUnselected.interactable = false;
+        }
+
+        creditsButtonUnselected.onClick.AddListener(BackMenu);
+        makersCreditsText.SetActive(true);
+        soundCreditsText.SetActive(true);
+
+        textChange.text = "Back";
+        creditsButtonUnselected.onClick.RemoveListener(CreditsMenu);
+    }
+
+    public void BackMenu()
+    {
+        creditsTitle.text = "Mind Break!";
+        textChange.text = "Credits";
+
+        if (startButtonUnselected != null)
+        {
+            startButtonUnselected.interactable = true;
+        }
+
+        if (exitButtonUnselected != null)
+        {
+            exitButtonUnselected.interactable = true;
+        }
+
+        creditsButtonUnselected.onClick.AddListener(CreditsMenu);
+        makersCreditsText.SetActive(false);
+        soundCreditsText.SetActive(false);
+        creditsButtonUnselected.onClick.RemoveListener(BackMenu);
     }
 
     public void QuitGame()
