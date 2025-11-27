@@ -74,7 +74,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -272,7 +272,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -475,7 +475,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b39e5a87be51a4ba4f92ee38c0411a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CakeObject: {fileID: 0}
+  xOffset: 0.5
+  yOffset: 0.5
+  zOffset: 0.5
+  puzzleObjects:
+  - {fileID: 0}
 --- !u!114 &345790199807232845
 MonoBehaviour:
   m_ObjectHideFlags: 0

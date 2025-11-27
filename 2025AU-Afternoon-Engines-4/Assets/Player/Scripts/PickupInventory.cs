@@ -213,15 +213,22 @@ public class PickupInventory : MonoBehaviour, IInteractable
     void PickupObject(GameObject objectPickup)
     {
         heldObject = objectPickup;
+        string tempTag = heldObject.gameObject.tag;
 
-        if (CheckTagArray(heldObject.gameObject.tag, PuzzleViewTagArray))
+        if (CheckTagArray(tempTag, PuzzleViewTagArray))
         {
             DropObject();
             Player.GetComponent<FirstPersonController>().enabled = false;
             PuzzleViewEnter.Play();
             
-            //PuzzleView1();
-            PuzzleView2();
+            if (tempTag == "Joystick")
+            {
+                PuzzleView1();
+            }
+            else if (tempTag == "Binoculars")
+            {
+                PuzzleView2();
+            }
         }
 
         else {
