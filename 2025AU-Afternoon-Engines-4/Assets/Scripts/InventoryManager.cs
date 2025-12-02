@@ -1,13 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
     [Tooltip("Put the hotbar selector / highlighter from the UI here")]
     public Image hotBarSelector;
-    [Tooltip("Put the main inventory from the UI here")]
-    public GameObject mainInventory;
+    [Tooltip("Put the main inventory png from the UI here")]
+    public GameObject mainInventoryImage;
+    [Tooltip("Put the item Name text from the UI here")]
+    public TMP_Text itemNameText;
+    [Tooltip("Put the item Description text from the UI here")]
+    public TMP_Text itemDescreptionText;
     [Tooltip("Put the PreviewCamera object from the Player prefab here")]
     public Camera previewCamera;
     private int[] hotBarPositionX = { -505, -353, -209, -66, 80, 224, 365, 515 };
@@ -17,6 +22,7 @@ public class InventoryManager : MonoBehaviour
     private int[] mainInventoryPositionY = { 120, 230, 350 };
     private Sprite spriteThumbnail;
     private Image itemThumbnail;
+    private Image bigItemThumbnail;
     private int spriteSize = 92;
     private List<Image> hotBarSlotsUsed = new List<Image>();
     private List<Image> inventorySlotsUsed = new List<Image>();
@@ -35,9 +41,12 @@ public class InventoryManager : MonoBehaviour
         // Ensures the selector always starts at the first slot
         CycleSelectorPosition(0);
         // Hides the main inventory initially
-        mainInventory.SetActive(false);
+        mainInventoryImage.SetActive(false);
+        itemNameText.gameObject.SetActive(false);
+        itemDescreptionText.gameObject.SetActive(false);
+        
         // Gets the "Canvas" element of the UI to be able to access all the other UI elements
-        parentUI = mainInventory.transform.parent.gameObject;
+        parentUI = mainInventoryImage.transform.parent.gameObject;
     }
 
     public void OpenInventory()
@@ -57,7 +66,11 @@ public class InventoryManager : MonoBehaviour
 
         hotBarSelector.transform.gameObject.SetActive(true);
         hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[0], mainInventoryPositionY[0] - 15, 0);
-        mainInventory.SetActive(true);
+        mainInventoryImage.SetActive(true);
+        UpdateItemDescriptions();
+        itemNameText.gameObject.SetActive(true);
+        itemDescreptionText.gameObject.SetActive(true);
+        bigItemThumbnail.gameObject.SetActive(true);
         inventoryOpen = true;
     }
 
@@ -79,7 +92,10 @@ public class InventoryManager : MonoBehaviour
         }
 
         hotBarSelector.rectTransform.anchoredPosition = new Vector3(hotBarPositionX[0], hotBarPositionY, 0);
-        mainInventory.SetActive(false);
+        mainInventoryImage.SetActive(false);
+        bigItemThumbnail.gameObject.SetActive(false);
+        itemNameText.gameObject.SetActive(false);
+        itemDescreptionText.gameObject.SetActive(false);
         inventoryOpen = false;
     }
 
@@ -146,7 +162,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Math for deciding the selector position (X & Y axis) in the main inventory
-    void MainInventoryNavigation()
+    private void MainInventoryNavigation()
     {
         // If the position is "above" the inventory amount, send it to the first slot
         // Else If the position is "below" the inventory amount, send it to the last slot
@@ -158,6 +174,8 @@ public class InventoryManager : MonoBehaviour
         else if (inventorySelectorPosition <= 15) { positionY = 1; }
         else { positionY = 2; }
         hotBarSelector.rectTransform.anchoredPosition = new Vector3(mainInventoryPositionX[inventorySelectorPosition], mainInventoryPositionY[positionY] - 15, 0);
+
+        UpdateItemDescriptions();
     }
 
     public void InstantiateInventoryItem(GameObject item, int position)
@@ -190,22 +208,26 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateInventoryUI(List<GameObject> inventory)
     {
+        int i = 0;
         // Currently called every frame in the PickUpInventory.cs Update() function | on the week 4 task list to change this
         // Iterates through every hotbar thumbnail image, destroying thumbnails for items that are no longer stored, and repositioning thumbnails for items still there
-        foreach (Image uiItem in hotBarSlotsUsed)
+        if (!inventoryOpen)
         {
-            if (uiItem != null)
+            foreach (Image uiItem in hotBarSlotsUsed)
             {
-                Destroy(uiItem.gameObject);
+                if (uiItem != null)
+                {
+                    Destroy(uiItem.gameObject);
+                }
             }
-        }
-        hotBarSlotsUsed.Clear();
+            hotBarSlotsUsed.Clear();
 
-        int i = 0;
-        foreach (GameObject item in inventory)
-        {
-            InstantiateInventoryItem(item, i);
-            i++;
+            i = 0;
+            foreach (GameObject item in inventory)
+            {
+                InstantiateInventoryItem(item, i);
+                i++;
+            }
         }
 
         if (inventoryOpen)
@@ -227,6 +249,31 @@ public class InventoryManager : MonoBehaviour
                 i++;
             }
         }
+    }
+
+    private void UpdateItemDescriptions()
+    {
+        // Gets the item data from the ItemData.cs script on that specific GameObject
+        string itemName = mainInventoryItems[inventorySelectorPosition].GetComponent<ItemData>().itemName;
+        string itemDescription = mainInventoryItems[inventorySelectorPosition].GetComponent<ItemData>().itemDescription;
+
+        // Displays the item data in the text boxes
+        itemNameText.text = itemName;
+        itemDescreptionText.text = itemDescription;
+
+        // For displaying a large version of the item thumbnail
+        if (bigItemThumbnail == null)
+        {
+            bigItemThumbnail = Instantiate(inventorySlotsUsed[inventorySelectorPosition], inventorySlotsUsed[inventorySelectorPosition].transform.parent);
+            bigItemThumbnail.name = "bigItemThumbnail_Image";
+        }
+        else
+        {
+            Sprite tempItemSprite = inventorySlotsUsed[inventorySelectorPosition].GetComponent<Image>().sprite;
+            bigItemThumbnail.sprite = tempItemSprite;
+        }
+        bigItemThumbnail.rectTransform.sizeDelta = new Vector2(spriteSize * 5, spriteSize * 5);
+        bigItemThumbnail.rectTransform.anchoredPosition = new Vector3(-368, 478, 0);
     }
 
     private void CreateItemImage(Texture2D tempThumbnail)
@@ -263,7 +310,7 @@ public class InventoryManager : MonoBehaviour
         objectThumbnail.ReadPixels(new Rect(0, 0, spriteSize, spriteSize), 0, 0);
         objectThumbnail.Apply();
 
-        // Clean up
+        // Clean up | .Destroy() does not work, it needs to be .DestroyImmediate()
         previewCamera.targetTexture = null;
         RenderTexture.active = null;
         tempTexture.Release();
