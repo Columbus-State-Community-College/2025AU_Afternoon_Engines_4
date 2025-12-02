@@ -1,3 +1,7 @@
 2025AU-Afternoon-Engines-4/.vscode/settings.json
 2025AU-Afternoon-Engines-4/.vscode/extensions.json
 2025AU-Afternoon-Engines-4/.vscode/launch.json
+
+
+# Mac-only .DS_Store helpers
+.DS_Store
