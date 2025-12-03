@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenuScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AsylumLevelScene00.unity
     guid: e98f236267375984f9d562604b9ba3fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WaterLevelScene01.unity
     guid: f41372a87f9a2214d88c2bc5d9b2ad43
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WildWestLevelScene02.unity
     guid: 528110e32454bc54b87cbe66e74ac67b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/VampireLevelScene03.unity
     guid: 1914c5901ae93fa4e831bca1763e8692
   - enabled: 1
