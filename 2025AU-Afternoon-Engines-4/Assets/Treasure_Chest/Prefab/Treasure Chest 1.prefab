@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.2134984
+      value: 1.380092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.2134984
+      value: 1.380092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.2134984
+      value: 1.380092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.66
+      value: 10.9376
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63
+      value: 0.96790004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 1.2606
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -61,23 +61,126 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8268885089669383272, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8268885089669383272, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8532128
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8268885089669383272, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.521563
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8268885089669383272, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8268885089669383272, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8268885089669383272, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -62.874
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
       propertyPath: m_Name
-      value: Treasure Chest
+      value: Treasure Chest 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2148948413820411110}
+    - targetCorrespondingSourceObject: {fileID: 3001653148960597921, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6087232440876155285}
+    - targetCorrespondingSourceObject: {fileID: 3001653148960597921, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2307342328596388338}
   m_SourcePrefab: {fileID: 100100000, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+--- !u!1 &5671858714904806830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+  m_PrefabInstance: {fileID: 4789319417602767103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2148948413820411110
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5671858714904806830}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4433349922207265820, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+--- !u!1 &7772956771046219614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3001653148960597921, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}
+  m_PrefabInstance: {fileID: 4789319417602767103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6087232440876155285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772956771046219614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 1
+  willMove: 0
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: -62
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 1
+  movementX: 0
+  movementY: 0
+  movementZ: 0
+  soundEffect: {fileID: 0}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  linkedPuzzleCompleted: 0
+--- !u!64 &2307342328596388338
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7772956771046219614}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8648318152841473598, guid: 0314028688c7ba146a690e51882ab6e3, type: 3}

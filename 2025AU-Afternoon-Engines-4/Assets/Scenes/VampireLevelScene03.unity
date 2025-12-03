@@ -6367,7 +6367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1971092347352635522, guid: 300ae711ca97a0349b9d3531a02c6384, type: 3}
       propertyPath: m_Center.x
-      value: 0.31485835
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1971092347352635522, guid: 300ae711ca97a0349b9d3531a02c6384, type: 3}
       propertyPath: m_Center.y
@@ -24360,6 +24360,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169854124400890217, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: Scene
+      value: Mind_Break
+      objectReference: {fileID: 0}
     - target: {fileID: 169854124400890217, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
       propertyPath: loadingScreen
       value: 

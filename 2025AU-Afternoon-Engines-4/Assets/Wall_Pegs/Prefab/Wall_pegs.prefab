@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2977476974272614904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9213523928363384341}
+  - component: {fileID: 3944834652238998089}
+  m_Layer: 0
+  m_Name: PuzzleTrigger_Tubes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9213523928363384341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977476974272614904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.3, y: 65, z: 8.9}
+  m_LocalScale: {x: 202.1377, y: 127.44254, z: 15.256003}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1865062564814668379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3944834652238998089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977476974272614904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2191196897779459504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,16 +62,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.020455679
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.020455679
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.020455679
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 5.4573
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.1919003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.02
+      value: 0.5498
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,6 +119,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9213523928363384341}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -9194409377166261422, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4378992872646694040}
   m_SourcePrefab: {fileID: 100100000, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+--- !u!4 &1865062564814668379 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+  m_PrefabInstance: {fileID: 2191196897779459504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2165761494022170338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -9194409377166261422, guid: f36472faf748dc3418eb14a5d3e702b7, type: 3}
+  m_PrefabInstance: {fileID: 2191196897779459504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4378992872646694040
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165761494022170338}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 201.87965, y: 128.86276, z: 3.6719134}
+  m_Center: {x: 0, y: 65.03212, z: 0}

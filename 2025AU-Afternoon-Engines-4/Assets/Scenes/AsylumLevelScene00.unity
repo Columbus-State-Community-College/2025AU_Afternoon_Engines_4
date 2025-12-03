@@ -1404,6 +1404,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1405777450}
     m_Modifications:
     - target: {fileID: 169854124400890217, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: Scene
+      value: Mind_Break
+      objectReference: {fileID: 0}
+    - target: {fileID: 169854124400890217, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
       propertyPath: loadingScreen
       value: 
       objectReference: {fileID: 1253358627}
