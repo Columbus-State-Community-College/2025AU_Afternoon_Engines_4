@@ -47,7 +47,7 @@ public class FirstPersonController : MonoBehaviour
     [Header("Cooldown Timers")]
     [SerializeField] private float InteractionCooldown = 0.2f;
     private float interactionCooldownTimer = 0.0f;
-    [SerializeField] private float GlobalUICooldown = 0.2f;
+    [SerializeField] private float GlobalUICooldown = 0.5f;
     private float UICooldownTimer = 0.0f;
     private bool UIinputPermitted = true;
     //private bool interactionPermitted = true;

@@ -77,19 +77,23 @@ public class MainManager : MonoBehaviour
 
     public void PauseGameScreen()
     {
+        GameObject referenceToPauseScreen = PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject; 
         Debug.LogAssertion(PlayerObject.GetInstanceID());
+        Debug.LogAssertion(PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject);
         if (!isPaused)
         {
+            PlayerObject.transform.Find(PauseScreen.name);
             isPaused = true;
-            
-            PlayerObject.GetComponentInChildren<PauseScreenScript>().SetActivationState(true);
+            referenceToPauseScreen.SetActive(true);
+            //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(true);
             PlayerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
         }
         else
         {
             
             isPaused = false;
-            PlayerObject.GetComponentInChildren<PauseScreenScript>().SetActivationState(false);
+            referenceToPauseScreen.SetActive(false);
+            //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(false);
             PlayerObject.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("Player");
         }
         
