@@ -149,7 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 0}
-  PauseScreen: {fileID: 421891300473777390, guid: cedaa4837f2f90a4aae7ff585ebb1863, type: 3}
   WinScreen: {fileID: 421891300473777390, guid: 7e80a41a209cba749960a5c1e4331b36, type: 3}
   LoseScreen: {fileID: 3688392811743516615, guid: 75a17970808202f45a64d6eea5c2e4cb, type: 3}
 --- !u!4 &18063754
@@ -4111,6 +4110,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152879680306580068, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.434341
+      objectReference: {fileID: 0}
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: PuzzleViewCamera1
       value: 
@@ -4127,6 +4130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5151732352172121190, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 744a906a4946c6e41b63ba428306a4b1, type: 3}
     - target: {fileID: 5601747217787851557, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: OptionsManager
       value: 

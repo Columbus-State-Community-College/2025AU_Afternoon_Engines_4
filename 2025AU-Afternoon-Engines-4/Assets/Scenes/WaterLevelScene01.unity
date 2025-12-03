@@ -440,10 +440,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152879680306580068, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.387499
+      objectReference: {fileID: 0}
     - target: {fileID: 4819260905712991083, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5151732352172121190, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 744a906a4946c6e41b63ba428306a4b1, type: 3}
     - target: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
