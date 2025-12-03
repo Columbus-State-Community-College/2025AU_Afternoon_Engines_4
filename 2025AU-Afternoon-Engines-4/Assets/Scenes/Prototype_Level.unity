@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b90a11d66893d4c84f499312f84ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputHandler: {fileID: 0}
+  PlayerObject: {fileID: 0}
   PauseScreen: {fileID: 421891300473777390, guid: cedaa4837f2f90a4aae7ff585ebb1863, type: 3}
   WinScreen: {fileID: 421891300473777390, guid: 7e80a41a209cba749960a5c1e4331b36, type: 3}
   LoseScreen: {fileID: 3688392811743516615, guid: 75a17970808202f45a64d6eea5c2e4cb, type: 3}
@@ -3692,6 +3692,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643065936}
   m_Mesh: {fileID: 3738015642817059878, guid: 3b8e490931690be43886c9ef65fc7698, type: 3}
+--- !u!1001 &655574890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 169854124400890217, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: Scene
+      value: AsylumLevelScene00
+      objectReference: {fileID: 0}
+    - target: {fileID: 169854124400890217, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: loadingScreen
+      value: 
+      objectReference: {fileID: 803505536}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99693406
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.07824633
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.538
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -8.976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041691825354070310, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882163866555423093, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
+      propertyPath: m_Name
+      value: SceneLoadingZone
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
 --- !u!1001 &686456527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4026,6 +4131,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+--- !u!114 &803505536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5151732352172121190, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+  m_PrefabInstance: {fileID: 803505535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829360928
 GameObject:
   m_ObjectHideFlags: 0
@@ -12265,3 +12381,4 @@ SceneRoots:
   - {fileID: 5462301105536603901}
   - {fileID: 2077899498}
   - {fileID: 406665039}
+  - {fileID: 655574890}

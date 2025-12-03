@@ -70,7 +70,7 @@ public class InventoryManager : MonoBehaviour
         UpdateItemDescriptions();
         itemNameText.gameObject.SetActive(true);
         itemDescreptionText.gameObject.SetActive(true);
-        bigItemThumbnail.gameObject.SetActive(true);
+        bigItemThumbnail?.gameObject.SetActive(true);
         inventoryOpen = true;
     }
 
@@ -80,7 +80,7 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform uiElement in parentUI.transform)
         {
             // This makes sure these arent enabled erroneously
-            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen" || uiElement.gameObject.name != "PuzzleView1Controls_Text")
+            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen" || uiElement.gameObject.name != "PuzzleView1Controls_Text" || uiElement.gameObject.name != "PauseScreen" || uiElement.gameObject.name != "MusicSettings_Text" || uiElement.gameObject.name != "FullscreenSettings_Text" || uiElement.gameObject.name != "OptionsPopup_text" || uiElement.gameObject.name != "Loading_Screen")
             {
                 uiElement.gameObject.SetActive(true);
             }
@@ -93,7 +93,7 @@ public class InventoryManager : MonoBehaviour
 
         hotBarSelector.rectTransform.anchoredPosition = new Vector3(hotBarPositionX[0], hotBarPositionY, 0);
         mainInventoryImage.SetActive(false);
-        bigItemThumbnail.gameObject.SetActive(false);
+        bigItemThumbnail?.gameObject.SetActive(false);
         itemNameText.gameObject.SetActive(false);
         itemDescreptionText.gameObject.SetActive(false);
         inventoryOpen = false;
@@ -253,27 +253,30 @@ public class InventoryManager : MonoBehaviour
 
     private void UpdateItemDescriptions()
     {
-        // Gets the item data from the ItemData.cs script on that specific GameObject
-        string itemName = mainInventoryItems[inventorySelectorPosition].GetComponent<ItemData>().itemName;
-        string itemDescription = mainInventoryItems[inventorySelectorPosition].GetComponent<ItemData>().itemDescription;
-
-        // Displays the item data in the text boxes
-        itemNameText.text = itemName;
-        itemDescreptionText.text = itemDescription;
-
-        // For displaying a large version of the item thumbnail
-        if (bigItemThumbnail == null)
+        if (mainInventoryItems.Count > 0)
         {
-            bigItemThumbnail = Instantiate(inventorySlotsUsed[inventorySelectorPosition], inventorySlotsUsed[inventorySelectorPosition].transform.parent);
-            bigItemThumbnail.name = "bigItemThumbnail_Image";
+            // Gets the item data from the ItemData.cs script on that specific GameObject
+            string itemName = mainInventoryItems[inventorySelectorPosition].GetComponent<ItemData>().itemName;
+            string itemDescription = mainInventoryItems[inventorySelectorPosition].GetComponent<ItemData>().itemDescription;
+
+            // Displays the item data in the text boxes
+            itemNameText.text = itemName;
+            itemDescreptionText.text = itemDescription;
+
+            // For displaying a large version of the item thumbnail
+            if (bigItemThumbnail == null)
+            {
+                bigItemThumbnail = Instantiate(inventorySlotsUsed[inventorySelectorPosition], inventorySlotsUsed[inventorySelectorPosition].transform.parent);
+                bigItemThumbnail.name = "bigItemThumbnail_Image";
+            }
+            else
+            {
+                Sprite tempItemSprite = inventorySlotsUsed[inventorySelectorPosition].GetComponent<Image>().sprite;
+                bigItemThumbnail.sprite = tempItemSprite;
+            }
+            bigItemThumbnail.rectTransform.sizeDelta = new Vector2(spriteSize * 5, spriteSize * 5);
+            bigItemThumbnail.rectTransform.anchoredPosition = new Vector3(-368, 478, 0);
         }
-        else
-        {
-            Sprite tempItemSprite = inventorySlotsUsed[inventorySelectorPosition].GetComponent<Image>().sprite;
-            bigItemThumbnail.sprite = tempItemSprite;
-        }
-        bigItemThumbnail.rectTransform.sizeDelta = new Vector2(spriteSize * 5, spriteSize * 5);
-        bigItemThumbnail.rectTransform.anchoredPosition = new Vector3(-368, 478, 0);
     }
 
     private void CreateItemImage(Texture2D tempThumbnail)
