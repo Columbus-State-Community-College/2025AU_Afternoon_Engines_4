@@ -44,9 +44,12 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private PlayerInputHandler playerInputHandler;
     [SerializeField] private Image reticle;
 
-    [Header("Cooldown Timer")]
+    [Header("Cooldown Timers")]
     [SerializeField] private float InteractionCooldown = 0.2f;
     private float interactionCooldownTimer = 0.0f;
+    [SerializeField] private float GlobalUICooldown = 0.2f;
+    private float UICooldownTimer = 0.0f;
+    private bool UIinputPermitted = true;
     //private bool interactionPermitted = true;
 
     [Header("Sounds")]
@@ -58,12 +61,15 @@ public class FirstPersonController : MonoBehaviour
     // if sprint is triggered, multiply walkSpeed by sprintMultiplier, otherwise maintain walkSpeed (multiply it by 1)
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
     private PickupInventory pickUpScript;
+
+    private MainManager mainManagerInstance = MainManager.Instance;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         interactionCooldownTimer = InteractionCooldown;
+        UICooldownTimer = GlobalUICooldown;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -214,10 +220,20 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandlePauseMenu()
     {
-        if (playerInputHandler.PauseTriggered)
+        if (playerInputHandler.PauseTriggered && UIinputPermitted)
         {
-            MainManager.Instance.PauseGameScreen();
-            Debug.LogAssertion("Game Pause input detected");
+            mainManagerInstance.PauseGameScreen();
+            UICooldownTimer = GlobalUICooldown;
+            UIinputPermitted = false;
+            //Debug.LogAssertion("Game Pause input detected");
+        }
+        else
+        {
+            UICooldownTimer -= Time.unscaledDeltaTime;
+            if (UICooldownTimer <= 0.0f)
+            {
+                UIinputPermitted = true;
+            }
         }
     }
 }

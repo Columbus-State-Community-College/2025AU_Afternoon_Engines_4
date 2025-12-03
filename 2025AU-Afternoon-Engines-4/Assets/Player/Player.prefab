@@ -1732,6 +1732,7 @@ MonoBehaviour:
   playerInputHandler: {fileID: 8172701533369116017}
   reticle: {fileID: 5271367028149171708}
   InteractionCooldown: 0.2
+  GlobalUICooldown: 0.2
   JumpSound: {fileID: 6807990521440485629}
   RunningSound: {fileID: 5238793338624763082}
 --- !u!114 &547752402032282857

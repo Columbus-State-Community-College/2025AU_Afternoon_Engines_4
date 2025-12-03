@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5982282364325683954}
-  - component: {fileID: 1555049914919268963}
+  - component: {fileID: 4867218307905861255}
   m_Layer: 0
   m_Name: WinScreen
   m_TagString: Untagged
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1555049914919268963
+--- !u!114 &4867218307905861255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,11 +49,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 421891300473777390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c4658d07934f54894434f24c63b3df, type: 3}
+  m_Script: {fileID: 11500000, guid: a2716af21d6494d4a89008dd938618c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ThisScreen: {fileID: 421891300473777390}
-  inputHandlerObject: {fileID: 0}
 --- !u!1 &945915514114182837
 GameObject:
   m_ObjectHideFlags: 0

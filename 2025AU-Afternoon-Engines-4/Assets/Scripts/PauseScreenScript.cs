@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EndScreenScript : MonoBehaviour
+public class PauseScreenScript : MonoBehaviour
 {
     [SerializeField] private GameObject ThisScreen;
     //[SerializeField] private PlayerInputHandler inputHandlerObject;
@@ -23,7 +23,13 @@ public class EndScreenScript : MonoBehaviour
     
     void Start()
     {
-        ThisScreen.SetActive(false);
+        //ThisScreen.SetActive(false);
+        this.gameObject.SetActive(false);
+    }
+
+    public void SetActivationState(bool state)
+    {
+        this.gameObject.SetActive(state);
     }
 
     /*/ Update is called once per frame

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EndScreenScript : MonoBehaviour
+public class WinScreenScript : MonoBehaviour
 {
     [SerializeField] private GameObject ThisScreen;
     //[SerializeField] private PlayerInputHandler inputHandlerObject;

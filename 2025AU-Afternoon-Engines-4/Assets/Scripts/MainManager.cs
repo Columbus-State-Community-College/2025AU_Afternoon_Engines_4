@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
@@ -10,7 +11,7 @@ public class MainManager : MonoBehaviour
 
     public Dictionary<string, bool> ProgressTracker = new Dictionary<string, bool>();// a dictionary for tracking if a flag/puzzle has been completed
 
-    [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private GameObject PlayerObject;
 
     [Header("Game-Pausing Screens")]
     [SerializeField] private GameObject PauseScreen;
@@ -61,6 +62,7 @@ public class MainManager : MonoBehaviour
     {
         if (!isPaused)  // while not paused
         {
+            
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -75,16 +77,20 @@ public class MainManager : MonoBehaviour
 
     public void PauseGameScreen()
     {
-        Debug.LogAssertion("MainManager hears the pause call");
+        Debug.LogAssertion(PlayerObject.GetInstanceID());
         if (!isPaused)
         {
-            PauseScreen.SetActive(true);
             isPaused = true;
+            
+            PlayerObject.GetComponentInChildren<PauseScreenScript>().SetActivationState(true);
+            PlayerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
         }
         else
         {
-            PauseScreen.SetActive(false);
+            
             isPaused = false;
+            PlayerObject.GetComponentInChildren<PauseScreenScript>().SetActivationState(false);
+            PlayerObject.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("Player");
         }
         
     }
