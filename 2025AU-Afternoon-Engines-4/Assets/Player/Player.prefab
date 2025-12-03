@@ -1699,6 +1699,7 @@ GameObject:
   - component: {fileID: 7900283071511951156}
   - component: {fileID: 595199396238110603}
   - component: {fileID: 8196334646950275432}
+  - component: {fileID: 6783180068968898003}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1958,6 +1959,19 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!114 &6783180068968898003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819260905712991083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d431e2c32ff153469da662a0c82e51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseScreen: {fileID: 421891300473777390, guid: cedaa4837f2f90a4aae7ff585ebb1863, type: 3}
 --- !u!1 &5149618858965099824
 GameObject:
   m_ObjectHideFlags: 0

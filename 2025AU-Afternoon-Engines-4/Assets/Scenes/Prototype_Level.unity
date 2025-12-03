@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 86875906}
   - component: {fileID: 86875908}
   - component: {fileID: 86875909}
+  - component: {fileID: 86875910}
   m_Layer: 0
   m_Name: Purple_Button_FakeKey
   m_TagString: Key01
@@ -708,6 +709,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &86875910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86875904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Purple Button
+  itemDescription: gsgdfgdfh
 --- !u!1 &89662512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,6 +3081,7 @@ GameObject:
   - component: {fileID: 564901696}
   - component: {fileID: 564901698}
   - component: {fileID: 564901699}
+  - component: {fileID: 564901700}
   m_Layer: 0
   m_Name: Green_Button_FakeKey
   m_TagString: Key01
@@ -3189,6 +3205,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &564901700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564901694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Green Button
+  itemDescription: sdfgsfdg
 --- !u!1 &570666256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3461,6 +3491,7 @@ GameObject:
   - component: {fileID: 629703407}
   - component: {fileID: 629703409}
   - component: {fileID: 629703410}
+  - component: {fileID: 629703411}
   m_Layer: 0
   m_Name: Yellow_Button_FakeKey
   m_TagString: Key01
@@ -3584,6 +3615,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &629703411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629703405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Yellow Button
+  itemDescription: fhgdfhd
 --- !u!1 &643065936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6826,6 +6871,7 @@ GameObject:
   - component: {fileID: 1239974652}
   - component: {fileID: 1239974651}
   - component: {fileID: 1239974654}
+  - component: {fileID: 1239974655}
   m_Layer: 0
   m_Name: Orange_FakeKey_01
   m_TagString: Key02
@@ -6949,6 +6995,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1239974655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239974649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Orange Key
+  itemDescription: skgmsdg
 --- !u!1 &1260497893
 GameObject:
   m_ObjectHideFlags: 0
@@ -7539,6 +7599,7 @@ GameObject:
   - component: {fileID: 1322167864}
   - component: {fileID: 1322167863}
   - component: {fileID: 1322167866}
+  - component: {fileID: 1322167867}
   m_Layer: 0
   m_Name: Blue_Key_01
   m_TagString: Key01
@@ -7662,6 +7723,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1322167867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322167861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Blue Key
+  itemDescription: sdfsdf
 --- !u!114 &1376633672 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7210688689410813692, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
@@ -8596,6 +8671,7 @@ GameObject:
   - component: {fileID: 1584680109}
   - component: {fileID: 1584680111}
   - component: {fileID: 1584680110}
+  - component: {fileID: 1584680112}
   m_Layer: 0
   m_Name: Lock_03_FakeKey_01
   m_TagString: Key02
@@ -8670,6 +8746,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1584680112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584680108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Fake Key
+  itemDescription: sdgsdg
 --- !u!1 &1587635839
 GameObject:
   m_ObjectHideFlags: 0
@@ -8990,6 +9080,7 @@ GameObject:
   - component: {fileID: 1672608300}
   - component: {fileID: 1672608301}
   - component: {fileID: 1672608302}
+  - component: {fileID: 1672608303}
   m_Layer: 0
   m_Name: Lock_Pick_Key
   m_TagString: Key01
@@ -9067,6 +9158,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1672608303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672608299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Lock Pick
+  itemDescription: adgsdg
 --- !u!1 &1696611403
 GameObject:
   m_ObjectHideFlags: 0
@@ -9835,6 +9940,7 @@ GameObject:
   - component: {fileID: 1808968918}
   - component: {fileID: 1808968920}
   - component: {fileID: 1808968921}
+  - component: {fileID: 1808968922}
   m_Layer: 0
   m_Name: Red_Button_Key
   m_TagString: Key02
@@ -9958,6 +10064,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1808968922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808968916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Red Button
+  itemDescription: sdgsdg
 --- !u!1 &1821168411
 GameObject:
   m_ObjectHideFlags: 0
@@ -10638,6 +10758,7 @@ GameObject:
   - component: {fileID: 1951376347}
   - component: {fileID: 1951376346}
   - component: {fileID: 1951376349}
+  - component: {fileID: 1951376350}
   m_Layer: 0
   m_Name: Yellow_FakeKey_01
   m_TagString: Key02
@@ -10761,6 +10882,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1951376350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951376344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Yellow Key
+  itemDescription: adgsdg
 --- !u!1 &1962275654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11296,6 +11431,7 @@ GameObject:
   - component: {fileID: 2042878686}
   - component: {fileID: 2042878688}
   - component: {fileID: 2042878689}
+  - component: {fileID: 2042878690}
   m_Layer: 0
   m_Name: Blue_Button_FakeKey
   m_TagString: Key01
@@ -11419,6 +11555,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2042878690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042878684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Blue Button
+  itemDescription: dgsdg
 --- !u!1 &2044059680
 GameObject:
   m_ObjectHideFlags: 0
@@ -11970,6 +12120,7 @@ GameObject:
   - component: {fileID: 2135006117}
   - component: {fileID: 2135006119}
   - component: {fileID: 2135006120}
+  - component: {fileID: 2135006121}
   m_Layer: 0
   m_Name: Orange_Button_FakeKey
   m_TagString: Key01
@@ -12093,6 +12244,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2135006121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135006115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Orange Button
+  itemDescription: sdgsdgs
 --- !u!1001 &714364673096735737
 PrefabInstance:
   m_ObjectHideFlags: 0

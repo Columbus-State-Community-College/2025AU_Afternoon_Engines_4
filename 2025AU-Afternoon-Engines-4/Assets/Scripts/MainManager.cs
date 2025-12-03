@@ -14,7 +14,7 @@ public class MainManager : MonoBehaviour
     [SerializeField] private GameObject PlayerObject;
 
     [Header("Game-Pausing Screens")]
-    [SerializeField] private GameObject PauseScreen;
+    //[SerializeField] private GameObject PauseScreen;
     [SerializeField] private GameObject WinScreen;
     [SerializeField] private GameObject LoseScreen;
 
@@ -43,7 +43,7 @@ public class MainManager : MonoBehaviour
             ProgressTracker.Add("puzzle01", false);
             ProgressTracker.Add("puzzle02", false);
         }
-
+        //PauseScreen = PlayerObject.GetComponent<PlayerChildScript>().PauseScreen;
         /*/ Prepare Game-Pausing Screens
         {
             //PauseScreen = Instantiate(PauseScreen);
@@ -77,14 +77,16 @@ public class MainManager : MonoBehaviour
 
     public void PauseGameScreen()
     {
-        GameObject referenceToPauseScreen = PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject; 
-        Debug.LogAssertion(PlayerObject.GetInstanceID());
-        Debug.LogAssertion(PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject);
+        //var PauseScreenID = PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.GetInstanceID(); 
+        //Debug.LogAssertion(PlayerObject.GetInstanceID());
+        //Debug.LogAssertion("Is Pause Screen active in hierarchy?" + PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.activeInHierarchy);
         if (!isPaused)
         {
-            PlayerObject.transform.Find(PauseScreen.name);
+            //PlayerObject.transform.Find(PauseScreen.name);
             isPaused = true;
-            referenceToPauseScreen.SetActive(true);
+            PlayerObject.GetComponent<PlayerChildScript>().PauseScreen.SetActive(true);
+            //PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.SetActive(true);
+            //Debug.LogAssertion("Is Pause Screen active in hierarchy?" + referenceToPauseScreen.activeInHierarchy);
             //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(true);
             PlayerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
         }
@@ -92,7 +94,8 @@ public class MainManager : MonoBehaviour
         {
             
             isPaused = false;
-            referenceToPauseScreen.SetActive(false);
+            PlayerObject.GetComponent<PlayerChildScript>().PauseScreen.SetActive(true);
+            //referenceToPauseScreen.SetActive(false);
             //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(false);
             PlayerObject.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("Player");
         }

@@ -59,5 +59,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69c248b055207a946a789bb34a0d9e20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8344078117446907362}
   m_SourcePrefab: {fileID: 100100000, guid: 69c248b055207a946a789bb34a0d9e20, type: 3}
+--- !u!1 &6571349799309370826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 69c248b055207a946a789bb34a0d9e20, type: 3}
+  m_PrefabInstance: {fileID: 6337538854129916059}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-8344078117446907362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571349799309370826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Cyan Tube
+  itemDescription: This is a cyan pipe
