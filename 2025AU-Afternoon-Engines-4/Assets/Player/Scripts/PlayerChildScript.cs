@@ -4,9 +4,9 @@ public class PlayerChildScript : MonoBehaviour
 {
     public GameObject PauseScreen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
-        PauseScreen = GameObject.Find("PauseScreen");//.GetComponentInChildren<PauseScreenScript>().gameObject;
+        //PauseScreen = GameObject.Find("PauseScreen");//.GetComponentInChildren<PauseScreenScript>().gameObject;
         Debug.LogAssertion(PauseScreen.activeInHierarchy);
     }
 

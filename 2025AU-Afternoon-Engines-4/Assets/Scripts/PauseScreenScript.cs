@@ -25,6 +25,7 @@ public class PauseScreenScript : MonoBehaviour
     {
         //ThisScreen.SetActive(false);
         this.gameObject.SetActive(false);
+        MainManager.Instance.PauseScreen = this.gameObject;
     }
 
     public void SetActivationState(bool state)
