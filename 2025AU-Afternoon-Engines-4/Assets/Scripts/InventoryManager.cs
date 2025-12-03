@@ -80,7 +80,7 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform uiElement in parentUI.transform)
         {
             // This makes sure these arent enabled erroneously
-            if (uiElement.gameObject.name != "WinScreen" || uiElement.gameObject.name != "LoseScreen" || uiElement.gameObject.name != "PuzzleView1Controls_Text" || uiElement.gameObject.name != "PauseScreen" || uiElement.gameObject.name != "MusicSettings_Text" || uiElement.gameObject.name != "FullscreenSettings_Text" || uiElement.gameObject.name != "OptionsPopup_text" || uiElement.gameObject.name != "Loading_Screen")
+            if (uiElement.gameObject.name != "WinScreen" && uiElement.gameObject.name != "LoseScreen" && uiElement.gameObject.name != "PuzzleView1Controls_Text" && uiElement.gameObject.name != "PauseScreen" && uiElement.gameObject.name != "MusicSettings_Text" && uiElement.gameObject.name != "FullscreenSettings_Text" && uiElement.gameObject.name != "OptionsPopup_text" && uiElement.gameObject.name != "LoadingScreen")
             {
                 uiElement.gameObject.SetActive(true);
             }
