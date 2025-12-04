@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Collections;
 using TMPro;
 
 public class MainMenu : MonoBehaviour
@@ -18,12 +19,30 @@ public class MainMenu : MonoBehaviour
     public GameObject makersCreditsText;
     public GameObject soundCreditsText;
     private Color newColor = Color.blue;
+    private float lastClickTime;
+    private float doubleClickTimeThreshold = 0.3f;
+    public TMP_Text controlsInstructionText;
+    private float displayDuration = 10f;
 
     void Start()
     {
-        InputSystem.DisableDevice(Mouse.current);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked; 
+
+        if (startButtonUnselected != null)
+        {
+            startButtonUnselected.interactable = false;
+        }
+
+        if (exitButtonUnselected != null)
+        {
+            exitButtonUnselected.interactable = false;
+        }
+                
+        if (creditsButtonUnselected != null)
+        {
+            creditsButtonUnselected.interactable = false;
+        }
 
         if (EventSystem.current != null && firstMenuItem != null)
         {
@@ -53,9 +72,59 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            StartGame();
+        }
+
+        if (Mouse.current.middleButton.wasPressedThisFrame)
+        {
+            QuitGame();
+        }
+
+        if (Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            CreditsMenu();
+
+            if (Time.time - lastClickTime < doubleClickTimeThreshold)
+            {
+                BackMenu();
+            }
+
+            lastClickTime = Time.time;
+        }
+    }
+
+    void OnEnable()
+    {
+        StartCoroutine(HideTextAfterDelay());
+    }
+
+    IEnumerator HideTextAfterDelay()
+    {
+        yield return new WaitForSeconds(displayDuration);
+        
+        if (startButtonUnselected != null)
+        {
+            startButtonUnselected.interactable = true;
+        }
+
+        if (exitButtonUnselected != null)
+        {
+            exitButtonUnselected.interactable = true;
+        }
+                
+        if (creditsButtonUnselected != null)
+        {
+            creditsButtonUnselected.interactable = true;
+        }
+        controlsInstructionText.gameObject.SetActive(false);
+    }
+
     public void StartGame()
     {
-        InputSystem.EnableDevice(Mouse.current);
         SceneManager.LoadScene(Scene);
     }
 
