@@ -4,11 +4,9 @@ using TMPro;
 public class OptionsMenuBringUp : MonoBehaviour
 {
     public GameObject OptionsManager;
-    public KeyCode BringUpOptions;
-    public KeyCode BringDownOptions;
-    public TMP_Text musicSettingsText;
-    public TMP_Text optionsPopupText;
-    public TMP_Text fullScreenText;
+    public KeyCode BringUpDownOptions;
+    public KeyCode BringUpDownOptionsGamepad;
+    private bool isOptionsOpen = false;
 
     void Start()
     {
@@ -17,30 +15,28 @@ public class OptionsMenuBringUp : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(BringUpOptions))
+        if (Input.GetKeyDown(BringUpDownOptions) || Input.GetKeyDown(BringUpDownOptionsGamepad))
         {
-            OptionsMenuTurnOn();
-        }
-
-        else if (Input.GetKeyDown(BringDownOptions))
-        {
-            OptionsMenuTurnOff();
+            if (isOptionsOpen)
+            {
+                OptionsMenuTurnOff();
+                isOptionsOpen = false;
+            }
+            else
+            {
+                OptionsMenuTurnOn();
+                isOptionsOpen = true;
+            }
         }
     }
 
     void OptionsMenuTurnOn()
     {
         OptionsManager.GetComponent<OptionsMenu>().enabled = true;
-        optionsPopupText.gameObject.SetActive(true);
-        musicSettingsText.gameObject.SetActive(true);
-        fullScreenText.gameObject.SetActive(true);
     }
 
     void OptionsMenuTurnOff()
     {
         OptionsManager.GetComponent<OptionsMenu>().enabled = false;
-        optionsPopupText.gameObject.SetActive(false);
-        musicSettingsText.gameObject.SetActive(false);
-        fullScreenText.gameObject.SetActive(false);
     }
 }
