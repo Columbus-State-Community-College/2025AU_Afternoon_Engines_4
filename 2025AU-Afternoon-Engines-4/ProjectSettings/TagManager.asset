@@ -23,12 +23,12 @@ TagManager:
   - Head
   - HeadPart
   - Binoculars
-  - RedTube
+  - Tube
   - BlueTube
   - CyanTube
   - OrangeTube
+  - RedTube
   - WhiteTube
-  - Tube
   layers:
   - Default
   - TransparentFX
