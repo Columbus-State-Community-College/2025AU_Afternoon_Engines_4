@@ -50,32 +50,32 @@ public class PuzzleView1 : MonoBehaviour
     {
         if (Input.GetKeyDown(moveObjectBackwardKey) || (Input.GetKeyDown(moveObjectBackwardGamePad)))
         {
-            puzzlePiece.transform.Translate(0, 0, -zOffset);
+            puzzlePiece.transform.Translate(0, 0, -zOffset, Space.World);
         }
 
         else if (Input.GetKeyDown(moveObjectForwardKey) || (Input.GetKeyDown(moveObjectForwardGamePad)))
         {
-            puzzlePiece.transform.Translate(0, 0, zOffset);
+            puzzlePiece.transform.Translate(0, 0, zOffset, Space.World);
         }
 
         else if (Input.GetKeyDown(moveObjectLeftKey) || (Input.GetKeyDown(moveObjectLeftGamePad)))
         {
-            puzzlePiece.transform.Translate(-xOffset, 0, 0);
+            puzzlePiece.transform.Translate(-xOffset, 0, 0, Space.World);
         }
 
         else if (Input.GetKeyDown(moveObjectRightKey) || (Input.GetKeyDown(moveObjectRightGamePad)))
         {
-            puzzlePiece.transform.Translate(xOffset, 0, 0);
+            puzzlePiece.transform.Translate(xOffset, 0, 0, Space.World);
         }
 
         else if (Input.GetKeyDown(moveObjectUpKey) || (Input.GetKeyDown(moveObjectUpGamePad)))
         {
-            puzzlePiece.transform.Translate(0, yOffset, 0);
+            puzzlePiece.transform.Translate(0, yOffset, 0, Space.World);
         }
 
         else if (Input.GetKeyDown(moveObjectDownKey) || (Input.GetKeyDown(moveObjectDownGamePad)))
         {
-            puzzlePiece.transform.Translate(0, -yOffset, 0);
+            puzzlePiece.transform.Translate(0, -yOffset, 0, Space.World);
         }
     }
 }
