@@ -339,6 +339,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152879680306580068, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 83.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 152879680306580068, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: PuzzleViewCamera1
       value: 
@@ -358,6 +366,10 @@ PrefabInstance:
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: 'objectTagArray.Array.data[7]'
       value: Tube
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229259132326182029, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4819260905712991083, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_Name
@@ -418,6 +430,10 @@ PrefabInstance:
     - target: {fileID: 7900283071511951156, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: BringUpDownOptionsGamepad
       value: 339
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079737392218721813, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5601747217787851557, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
