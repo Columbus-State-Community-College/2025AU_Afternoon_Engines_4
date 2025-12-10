@@ -34,6 +34,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
     [SerializeField] private PlayerInputHandler playerInputHandler;
     public GameObject PuzzleViewCamera1;
     public GameObject PuzzleViewCamera2;
+    public GameObject PuzzleViewCamera3;
     public GameObject PuzzleViewManager;
     public InventoryManager inventoryManager;
 
@@ -52,6 +53,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
         inventoryDisplayText.gameObject.SetActive(false);
         PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
         PuzzleViewManager.GetComponent<PuzzleView2>().enabled = false;
+        PuzzleViewManager.GetComponent<PuzzleView3>().enabled = false;
         currentPickupTarget = null;
         heldObject = null;
     }
@@ -229,6 +231,10 @@ public class PickupInventory : MonoBehaviour, IInteractable
             {
                 PuzzleView2();
             }
+            else if (tempTag == "Combination")
+            {
+                PuzzleView3();
+            }
         }
 
         else {
@@ -367,6 +373,14 @@ public class PickupInventory : MonoBehaviour, IInteractable
         PuzzleViewCamera2.SetActive(true);
     }
 
+        void PuzzleView3()
+    {
+        PuzzleView1ControlsText.gameObject.SetActive(true);
+        PuzzleViewManager.GetComponent<PuzzleView3>().enabled = true;
+        PlayerCamera.SetActive(false);
+        PuzzleViewCamera3.SetActive(true);
+    }
+
     void ExitPuzzleView()
     {
         PuzzleView1ControlsText.gameObject.SetActive(false);
@@ -374,9 +388,11 @@ public class PickupInventory : MonoBehaviour, IInteractable
         ManikinPartCheckerText.gameObject.SetActive(false);
         PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
         PuzzleViewManager.GetComponent<PuzzleView2>().enabled = false;
+        PuzzleViewManager.GetComponent<PuzzleView3>().enabled = false;
         Player.GetComponent<FirstPersonController>().enabled = true;
         PlayerCamera.SetActive(true);
         PuzzleViewCamera1.SetActive(false);
         PuzzleViewCamera2.SetActive(false);
+        PuzzleViewCamera3.SetActive(false);
     }
 }
