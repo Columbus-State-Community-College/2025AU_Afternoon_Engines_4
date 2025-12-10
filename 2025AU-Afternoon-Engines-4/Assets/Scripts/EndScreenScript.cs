@@ -3,10 +3,10 @@ using UnityEngine;
 public class EndScreenScript : MonoBehaviour
 {
     [SerializeField] private GameObject ThisScreen;
-    [SerializeField] private PlayerInputHandler inputHandlerObject;
+    //[SerializeField] private PlayerInputHandler inputHandlerObject;
 
 
-
+    /*
     void OnEnable()
     {
         inputHandlerObject.ActivateUIActionMap(true);
@@ -15,7 +15,7 @@ public class EndScreenScript : MonoBehaviour
     void OnDisable()
     {
         inputHandlerObject.ActivateUIActionMap(false);
-    }
+    }*/
 
     // add in an enabled state and disabled state, provide button event functions
 

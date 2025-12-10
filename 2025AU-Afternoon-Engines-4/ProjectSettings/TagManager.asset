@@ -23,6 +23,17 @@ TagManager:
   - Head
   - HeadPart
   - Binoculars
+  - Tube
+  - BlueTube
+  - CyanTube
+  - OrangeTube
+  - RedTube
+  - WhiteTube
+  - Bottle
+  - Figures
+  - Figure1
+  - Figure2
+  - Figure3
   layers:
   - Default
   - TransparentFX

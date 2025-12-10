@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
@@ -10,12 +11,12 @@ public class MainManager : MonoBehaviour
 
     public Dictionary<string, bool> ProgressTracker = new Dictionary<string, bool>();// a dictionary for tracking if a flag/puzzle has been completed
 
-    [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private GameObject PlayerObject;
 
     [Header("Game-Pausing Screens")]
-    [SerializeField] private GameObject PauseScreen;
-    [SerializeField] private GameObject WinScreen;
-    [SerializeField] private GameObject LoseScreen;
+    [SerializeField] public GameObject PauseScreen;
+    [SerializeField] public GameObject WinScreen;
+    [SerializeField] public GameObject LoseScreen;
 
     public static bool isPaused;
 
@@ -28,7 +29,7 @@ public class MainManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
+        //PauseScreen = PlayerObject.GetComponent<PlayerChildScript>().PauseScreen;
     }
 
     // Brackets used for IDE organization in several instances
@@ -42,7 +43,7 @@ public class MainManager : MonoBehaviour
             ProgressTracker.Add("puzzle01", false);
             ProgressTracker.Add("puzzle02", false);
         }
-
+        //PauseScreen = PlayerObject.GetComponent<PlayerChildScript>().PauseScreen;
         /*/ Prepare Game-Pausing Screens
         {
             //PauseScreen = Instantiate(PauseScreen);
@@ -61,6 +62,7 @@ public class MainManager : MonoBehaviour
     {
         if (!isPaused)  // while not paused
         {
+            
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -75,16 +77,30 @@ public class MainManager : MonoBehaviour
 
     public void PauseGameScreen()
     {
-        Debug.LogAssertion("MainManager hears the pause call");
+        //var PauseScreenID = PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.GetInstanceID(); 
+        
+        //Debug.LogAssertion(PlayerObject.GetInstanceID());
+        //PauseScreen = PlayerObject.GetComponent<PlayerChildScript>().PauseScreen.gameObject;
+        Debug.LogAssertion("Is Pause Screen active in hierarchy?" + PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.activeInHierarchy);
+        
         if (!isPaused)
         {
-            PauseScreen.SetActive(true);
+            //PlayerObject.transform.Find(PauseScreen.name);
             isPaused = true;
+            PauseScreen.SetActive(true);
+            //PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.SetActive(true);
+            //Debug.LogAssertion("Is Pause Screen active in hierarchy?" + referenceToPauseScreen.activeInHierarchy);
+            //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(true);
+            //PlayerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
         }
         else
         {
-            PauseScreen.SetActive(false);
+            
             isPaused = false;
+            PauseScreen.SetActive(false);
+            //referenceToPauseScreen.SetActive(false);
+            //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(false);
+            //PlayerObject.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("Player");
         }
         
     }
