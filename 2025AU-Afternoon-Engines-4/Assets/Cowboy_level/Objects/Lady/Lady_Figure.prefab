@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -1.8505075
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -7.824454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.24948989
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.31639948
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.9486261
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 143.109
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -50,10 +50,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
       propertyPath: m_Name
-      value: F_Lady_Figure
+      value: Lady_Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
+      propertyPath: m_TagString
+      value: Figure2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8258984534353744639}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7617638096640151503}
   m_SourcePrefab: {fileID: 100100000, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
+--- !u!1 &8669136267740953340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7bd1a1bf7747c0945880b1d168221e1a, type: 3}
+  m_PrefabInstance: {fileID: 8399103700704593837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8258984534353744639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669136267740953340}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20520133, y: 0.3639507, z: 0.22122289}
+  m_Center: {x: 0, y: 0.18585117, z: -0.009034247}
+--- !u!54 &7617638096640151503
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669136267740953340}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
