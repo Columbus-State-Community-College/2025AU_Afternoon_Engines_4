@@ -28,7 +28,7 @@ public class GameTimer : MonoBehaviour
             else
             {
                 timerIsRunning = false;
-                GameOver();
+                MainManager.Instance.LoseGameScreen();
             }
         }
     }
@@ -40,10 +40,4 @@ public class GameTimer : MonoBehaviour
         timerText.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
     }
 
-    void GameOver()
-    {
-        timerText.text = "Game Over!";
-        Time.timeScale = 0; // Pause the game
-        _UIElements.LoseGame();// Possible Idea: SceneManager.LoadScene("GameOverScene"); // Load up a new scene when you get a game over
-    }
 }
