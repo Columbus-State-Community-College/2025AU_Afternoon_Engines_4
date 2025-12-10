@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -29,7 +30,7 @@ public class MainManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        //PauseScreen = PlayerObject.GetComponent<PlayerChildScript>().PauseScreen;
+        
     }
 
     // Brackets used for IDE organization in several instances
@@ -40,22 +41,10 @@ public class MainManager : MonoBehaviour
 
         // for tracking progress
         {
-            ProgressTracker.Add("puzzle01", false);
-            ProgressTracker.Add("puzzle02", false);
+            InitializeProgressTracker();
+            
         }
-        //PauseScreen = PlayerObject.GetComponent<PlayerChildScript>().PauseScreen;
-        /*/ Prepare Game-Pausing Screens
-        {
-            //PauseScreen = Instantiate(PauseScreen);
-            //WinScreen = Instantiate(WinScreen);
-            //LoseScreen = Instantiate(LoseScreen);
-            PauseScreen.SetActive(false);
-            WinScreen.SetActive(false);
-            LoseScreen.SetActive(false);
-            
-            
-        }*/
-        
+
     }
 
     void Update()
@@ -73,60 +62,67 @@ public class MainManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+        if (ProgressTracker.ElementAt(ProgressTracker.Count - 1).Value == true)
+        {
+            WinGameScreen();
+        }
     }
 
     public void PauseGameScreen()
     {
-        //var PauseScreenID = PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.GetInstanceID(); 
-        
-        //Debug.LogAssertion(PlayerObject.GetInstanceID());
-        //PauseScreen = PlayerObject.GetComponent<PlayerChildScript>().PauseScreen.gameObject;
-        Debug.LogAssertion("Is Pause Screen active in hierarchy?" + PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.activeInHierarchy);
         
         if (!isPaused)
         {
-            //PlayerObject.transform.Find(PauseScreen.name);
             isPaused = true;
             PauseScreen.SetActive(true);
-            //PlayerObject.transform.Find("UI").transform.Find("Canvas").transform.Find(PauseScreen.name).gameObject.SetActive(true);
-            //Debug.LogAssertion("Is Pause Screen active in hierarchy?" + referenceToPauseScreen.activeInHierarchy);
-            //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(true);
-            //PlayerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
         }
         else
         {
-            
             isPaused = false;
             PauseScreen.SetActive(false);
-            //referenceToPauseScreen.SetActive(false);
-            //PlayerObject.GetComponentInChildren<PauseScreenScript>().gameObject.SetActive(false);
-            //PlayerObject.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("Player");
         }
-        
+
     }
 
     public void WinGameScreen()
     {
+        isPaused = true;
         WinScreen.SetActive(true);
     }
 
     public void LoseGameScreen()
     {
+        isPaused = true;
         LoseScreen.SetActive(true);
     }
     public void RestartGame()
     {
+        isPaused = false;
+        ResetProgressTracker();
         SceneManager.LoadScene("MainMenu");
-        /* TODO reset progress
-        foreach (var item in ProgressTracker)
-        {
-            // 
-        }*/
+        
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+    //strictly for readability
+    private void ResetProgressTracker()
+    {
+        InitializeProgressTracker();
+    }
+
+    //  creates the progress tracker on new game and resets it on restart game 
+    private void InitializeProgressTracker()
+    {
+        Dictionary<string, bool> FreshProgressTracker = new Dictionary<string, bool>();
+        {
+            FreshProgressTracker.Add("puzzle01", false);
+            FreshProgressTracker.Add("puzzle02", false);
+        }
+
+        ProgressTracker = FreshProgressTracker;
     }
 
 
