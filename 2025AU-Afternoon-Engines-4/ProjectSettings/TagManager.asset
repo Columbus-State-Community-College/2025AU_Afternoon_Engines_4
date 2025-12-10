@@ -29,6 +29,7 @@ TagManager:
   - OrangeTube
   - RedTube
   - WhiteTube
+  - Bottle
   layers:
   - Default
   - TransparentFX
