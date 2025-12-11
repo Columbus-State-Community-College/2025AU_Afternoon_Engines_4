@@ -1,0 +1,577 @@
+fileFormatVersion: 2
+guid: c62293f472756034f81d99a96fe899b7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3423
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde3b4e7eca37234290f92606a74bb31
+      internalID: -1389291191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 3423
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2096c9f0fbe81be4e80f188580856081
+      internalID: -614290133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3350
+        y: 3423
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f2f4f76e0d13d4bb8f2dd54c002816
+      internalID: -450704692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5025
+        y: 3423
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7341f20e71232b4da8fca045ac487d0
+      internalID: 1054409979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 6700
+        y: 3423
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95646f4f3c1cccc4189e05a27ef1700d
+      internalID: 2121098532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2282
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15073d53a85ab874bba24f3ad15b3bde
+      internalID: -1591742259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 2282
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c4a38d76c11b645bba01d38240eacc
+      internalID: -1681208759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3350
+        y: 2282
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b9f7be5b6c3ce4d9a3c294ba5553b2
+      internalID: 570061014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5025
+        y: 2282
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cfde61f1db0ab4b8b57e3e155a6aba
+      internalID: -1037731256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 6700
+        y: 2282
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199d02f31ada394489a9a99564c237ca
+      internalID: -1222164862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1141
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bad4bbc4fdb8549bba3d8a26ee04ee
+      internalID: -91547667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1141
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364fc837447fe5a4396a87d2248e535c
+      internalID: -1638502362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3350
+        y: 1141
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2fe9a60e5672540a798b4dd2681516
+      internalID: 818437506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5025
+        y: 1141
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da3eb5032b194f44bc12d7ee1d08fd8
+      internalID: 1889262743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 6700
+        y: 1141
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c155db4931af8a74a8985407a598f7e4
+      internalID: -987786241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10136a6c1da2d2e45aa099d6703c5bf6
+      internalID: -1485224206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 0
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ee9c88f0f0726489bee75b45e47365
+      internalID: 97650243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3350
+        y: 0
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1ed9d3ff6dc9b43911ac155daacc65
+      internalID: 676491634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5025
+        y: 0
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1c93f1e99d3f840b9f125e88e0ec6e
+      internalID: 71966260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Submarine fish-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 6700
+        y: 0
+        width: 1675
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de6f5112813c934092c8d447310dad6
+      internalID: -1241366920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 48945064883042e429ad8058d3a89f5a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Submarine fish-Sheet_0: -1389291191
+      Submarine fish-Sheet_1: -614290133
+      Submarine fish-Sheet_10: -91547667
+      Submarine fish-Sheet_11: -1638502362
+      Submarine fish-Sheet_12: 818437506
+      Submarine fish-Sheet_13: 1889262743
+      Submarine fish-Sheet_14: -987786241
+      Submarine fish-Sheet_15: -1485224206
+      Submarine fish-Sheet_16: 97650243
+      Submarine fish-Sheet_17: 676491634
+      Submarine fish-Sheet_18: 71966260
+      Submarine fish-Sheet_19: -1241366920
+      Submarine fish-Sheet_2: -450704692
+      Submarine fish-Sheet_3: 1054409979
+      Submarine fish-Sheet_4: 2121098532
+      Submarine fish-Sheet_5: -1591742259
+      Submarine fish-Sheet_6: -1681208759
+      Submarine fish-Sheet_7: 570061014
+      Submarine fish-Sheet_8: -1037731256
+      Submarine fish-Sheet_9: -1222164862
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
