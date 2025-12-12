@@ -202,7 +202,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 172a42a67b99d0740bede155a9bcaab4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.346
+  m_Volume: 0.415
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1069,6 +1069,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 19.289036
       objectReference: {fileID: 0}
+    - target: {fileID: 1184604140954808085, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390835416211589098, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 08a70c18f607ab74a8a84907ba3964a7, type: 3}
+    - target: {fileID: 2865423249933376780, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7496e2ff61ab5441be94e59d714f9d0, type: 3}
     - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_fontSize
       value: 37.2
@@ -1140,6 +1152,18 @@ PrefabInstance:
     - target: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807990521440485629, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Pitch
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807990521440485629, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Volume
+      value: 0.428
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807990521440485629, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.644
       objectReference: {fileID: 0}
     - target: {fileID: 7900283071511951156, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: BringUpOptions
