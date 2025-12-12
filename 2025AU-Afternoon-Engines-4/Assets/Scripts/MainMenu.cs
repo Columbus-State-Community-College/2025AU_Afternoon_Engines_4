@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     public Button exitButtonUnselected;
     public TMP_Text textChange;
     public TMP_Text creditsTitle;
+    public GameObject creditsBackground;
     public GameObject makersCreditsText;
     public GameObject soundCreditsText;
     private Color newColor = Color.blue;
@@ -143,6 +144,7 @@ public class MainMenu : MonoBehaviour
         }
 
         creditsButtonUnselected.onClick.AddListener(BackMenu);
+        creditsBackground.SetActive(true);
         makersCreditsText.SetActive(true);
         soundCreditsText.SetActive(true);
 
@@ -166,6 +168,7 @@ public class MainMenu : MonoBehaviour
         }
 
         creditsButtonUnselected.onClick.AddListener(CreditsMenu);
+        creditsBackground.SetActive(false);
         makersCreditsText.SetActive(false);
         soundCreditsText.SetActive(false);
         creditsButtonUnselected.onClick.RemoveListener(BackMenu);

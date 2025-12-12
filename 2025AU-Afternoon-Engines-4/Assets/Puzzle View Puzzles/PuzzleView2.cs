@@ -8,6 +8,7 @@ public class PuzzleView2 : MonoBehaviour
     private string[] manikinPartTagArray = { "HeadPart", "LeftLegPart", "RightLegPart", "LeftArmPart", "RightArmPart" };
     public TMP_Text ManikinPartCheckerText;
     public AudioSource PuzzleFinishedSound;
+    public GameObject PortalEntry;
 
     void Update()
     {
@@ -23,6 +24,7 @@ public class PuzzleView2 : MonoBehaviour
         {
             ManikinPartCheckerText.text = "Every Manikin part has been correctly placed! This puzzle is complete!";
             PuzzleFinishedSound.Play();
+            PortalEntry.SetActive(true);
         }
         else
         {

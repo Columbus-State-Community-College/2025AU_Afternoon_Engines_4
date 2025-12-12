@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &1332432
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +690,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Figures
       objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemName
+      value: Man Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a man
+      objectReference: {fileID: 0}
     - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.363119
@@ -1077,8 +1085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &296419970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8087733743066438217, guid: 9d1e56b4f2c3f4841869150bebc27801, type: 3}
@@ -1376,8 +1384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &399825232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,8 +1710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &472307300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,8 +2079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &588154351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,8 +2359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &596607105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,8 +2693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1001 &664565142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2698,6 +2706,14 @@ PrefabInstance:
     - target: {fileID: 5819780387222859403, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
       propertyPath: m_Name
       value: F_Man_Figure_Puzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemName
+      value: Man Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a man
       objectReference: {fileID: 0}
     - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2929,8 +2945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &754105330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8882163866555423093, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
@@ -3216,6 +3232,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemName
+      value: Cowboy Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a cowboy
+      objectReference: {fileID: 0}
     - target: {fileID: 7057274861532906776, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -3270,10 +3294,58 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 75f0e0c7d4567b94ead0920740bba108, type: 3}
+    - target: {fileID: 2158775406764361118, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 2158775406764361118, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 2158775406764361118, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2865423249933376780, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d2721353b76f37a4a854f63a29c7ae6b, type: 3}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontSize
+      value: 37.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659086145634617442, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659086145634617442, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063390997153230889, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 4063390997153230889, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 4063390997153230889, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4819260905712991083, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3320,6 +3392,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437063140475599473, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 6437063140475599473, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 6437063140475599473, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389273306602633541, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 7389273306602633541, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 7389273306602633541, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3812,8 +3908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: tempname
-  itemDescription: tempdesc
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1001 &1272387397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3869,6 +3965,14 @@ PrefabInstance:
     - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemName
+      value: Cowboy Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a cowboy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4180,6 +4284,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemName
+      value: Lady Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a lady
+      objectReference: {fileID: 0}
     - target: {fileID: 7617638096640151503, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -6210,6 +6322,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemName
+      value: Lady Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a lady
+      objectReference: {fileID: 0}
     - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.861
