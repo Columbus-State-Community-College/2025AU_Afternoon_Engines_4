@@ -34,6 +34,7 @@ TagManager:
   - Figure1
   - Figure2
   - Figure3
+  - Combination
   layers:
   - Default
   - TransparentFX

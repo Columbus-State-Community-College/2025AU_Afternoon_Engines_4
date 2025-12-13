@@ -21,13 +21,13 @@ public class PuzzleView3 : MonoBehaviour
     private KeyCode switchPuzzlePiece = KeyCode.Q; // This can be changed to whatever
     private KeyCode moveObjectForwardGamePad = KeyCode.JoystickButton3;
     private KeyCode moveObjectBackwardGamePad = KeyCode.JoystickButton0;
-    //private KeyCode switchPuzzlePieceGamePad = KeyCode.JoystickButton - idk what button to put here
+    private KeyCode switchPuzzlePieceGamePad = KeyCode.JoystickButton5;
 
     void Update()
     {
         if (puzzleObjects != null)
         {
-            if (Input.GetKeyDown(switchPuzzlePiece)) //  || (Input.GetKeyDown(moveObjectBackwardGamePad))
+            if (Input.GetKeyDown(switchPuzzlePiece) || Input.GetKeyDown(switchPuzzlePieceGamePad))
             {
                 currentPuzzleObject++;
                 if (currentPuzzleObject >= puzzleObjects.Count)

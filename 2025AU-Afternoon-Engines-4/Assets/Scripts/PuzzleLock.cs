@@ -71,10 +71,8 @@ public class PuzzleLock : MonoBehaviour
                 i++;
             }
             puzzleCompleted = true;
-            MainManager.Instance.ProgressTracker["puzzle01"] = true;
-            //for testing
-            var puzzle01value = MainManager.Instance.ProgressTracker["puzzle01"];
-            Debug.Log("puzzle01 is now tracked as " + puzzle01value);
+            
+            // TODO call to progression tracker
         }
     }
 }

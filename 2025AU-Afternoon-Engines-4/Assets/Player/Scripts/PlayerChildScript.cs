@@ -7,7 +7,7 @@ public class PlayerChildScript : MonoBehaviour
     void OnEnable()
     {
         //PauseScreen = GameObject.Find("PauseScreen");//.GetComponentInChildren<PauseScreenScript>().gameObject;
-        Debug.LogAssertion(PauseScreen.activeInHierarchy);
+        //Debug.LogAssertion(PauseScreen.activeInHierarchy);
     }
 
     /*/ Update is called once per frame

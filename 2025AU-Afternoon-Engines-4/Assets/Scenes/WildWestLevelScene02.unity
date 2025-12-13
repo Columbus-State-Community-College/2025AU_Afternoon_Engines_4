@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 58148}
   - component: {fileID: 58147}
   - component: {fileID: 58146}
+  - component: {fileID: 58151}
   m_Layer: 0
   m_Name: Sphere (7)
   m_TagString: Key01
@@ -255,6 +256,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &58151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &1332432
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +690,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Figures
       objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemName
+      value: Man Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a man
+      objectReference: {fileID: 0}
     - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.363119
@@ -926,6 +949,7 @@ GameObject:
   - component: {fileID: 267005037}
   - component: {fileID: 267005036}
   - component: {fileID: 267005035}
+  - component: {fileID: 267005040}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Key01
@@ -1049,6 +1073,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &267005040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267005034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &296419970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8087733743066438217, guid: 9d1e56b4f2c3f4841869150bebc27801, type: 3}
@@ -1210,6 +1248,7 @@ GameObject:
   - component: {fileID: 358578308}
   - component: {fileID: 358578307}
   - component: {fileID: 358578306}
+  - component: {fileID: 358578311}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Key01
@@ -1333,6 +1372,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &358578311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358578305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &399825232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,6 +1574,7 @@ GameObject:
   - component: {fileID: 443720420}
   - component: {fileID: 443720419}
   - component: {fileID: 443720418}
+  - component: {fileID: 443720423}
   m_Layer: 0
   m_Name: Sphere (8)
   m_TagString: Key01
@@ -1644,6 +1698,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443720423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443720417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &472307300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +1943,7 @@ GameObject:
   - component: {fileID: 569025010}
   - component: {fileID: 569025009}
   - component: {fileID: 569025008}
+  - component: {fileID: 569025013}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Key01
@@ -1998,6 +2067,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569025013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569025007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &588154351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2223,7 @@ GameObject:
   - component: {fileID: 594339576}
   - component: {fileID: 594339575}
   - component: {fileID: 594339574}
+  - component: {fileID: 594339579}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Key01
@@ -2263,6 +2347,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &594339579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594339573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &596607105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2557,7 @@ GameObject:
   - component: {fileID: 653547518}
   - component: {fileID: 653547517}
   - component: {fileID: 653547516}
+  - component: {fileID: 653547521}
   m_Layer: 0
   m_Name: Sphere (6)
   m_TagString: Key01
@@ -2582,6 +2681,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653547521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653547515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1001 &664565142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2593,6 +2706,14 @@ PrefabInstance:
     - target: {fileID: 5819780387222859403, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
       propertyPath: m_Name
       value: F_Man_Figure_Puzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemName
+      value: Man Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a man
       objectReference: {fileID: 0}
     - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2688,6 +2809,7 @@ GameObject:
   - component: {fileID: 751664188}
   - component: {fileID: 751664187}
   - component: {fileID: 751664186}
+  - component: {fileID: 751664191}
   m_Layer: 0
   m_Name: Sphere (5)
   m_TagString: Key01
@@ -2811,6 +2933,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &751664191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751664185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1 &754105330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8882163866555423093, guid: cda9b29405e2207438074cc1aea2ad25, type: 3}
@@ -3096,6 +3232,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemName
+      value: Cowboy Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a cowboy
+      objectReference: {fileID: 0}
     - target: {fileID: 7057274861532906776, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -3146,13 +3290,61 @@ PrefabInstance:
       propertyPath: PuzzleViewManager
       value: 
       objectReference: {fileID: 1460809622}
-    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: objectTagArray.Array.size
-      value: 9
+    - target: {fileID: 1390835416211589098, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 75f0e0c7d4567b94ead0920740bba108, type: 3}
+    - target: {fileID: 2158775406764361118, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 2158775406764361118, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 2158775406764361118, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: 'objectTagArray.Array.data[8]'
-      value: Figures
+    - target: {fileID: 2865423249933376780, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2721353b76f37a4a854f63a29c7ae6b, type: 3}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontSize
+      value: 37.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 3546100301331218675, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659086145634617442, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659086145634617442, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063390997153230889, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 4063390997153230889, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 4063390997153230889, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4819260905712991083, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_Name
@@ -3200,6 +3392,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6426730350314734248, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437063140475599473, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 6437063140475599473, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 6437063140475599473, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389273306602633541, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 7389273306602633541, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6830248945980055863, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
+    - target: {fileID: 7389273306602633541, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3556,6 +3772,7 @@ GameObject:
   - component: {fileID: 1216455965}
   - component: {fileID: 1216455964}
   - component: {fileID: 1216455963}
+  - component: {fileID: 1216455968}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Key01
@@ -3679,6 +3896,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117490435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1216455968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216455962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425d43e56606bd4488d886bb7d50df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Bar Game Ball
+  itemDescription: A ball used for the bar game
 --- !u!1001 &1272387397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3734,6 +3965,14 @@ PrefabInstance:
     - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemName
+      value: Cowboy Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a cowboy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4045,6 +4284,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemName
+      value: Lady Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a lady
+      objectReference: {fileID: 0}
     - target: {fileID: 7617638096640151503, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -5134,13 +5381,14 @@ GameObject:
   - component: {fileID: 1957847547}
   - component: {fileID: 1957847546}
   - component: {fileID: 1957847545}
+  - component: {fileID: 1957847548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1957847545
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5215,6 +5463,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1957847548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957847544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1001 &2017103766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6030,6 +6322,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemName
+      value: Lady Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a lady
+      objectReference: {fileID: 0}
     - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.861

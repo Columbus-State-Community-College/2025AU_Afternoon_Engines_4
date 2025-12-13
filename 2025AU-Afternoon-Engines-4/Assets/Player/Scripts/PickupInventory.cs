@@ -28,6 +28,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
     public TMP_Text inventoryDisplayText;
     public TMP_Text PuzzleView1ControlsText;
     public TMP_Text PuzzleView2ControlsText;
+    public TMP_Text PuzzleView3ControlsText;
     public TMP_Text ManikinPartCheckerText;
     public GameObject Player;
     public GameObject PlayerCamera;
@@ -375,7 +376,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
 
         void PuzzleView3()
     {
-        PuzzleView1ControlsText.gameObject.SetActive(true);
+        PuzzleView3ControlsText.gameObject.SetActive(true);
         PuzzleViewManager.GetComponent<PuzzleView3>().enabled = true;
         PlayerCamera.SetActive(false);
         PuzzleViewCamera3.SetActive(true);
@@ -385,6 +386,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
     {
         PuzzleView1ControlsText.gameObject.SetActive(false);
         PuzzleView2ControlsText.gameObject.SetActive(false);
+        PuzzleView3ControlsText.gameObject.SetActive(false);
         ManikinPartCheckerText.gameObject.SetActive(false);
         PuzzleViewManager.GetComponent<PuzzleView1>().enabled = false;
         PuzzleViewManager.GetComponent<PuzzleView2>().enabled = false;
