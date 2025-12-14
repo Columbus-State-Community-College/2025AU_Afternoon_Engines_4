@@ -291,8 +291,9 @@ public class InventoryManager : MonoBehaviour
     {
         // Instantiate the GameObject, reset its position/rotation, and get its bounds (2D dimensions basically)
         GameObject objectPreview = Instantiate(item);
-        objectPreview.transform.position = new Vector3(0, 0, 0);
+        objectPreview.transform.position = new Vector3(0f, 0f, 0.2f);
         objectPreview.transform.rotation = Quaternion.identity;
+        objectPreview.transform.rotation = objectPreview.transform.rotation * Quaternion.Euler(45, 0, 45);
         objectPreview.layer = 6;
         objectPreview.SetActive(true);
         Renderer[] objectRenderer = objectPreview.GetComponentsInChildren<Renderer>(); ;
