@@ -167,36 +167,17 @@ public class FirstPersonController : MonoBehaviour
     private void HandleInteraction()
     {
         Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
-        //if()
 
-        //if (playerInputHandler.InteractTriggered && interactionPermitted)
-        //{   
         if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
         {
-            /*if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
-            {
-                reticle.color = Color.green;
-                if (playerInputHandler.InteractTriggered && interactionPermitted)
-                {
-                    // Debug.Log(hitInfo.collider.gameObject.name); // use to figure out what game object you're interacting with
-                    interactObj.Interact();
-                    interactionCooldownTimer = InteractionCooldown;
-                    interactionPermitted = false;
-                }
-                else
-                {
-                    interactionCooldownTimer -= Time.deltaTime;
-                    if (interactionCooldownTimer <= 0.0f)
-                    {
-                        interactionPermitted = true;
-                    }
-                }
-            }*/
-
             // Checks the "can I pick this up" tags in the PickupInventory.cs script | should be an easier and foolproof method 
             if (pickUpScript.CheckTagArray(hitInfo.collider.gameObject.tag, pickUpScript.objectTagArray))
             {
                 reticle.color = Color.green;
+            }
+            else if (pickUpScript.CheckTagArray(hitInfo.collider.gameObject.tag, pickUpScript.PuzzleViewTagArray))
+            {
+                reticle.color = Color.blue;
             }
             else
             {
@@ -207,15 +188,6 @@ public class FirstPersonController : MonoBehaviour
         {
             reticle.color = Color.red;
         }
-        //}
-        /*else
-        {
-            interactionCooldownTimer -= Time.deltaTime;
-            if (interactionCooldownTimer <= 0.0f)
-            {
-                interactionPermitted = true;
-            }
-        }*/
     }
 
     private void HandlePauseMenu()

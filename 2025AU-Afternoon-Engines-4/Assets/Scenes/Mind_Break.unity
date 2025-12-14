@@ -432,7 +432,7 @@ PrefabInstance:
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: PuzzleView3ControlsText
       value: 
-      objectReference: {fileID: 491679670}
+      objectReference: {fileID: 0}
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: objectTagArray.Array.size
       value: 8
@@ -1218,17 +1218,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 597652320649519244, guid: 2ac7ff0bac80b2f4fb1be2998374d1ff, type: 3}
   m_PrefabInstance: {fileID: 928389674}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &491679670 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 899274448420480375, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-  m_PrefabInstance: {fileID: 276897884}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &560747818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1703,7 +1692,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2391724346482592879, guid: f6566da095c376f43a700ced0d56af55, type: 3}
       propertyPath: m_Name
-      value: T_box (1)
+      value: T_box (puzzle button)
       objectReference: {fileID: 0}
     - target: {fileID: 2391724346482592879, guid: f6566da095c376f43a700ced0d56af55, type: 3}
       propertyPath: m_TagString
@@ -1731,7 +1720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3060983418617583317, guid: f6566da095c376f43a700ced0d56af55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.26
+      value: 44.56
       objectReference: {fileID: 0}
     - target: {fileID: 3060983418617583317, guid: f6566da095c376f43a700ced0d56af55, type: 3}
       propertyPath: m_LocalRotation.w
