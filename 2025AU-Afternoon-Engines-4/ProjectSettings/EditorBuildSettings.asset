@@ -26,8 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mind_Break.unity
     guid: d91eee14b2553764287dd179bd24af51
-  - enabled: 1
-    path: Assets/Mind_Break.unity
+  - enabled: 0
+    path: Assets/DNU_Mind_Break.unity
     guid: 61c2224efe7a2aa4fb040e5c3672dc3d
   - enabled: 1
     path: Assets/Scenes/AsylumLevelCake.unity
