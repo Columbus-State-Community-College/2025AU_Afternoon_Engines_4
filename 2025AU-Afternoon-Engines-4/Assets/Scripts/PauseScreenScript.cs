@@ -18,7 +18,11 @@ public class PauseScreenScript : MonoBehaviour
     {
         this.gameObject.SetActive(state);
     }
-
+    public void RestartGame()
+    {
+        Debug.Log("Game Should Restart");
+        MainManager.Instance.RestartGame();
+    }
     /*/ Update is called once per frame
     void Update()
     {

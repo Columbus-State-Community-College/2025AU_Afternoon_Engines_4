@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8534528887296417381}
   - component: {fileID: 5818380828586048435}
   - component: {fileID: 457057324045390580}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RestartGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,10 +249,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b7b90a11d66893d4c84f499312f84ed1, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 9218997219587198140, guid: 8a16bf6b9b3fc2048b0c05089a6178a7, type: 3}
+        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 2380491410586073398}
   - component: {fileID: 6395057421158683130}
   - component: {fileID: 6359755801736656600}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ExitGameButton (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,10 +382,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b7b90a11d66893d4c84f499312f84ed1, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 9218997219587198140, guid: 8a16bf6b9b3fc2048b0c05089a6178a7, type: 3}
+        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 2481072572774379684}
   - component: {fileID: 7145046465565539392}
   - component: {fileID: 8590926888820994037}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 4102328162249125946}
   - component: {fileID: 1685691274473559550}
   - component: {fileID: 473527168541740896}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

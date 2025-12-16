@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -33,6 +34,9 @@ public class MainManager : MonoBehaviour
     [SerializeField] public GameObject PauseScreen;
     [SerializeField] public GameObject WinScreen;
     [SerializeField] public GameObject LoseScreen;
+
+    [Header("Scene Event System")]
+    [SerializeField] public EventSystem EventSystem;
 
     public static bool isPaused;
 
@@ -114,7 +118,7 @@ public class MainManager : MonoBehaviour
     {
         isPaused = false;
         ResetProgressTracker();
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MenuScene");
         
     }
 
