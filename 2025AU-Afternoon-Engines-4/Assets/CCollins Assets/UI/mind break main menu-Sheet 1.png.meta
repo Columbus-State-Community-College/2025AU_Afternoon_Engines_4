@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d16883ec41f35674c8582b3e4b24bb9a
+guid: c2578fa5a2b68714d95c52a44bab80f2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mind break main menu-Sheet_0
+      name: mind break main menu-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,14 +112,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee1a479edd1ed4b459f2de6373847e01
-      internalID: 693005733
+      spriteID: eb55cb390f83fcb49922927b503f5b3d
+      internalID: 1477715358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mind break main menu-Sheet_1
+      name: mind break main menu-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 1920
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02254b3e8a0e03e40a419017b138c499
-      internalID: 1414384179
+      spriteID: 22c7dbbdb276bac48b2f93c43119ad64
+      internalID: -1391763278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mind break main menu-Sheet_2
+      name: mind break main menu-Sheet 1_2
       rect:
         serializedVersion: 2
         x: 3840
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8744a59ced48d24580caf3dcb59b7b7
-      internalID: -609368051
+      spriteID: 3be812daf8d138243b68b432319ab792
+      internalID: 1342058908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mind break main menu-Sheet_3
+      name: mind break main menu-Sheet 1_3
       rect:
         serializedVersion: 2
         x: 5760
@@ -178,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a30521b57989cce43a2a4ff6a790756c
-      internalID: -959034528
+      spriteID: 37798dbc2ccb9064693836b72a6db2d4
+      internalID: -289084679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mind break main menu-Sheet_4
+      name: mind break main menu-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 7680
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5e39830f349d7b4aab45acc3fa6335c
-      internalID: -1163254937
+      spriteID: a0912f588fbbc56449a0a26fa0e3d3c6
+      internalID: 913890660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mind break main menu-Sheet_5
+      name: mind break main menu-Sheet 1_5
       rect:
         serializedVersion: 2
         x: 9600
@@ -222,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e641ad69d398d46813c286e0fead8b
-      internalID: 1864028629
+      spriteID: 2f8cd42c7947d184c8da6e3fce16ccaa
+      internalID: -1907491875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mind break main menu-Sheet_6
+      name: mind break main menu-Sheet 1_6
       rect:
         serializedVersion: 2
         x: 11520
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 866e196af51660146b9d5d3287d54cc3
-      internalID: -263581311
+      spriteID: 37774d1555588984c8559a5c7b1bd397
+      internalID: 612118313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mind break main menu-Sheet_7
+      name: mind break main menu-Sheet 1_7
       rect:
         serializedVersion: 2
         x: 13440
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc2127f0db9230047b5770bc1201667e
-      internalID: -995626506
+      spriteID: 107ae8538c5a3db41b17dc33d32f9e2b
+      internalID: -1538297907
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 765bad1f6e19c60468b2eea4a2ea0380
+    spriteID: 185d6b05c6041e84a90deab8e95ec278
     internalID: 0
     vertices: []
     indices: 
@@ -286,14 +286,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mind break main menu-Sheet_0: 693005733
-      mind break main menu-Sheet_1: 1414384179
-      mind break main menu-Sheet_2: -609368051
-      mind break main menu-Sheet_3: -959034528
-      mind break main menu-Sheet_4: -1163254937
-      mind break main menu-Sheet_5: 1864028629
-      mind break main menu-Sheet_6: -263581311
-      mind break main menu-Sheet_7: -995626506
+      mind break main menu-Sheet 1_0: 1477715358
+      mind break main menu-Sheet 1_1: -1391763278
+      mind break main menu-Sheet 1_2: 1342058908
+      mind break main menu-Sheet 1_3: -289084679
+      mind break main menu-Sheet 1_4: 913890660
+      mind break main menu-Sheet 1_5: -1907491875
+      mind break main menu-Sheet 1_6: 612118313
+      mind break main menu-Sheet 1_7: -1538297907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
