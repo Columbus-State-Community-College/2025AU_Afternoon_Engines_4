@@ -291,7 +291,7 @@ public class InventoryManager : MonoBehaviour
     {
         // Instantiate the GameObject, reset its position/rotation, and get its bounds (2D dimensions basically)
         GameObject objectPreview = Instantiate(item);
-        objectPreview.transform.position = new Vector3(0f, 0f, 0.2f);
+        objectPreview.transform.position = new Vector3(0f, 0f, 0f);
         objectPreview.transform.rotation = Quaternion.identity;
         objectPreview.transform.rotation = objectPreview.transform.rotation * Quaternion.Euler(45, 0, 45);
         objectPreview.layer = 6;
@@ -304,7 +304,7 @@ public class InventoryManager : MonoBehaviour
         previewCamera.targetTexture = tempTexture;
         float zoom = Mathf.Max(objectDimensions.size.x, objectDimensions.size.y, objectDimensions.size.z);
         previewCamera.orthographicSize = zoom / 2f;
-        previewCamera.transform.position = objectDimensions.center + Vector3.back * zoom; 
+        previewCamera.transform.position = (objectDimensions.center + Vector3.back * zoom) + new Vector3(0f, 0f, -0.2f); 
         previewCamera.transform.LookAt(objectDimensions.center);
         previewCamera.Render();
 
