@@ -347,7 +347,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
     {
         if (inventory.Count > 0)
         {
-            inventoryDisplayText.text = inventory[selectedInventoryIndex].name;
+            inventoryDisplayText.text = inventory[selectedInventoryIndex].GetComponent<ItemData>().itemName;;
             inventoryManager.CycleSelectorPosition(selectedInventoryIndex);
         }
     }
