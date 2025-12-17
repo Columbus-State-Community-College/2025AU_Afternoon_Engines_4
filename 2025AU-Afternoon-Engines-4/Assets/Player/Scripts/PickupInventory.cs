@@ -261,6 +261,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
         if (rb != null)
         {
             rb.isKinematic = false;
+            rb.useGravity = true;
         }
 
         Debug.Log("Dropped: " + heldObject.name);
