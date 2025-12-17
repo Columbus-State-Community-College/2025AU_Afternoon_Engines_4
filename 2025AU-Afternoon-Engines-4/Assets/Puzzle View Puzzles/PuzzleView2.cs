@@ -25,6 +25,7 @@ public class PuzzleView2 : MonoBehaviour
             ManikinPartCheckerText.text = "Every Manikin part has been correctly placed! This puzzle is complete!";
             PuzzleFinishedSound.Play();
             PortalEntry.SetActive(true);
+            MainManager.Instance.SolvePuzzle("MannequinPuzzle01");
         }
         else
         {

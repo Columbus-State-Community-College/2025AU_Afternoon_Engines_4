@@ -151,15 +151,15 @@ public class MainManager : MonoBehaviour
             }
             // Wild West Level Puzzles
             {
-                FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle01","Find 3 figurines around the room! Balls can be thrown with RMB."));
+                FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle01","Find 3 figurines around the room and drop them on the table! Balls can be thrown with RMB."));
                 FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle02","Arrange the figures on the table to unlock the door."));
                 //FreshProgressTracker.Add(new Puzzle("HorseRacingPuzzle","TBD."));
             }
             // Vamp Level Puzzles
             {
-                FreshProgressTracker.Add(new Puzzle("MannequinPuzzle01","Assemble the mannequin!"));
-                FreshProgressTracker.Add(new Puzzle("MannequinPuzzle02","Assemble the mannequin!"));
-                FreshProgressTracker.Add(new Puzzle("MannequinPuzzle03","Assemble the mannequin!"));
+                FreshProgressTracker.Add(new Puzzle("MannequinPuzzle01","Assemble the mannequin! Drop each piece you find on the limb it should connect to."));
+                FreshProgressTracker.Add(new Puzzle("TheEndPuzzle01","Best to quit now, lest this reality trap you forever."));
+                
             }
             
         }
