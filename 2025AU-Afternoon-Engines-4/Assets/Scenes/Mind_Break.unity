@@ -170,6 +170,14 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6224895924954611504, guid: 65f28d1d335fc2140babdca3aae785e4, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224895924954611504, guid: 65f28d1d335fc2140babdca3aae785e4, type: 3}
+      propertyPath: m_Center.x
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7423907484689354915, guid: 65f28d1d335fc2140babdca3aae785e4, type: 3}
       propertyPath: m_Name
       value: Orange_tube2
@@ -240,6 +248,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 688469372}
     m_Modifications:
+    - target: {fileID: 1263742562139180817, guid: c2ef23d9a5bb582409bc9de20a418fca, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263742562139180817, guid: c2ef23d9a5bb582409bc9de20a418fca, type: 3}
+      propertyPath: m_Center.x
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 5111210886629483361, guid: c2ef23d9a5bb582409bc9de20a418fca, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -347,7 +363,7 @@ Transform:
   m_GameObject: {fileID: 252197038}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0026356438, y: 0.0009769107, z: 0.0011764467, w: -0.9999954}
-  m_LocalPosition: {x: -0.0291, y: 0.0801, z: 0.3176}
+  m_LocalPosition: {x: -0.0291, y: 0.0801, z: 1.3176}
   m_LocalScale: {x: 0.016580217, y: 0.01459628, z: 0.0329027}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,20 +422,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   willRotate: 0
-  willMove: 0
+  willMove: 1
   willAnimate: 0
   rotationSpeed: 10
   rotationX: 0
   rotationY: 0
   rotationZ: 0
-  movementSpeed: 1
+  movementSpeed: 100
   movementX: 0
   movementY: 0
-  movementZ: 0
+  movementZ: -1
   soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &276897884
 PrefabInstance:
@@ -442,10 +459,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: pickupRange
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: PuzzleViewCamera1
       value: 
       objectReference: {fileID: 2079443800}
@@ -461,18 +474,6 @@ PrefabInstance:
       propertyPath: PuzzleViewManager
       value: 
       objectReference: {fileID: 1885011080}
-    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: PuzzleView3ControlsText
-      value: 
-      objectReference: {fileID: 1221259275}
-    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: objectTagArray.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      propertyPath: 'objectTagArray.Array.data[7]'
-      value: Tube
-      objectReference: {fileID: 0}
     - target: {fileID: 899274448420480375, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_text
       value: 'Up Arrow, X Button: Move Up
@@ -700,6 +701,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8196334646950275432, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_ActionsAsset
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 3cb294a191a9ebd4da92f601e55df184, type: 3}
     m_RemovedComponents:
     - {fileID: 5601747217787851557, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
     m_RemovedGameObjects: []
@@ -707,9 +712,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9093191789844149421, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       insertIndex: 2
       addedObject: {fileID: 582294268}
-    - targetCorrespondingSourceObject: {fileID: 9093191789844149421, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
-      insertIndex: 11
-      addedObject: {fileID: 1221259274}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
 --- !u!114 &276897885 stripped
@@ -1047,7 +1049,7 @@ PrefabInstance:
     - target: {fileID: 6735916892801563123, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
       propertyPath: 'puzzleObjects.Array.data[0]'
       value: 
-      objectReference: {fileID: 1626807040}
+      objectReference: {fileID: 2109895248}
     - target: {fileID: 6735916892801563123, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
       propertyPath: 'puzzleObjects.Array.data[1]'
       value: 
@@ -1059,11 +1061,11 @@ PrefabInstance:
     - target: {fileID: 6735916892801563123, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
       propertyPath: 'puzzleObjects.Array.data[3]'
       value: 
-      objectReference: {fileID: 1428304765}
+      objectReference: {fileID: 1626807040}
     - target: {fileID: 6735916892801563123, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
       propertyPath: 'puzzleObjects.Array.data[4]'
       value: 
-      objectReference: {fileID: 2109895248}
+      objectReference: {fileID: 1428304765}
     - target: {fileID: 6918410890975110208, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
       propertyPath: m_Name
       value: PuzzleViewCameras
@@ -2650,160 +2652,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7439792, y: 0.4084539, z: 0.0082272105}
   m_Center: {x: 0, y: 0.20179124, z: 0.0000000044237822}
---- !u!1 &1221259273
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1221259274}
-  - component: {fileID: 1221259276}
-  - component: {fileID: 1221259275}
-  m_Layer: 0
-  m_Name: PuzzleView3Controls_Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1221259274
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221259273}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 276897886}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 4.999878, y: -127.63}
-  m_SizeDelta: {x: 243.633, y: 51.26}
-  m_Pivot: {x: 1, y: 0.5}
---- !u!114 &1221259275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221259273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Left Arrow, Y Button: Move Tube Right
-
-    Right Arrow, A Button: Move
-    Tube Left
-
-    Up Arrow, X Button: Move Tube Backwards
-
-    Down Arrow, B Button:
-    Move Tube Fowards
-
-    A, Left Trigger Button: Move Tube Up
-
-    S, Right Trigger
-    Button: Move Tube Down
-
-    Q, Right Shoulder Button: Switch to Another Tube
-
-    Left
-    Control, Right Stick Press: Exit the Puzzle View'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -505.36627, y: 0, z: 0, w: -321.02066}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1221259276
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221259273}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1223183519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2981,7 +2829,7 @@ Transform:
   m_GameObject: {fileID: 1336614632}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0026356438, y: 0.0009769107, z: 0.0011764467, w: -0.9999954}
-  m_LocalPosition: {x: 0.0196, y: 0.0799, z: 0.3176}
+  m_LocalPosition: {x: 0.0196, y: 0.0799, z: 1.3176}
   m_LocalScale: {x: 0.016580217, y: 0.01459628, z: 0.0329027}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3050,7 +2898,7 @@ MonoBehaviour:
   puzzleKeyTag: LeftLeg
   keyTotalAmount: 1
   linkedMovementObjects:
-  - {fileID: 1336614632}
+  - {fileID: 1799200427}
   progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1336614637
@@ -3066,20 +2914,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   willRotate: 0
-  willMove: 0
+  willMove: 1
   willAnimate: 0
   rotationSpeed: 10
   rotationX: 0
   rotationY: 0
   rotationZ: 0
-  movementSpeed: 1
+  movementSpeed: 100
   movementX: 0
   movementY: 0
-  movementZ: 0
+  movementZ: -1
   soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &1395308376
 GameObject:
@@ -3231,7 +3080,7 @@ Transform:
   m_GameObject: {fileID: 1401275733}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0026356438, y: 0.0009769107, z: 0.0011764467, w: -0.9999954}
-  m_LocalPosition: {x: 0.044, y: 0.0798, z: 0.3176}
+  m_LocalPosition: {x: 0.044, y: 0.0798, z: 1.3176}
   m_LocalScale: {x: 0.016580217, y: 0.01459628, z: 0.0329027}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3300,7 +3149,7 @@ MonoBehaviour:
   puzzleKeyTag: RightArm
   keyTotalAmount: 1
   linkedMovementObjects:
-  - {fileID: 1401275733}
+  - {fileID: 1336614632}
   progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1401275738
@@ -3316,20 +3165,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   willRotate: 0
-  willMove: 0
+  willMove: 1
   willAnimate: 0
   rotationSpeed: 10
   rotationX: 0
   rotationY: 0
   rotationZ: 0
-  movementSpeed: 1
+  movementSpeed: 100
   movementX: 0
   movementY: 0
-  movementZ: 0
+  movementZ: -1
   soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &1428304763
 PrefabInstance:
@@ -3346,6 +3196,18 @@ PrefabInstance:
     - target: {fileID: 3327598960735673815, guid: 026e3aa91a38d604698585c75166cd5c, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409884586288875847, guid: 026e3aa91a38d604698585c75166cd5c, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409884586288875847, guid: 026e3aa91a38d604698585c75166cd5c, type: 3}
+      propertyPath: m_Center.x
+      value: -76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409884586288875847, guid: 026e3aa91a38d604698585c75166cd5c, type: 3}
+      propertyPath: m_Center.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7357019834566578715, guid: 026e3aa91a38d604698585c75166cd5c, type: 3}
       propertyPath: m_Name
@@ -3934,6 +3796,14 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8509835481153820919, guid: 2ac7ff0bac80b2f4fb1be2998374d1ff, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509835481153820919, guid: 2ac7ff0bac80b2f4fb1be2998374d1ff, type: 3}
+      propertyPath: m_Center.x
+      value: -45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4171,7 +4041,7 @@ MonoBehaviour:
   puzzleKeyTag: LeftArm
   keyTotalAmount: 1
   linkedMovementObjects:
-  - {fileID: 1699671430}
+  - {fileID: 1401275733}
   progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1699671435
@@ -4201,6 +4071,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &1710962883 stripped
 GameObject:
@@ -4304,7 +4175,7 @@ Transform:
   m_GameObject: {fileID: 1799200427}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0026356438, y: 0.0009769107, z: 0.0011764467, w: -0.9999954}
-  m_LocalPosition: {x: -0.0042, y: 0.08, z: 0.3176}
+  m_LocalPosition: {x: -0.0042, y: 0.08, z: 1.3176}
   m_LocalScale: {x: 0.016580217, y: 0.01459628, z: 0.0329027}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4373,7 +4244,7 @@ MonoBehaviour:
   puzzleKeyTag: RightLeg
   keyTotalAmount: 1
   linkedMovementObjects:
-  - {fileID: 1799200427}
+  - {fileID: 252197038}
   progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1799200432
@@ -4389,20 +4260,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   willRotate: 0
-  willMove: 0
+  willMove: 1
   willAnimate: 0
   rotationSpeed: 10
   rotationX: 0
   rotationY: 0
   rotationZ: 0
-  movementSpeed: 1
+  movementSpeed: 100
   movementX: 0
   movementY: 0
-  movementZ: 0
+  movementZ: -1
   soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &1817299840
 PrefabInstance:
@@ -4979,6 +4851,14 @@ PrefabInstance:
     - target: {fileID: 6865086189807628685, guid: 791a5bb4a91d4f848999b500f6b05e6b, type: 3}
       propertyPath: m_TagString
       value: WhiteTube
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409126230590321928, guid: 791a5bb4a91d4f848999b500f6b05e6b, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409126230590321928, guid: 791a5bb4a91d4f848999b500f6b05e6b, type: 3}
+      propertyPath: m_Center.x
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
