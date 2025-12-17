@@ -2314,25 +2314,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Left Arrow, Y Button: Move Tube Right
+  m_text: 'Up Arrow, X Button: Move Up
 
-    Right Arrow, A Button: Move
-    Tube Left
+    Down Arrow, B Button: Move Down
 
-    Up Arrow, X Button: Move Tube Backwards
+    Q,
+    Right Shoulder Button: Switch
 
-    Down Arrow, B Button:
-    Move Tube Fowards
-
-    A, Left Trigger Button: Move Tube Up
-
-    S, Right Trigger
-    Button: Move Tube Down
-
-    Q, Right Shoulder Button: Switch to Another Tube
-
-    Left
-    Control, Right Stick Press: Exit the Puzzle View'
+    Left Control, Right Stick Press: Exit the
+    Puzzle View'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75d52cfb486d80f438d6e417fe990441, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
