@@ -10572,7 +10572,7 @@ PrefabInstance:
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: PuzzleView2ControlsText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 337949544}
     - target: {fileID: 547752402032282857, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: PuzzleView3ControlsText
       value: 
