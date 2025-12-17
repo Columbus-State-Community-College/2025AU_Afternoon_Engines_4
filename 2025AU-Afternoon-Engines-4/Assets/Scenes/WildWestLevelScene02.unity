@@ -5787,11 +5787,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4415540610666155617, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5
+      value: 4.999939
       objectReference: {fileID: 0}
     - target: {fileID: 4819260905712991083, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900412299050638722, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.999939
       objectReference: {fileID: 0}
     - target: {fileID: 5601747217787851557, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: OptionsManager
@@ -5863,7 +5867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7497707755578266352, guid: 7eeaa2971ec7b544093517f834e5fb3c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5
+      value: 4.999939
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11116,6 +11120,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6402380298356367147, guid: e2717bca4ca29ca408a724b29f4afb4c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: edbff06068b37b74bb1adb6d32574c18, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
