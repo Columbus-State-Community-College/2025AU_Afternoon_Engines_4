@@ -12,6 +12,11 @@ public class PauseScreenScript : MonoBehaviour
         //ThisScreen.SetActive(false);
         this.gameObject.SetActive(false);
         MainManager.Instance.PauseScreen = this.gameObject;
+        //this.gameObject.GetComponentInChildren<HintTextScript>().Hint_Text = MainManager.Instance.CurrentHint();
+    }
+    void OnEnable()
+    {
+        this.gameObject.GetComponentInChildren<HintTextScript>().Hint_Text = MainManager.Instance.CurrentHint();
     }
 
     public void SetActivationState(bool state)
