@@ -141,18 +141,19 @@ public class MainManager : MonoBehaviour
         {
             // Water Level Puzzles
             {
-                FreshProgressTracker.Add(new Puzzle("TubePuzzle","Match the Tubes with Wall Pegs according to color."));
-                FreshProgressTracker.Add(new Puzzle("TreasureChestNumbers01", "Use these numbers for the lock on the Treasure Chest to open it."));
-                FreshProgressTracker.Add(new Puzzle("TreasureChestNumbers01","Roll the numbers accordingly to unlock Treasure Chest."));
-                FreshProgressTracker.Add(new Puzzle("TrapDoorKeyHole","Key to unlock Trap Door. Look on the Wall for Key Hole."));
-                FreshProgressTracker.Add(new Puzzle("TrapDoorKey","Key Hole to unlock Trap Door above ladder. Use Key to unlock."));
-                FreshProgressTracker.Add(new Puzzle("Ladder","Ladder to Trap Door. Unlock Wall Key Hole to gain access to next room."));
+                FreshProgressTracker.Add(new Puzzle("TubePuzzle01","Bring the tubes to the peg board."));
+                FreshProgressTracker.Add(new Puzzle("TubePuzzle02","Interact with the green switch on the wall and position the tubes by color."));
+                FreshProgressTracker.Add(new Puzzle("TreasureChestLockPuzzle01", "The chest is closed with a rolling combination lock."));
+                //FreshProgressTracker.Add(new Puzzle("TreasureChestNumbers01","Roll the numbers accordingly to unlock Treasure Chest."));
+                FreshProgressTracker.Add(new Puzzle("TrapDoorKeyHolePuzzle01","The key has a lock on the wall."));
+                //FreshProgressTracker.Add(new Puzzle("TrapDoorKey","Key Hole to unlock Trap Door above ladder. Use Key to unlock."));
+                //FreshProgressTracker.Add(new Puzzle("Ladder","Ladder to Trap Door. Unlock Wall Key Hole to gain access to next room."));
             }
             // Wild West Level Puzzles
             {
-                FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle","Move the first board game piece to the correct spot on the table."));
-                FreshProgressTracker.Add(new Puzzle("GunGamePuzzle","Win the next game piece knocking down bottles"));
-                FreshProgressTracker.Add(new Puzzle("HorseRacingPuzzle","TBD."));
+                FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle01","Move the first board game piece to the correct spot on the table."));
+                FreshProgressTracker.Add(new Puzzle("GunGamePuzzle","Win the next game piece by knocking down bottles"));
+                //FreshProgressTracker.Add(new Puzzle("HorseRacingPuzzle","TBD."));
             }
             // Vamp Level Puzzles
             {
@@ -165,6 +166,25 @@ public class MainManager : MonoBehaviour
         
         ProgressTracker = FreshProgressTracker;
         //FinalPuzzleSolved =  ProgressTracker.ElementAt(ProgressTracker.Count - 1).solvedStatus; // not quite workin as intended, may implement differently
+    }
+
+    public string CurrentHint()
+    {
+        string neededHint = "";
+        foreach (var Hint in ProgressTracker)
+        {
+            if (Hint.solvedStatus == false)
+            {
+                neededHint = Hint.hint;
+                break;
+            }
+            else
+            {
+                continue;
+            }
+            
+        }
+        return neededHint;
     }
 
 
