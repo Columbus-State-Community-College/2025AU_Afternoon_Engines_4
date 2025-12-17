@@ -151,8 +151,8 @@ public class MainManager : MonoBehaviour
             }
             // Wild West Level Puzzles
             {
-                FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle01","Move the first board game piece to the correct spot on the table."));
-                FreshProgressTracker.Add(new Puzzle("GunGamePuzzle","Win the next game piece by knocking down bottles"));
+                FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle01","Find 3 figurines around the room! Balls can be thrown with RMB."));
+                FreshProgressTracker.Add(new Puzzle("FigureBoardPuzzle02","Arrange the figures on the table to unlock the door."));
                 //FreshProgressTracker.Add(new Puzzle("HorseRacingPuzzle","TBD."));
             }
             // Vamp Level Puzzles
