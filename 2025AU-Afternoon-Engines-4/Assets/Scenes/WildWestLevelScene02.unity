@@ -441,6 +441,7 @@ MonoBehaviour:
   - {fileID: 7131224}
   - {fileID: 1455959969}
   - {fileID: 1068393101}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &7131228
 MonoBehaviour:
@@ -469,6 +470,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &51878725
 PrefabInstance:
@@ -1561,6 +1563,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &432301185
 GameObject:
@@ -2892,6 +2895,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &751664185
 GameObject:
@@ -3076,6 +3080,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &780065042 stripped
 GameObject:
@@ -3102,6 +3107,7 @@ MonoBehaviour:
   - {fileID: 846202808}
   - {fileID: 1902599509}
   - {fileID: 664565143}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &780065048
 MonoBehaviour:
@@ -3130,6 +3136,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: FigureBoardPuzzle01
   linkedPuzzleCompleted: 0
 --- !u!65 &780065049
 BoxCollider:
@@ -3752,6 +3759,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &1101035565
 PrefabInstance:
@@ -3858,6 +3866,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!4 &1101035571 stripped
 Transform:
@@ -4550,6 +4559,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!114 &1455959972
 MonoBehaviour:
@@ -4569,6 +4579,7 @@ MonoBehaviour:
   - {fileID: 1455959969}
   - {fileID: 2103728107}
   - {fileID: 419312672}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!65 &1455959973
 BoxCollider:
@@ -4902,6 +4913,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &1643593131
 PrefabInstance:
@@ -5162,6 +5174,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 1630223328}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!1 &1842308370 stripped
 GameObject:
@@ -5195,6 +5208,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &1859827946
 PrefabInstance:
@@ -5300,6 +5314,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &1918511852
 GameObject:
@@ -5505,6 +5520,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 2702572397995082727}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!1 &1948162699 stripped
 GameObject:
@@ -5913,6 +5929,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 754105330}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!1001 &2075017712
 PrefabInstance:
@@ -6146,6 +6163,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!114 &2103728110
 MonoBehaviour:
@@ -6165,6 +6183,7 @@ MonoBehaviour:
   - {fileID: 2103728107}
   - {fileID: 1842308370}
   - {fileID: 1272387398}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!65 &2103728111
 BoxCollider:
@@ -6504,6 +6523,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: FigureBoardPuzzle02
   linkedPuzzleCompleted: 0
 --- !u!4 &2702572397995082732 stripped
 Transform:
