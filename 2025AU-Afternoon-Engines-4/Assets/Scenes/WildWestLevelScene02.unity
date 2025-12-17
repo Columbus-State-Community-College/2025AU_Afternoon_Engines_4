@@ -3062,7 +3062,7 @@ MonoBehaviour:
   movementX: 0
   movementY: -1
   movementZ: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -8317,6 +8317,108 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19c0c7ee22ab574418ed20e879eaeb4a, type: 3}
+--- !u!1001 &490645303
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5819780387222859403, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_Name
+      value: F_Man_Figure_Puzzle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemName
+      value: Man Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282957655714269536, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a man
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.409
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.723816
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.323
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597724808786768945, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5819780387222859403, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 490645305}
+  m_SourcePrefab: {fileID: 100100000, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+--- !u!1 &490645304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5819780387222859403, guid: d5fc8c7c4e89a48429bf351b9ec49686, type: 3}
+  m_PrefabInstance: {fileID: 490645303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &490645305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490645304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 0
+  willMove: 1
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 100
+  movementX: 0
+  movementY: 10
+  movementZ: 0
+  soundEffect: {fileID: 0}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  progressionTrackerName: 
+  linkedPuzzleCompleted: 0
 --- !u!1001 &514045181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12118,6 +12220,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &940684190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1538253011131708222, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_Name
+      value: F_Cowboy_Figure_Puzzle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538253011131708222, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_TagString
+      value: Figure1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.839
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.851
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.501
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6403146
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.76811284
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 100.369
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167120213607082372, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemName
+      value: Cowboy Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819254119049098214, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a cowboy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057274861532906776, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057274861532906776, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511008591670558537, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: movementY
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511008591670558537, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+      propertyPath: movementSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+--- !u!1 &940684191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538253011131708222, guid: 1283df9c455d24644851aacdc34b30c9, type: 3}
+  m_PrefabInstance: {fileID: 940684190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &956289761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3336557576577296963, guid: 19c0c7ee22ab574418ed20e879eaeb4a, type: 3}
@@ -12523,7 +12715,7 @@ MonoBehaviour:
   movementX: 0
   movementY: -1
   movementZ: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -16201,6 +16393,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 1630223328}
+  - {fileID: 2132448547}
   progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!1 &1838817395
@@ -16488,7 +16681,7 @@ MonoBehaviour:
   movementX: 0
   movementY: -1
   movementZ: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -16971,6 +17164,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 2702572397995082727}
+  - {fileID: 940684191}
   progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!1001 &1932918794
@@ -17911,6 +18105,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 754105330}
+  - {fileID: 490645304}
   progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!4 &2068762262 stripped
@@ -18390,6 +18585,108 @@ Transform:
   - {fileID: 443720422}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2132448546
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemName
+      value: Lady Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189806497829190365, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: itemDescription
+      value: A figurine of a lady
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.408
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.824454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.653
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.31639948
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9486261
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 143.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288071567646646342, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669136267740953340, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      propertyPath: m_Name
+      value: Lady_Figure_Puzzle (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8669136267740953340, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132448548}
+  m_SourcePrefab: {fileID: 100100000, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+--- !u!1 &2132448547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8669136267740953340, guid: 8431647e30ada344eaca980c36c730ca, type: 3}
+  m_PrefabInstance: {fileID: 2132448546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132448548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132448547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 0
+  willMove: 1
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 100
+  movementX: 0
+  movementY: 10
+  movementZ: 0
+  soundEffect: {fileID: 0}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  progressionTrackerName: 
+  linkedPuzzleCompleted: 0
 --- !u!1001 &2134265044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19344,8 +19641,11 @@ SceneRoots:
   - {fileID: 7875279895022406225}
   - {fileID: 1272387397}
   - {fileID: 846202807}
+  - {fileID: 940684190}
   - {fileID: 6435202866647264562}
+  - {fileID: 2132448546}
   - {fileID: 664565142}
+  - {fileID: 490645303}
   - {fileID: 2117490435}
   - {fileID: 432301186}
   - {fileID: 1387966674}
