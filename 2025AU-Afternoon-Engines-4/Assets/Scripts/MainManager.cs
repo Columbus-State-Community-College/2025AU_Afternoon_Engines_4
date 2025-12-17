@@ -158,8 +158,8 @@ public class MainManager : MonoBehaviour
             // Vamp Level Puzzles
             {
                 FreshProgressTracker.Add(new Puzzle("MannequinPuzzle01","Assemble the mannequin! Drop each piece you find on the limb it should connect to."));
-                /* FreshProgressTracker.Add(new Puzzle("MannequinPuzzle02","Assemble the mannequin!"));
-                FreshProgressTracker.Add(new Puzzle("MannequinPuzzle03","Assemble the mannequin!")); */
+                FreshProgressTracker.Add(new Puzzle("TheEndPuzzle01","Best to quit now, lest this reality trap you forever."));
+                
             }
             
         }
