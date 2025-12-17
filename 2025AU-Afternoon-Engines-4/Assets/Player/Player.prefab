@@ -1776,7 +1776,7 @@ MonoBehaviour:
   mouseSensitivity: 0.1
   upDownLookRange: 80
   InteractorSource: {fileID: 4684471405801762352}
-  InteractRange: 2
+  InteractRange: 4
   characterController: {fileID: 1900030128590154932}
   mainCamera: {fileID: 3786069616473337458}
   playerInputHandler: {fileID: 8172701533369116017}
@@ -1797,7 +1797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78713af80728fd44a5156c0b878cba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupRange: 3
+  pickupRange: 4
   holdPoint: {fileID: 2994746541154584440}
   throwForce: 750
   objectTagArray:
@@ -1809,6 +1809,7 @@ MonoBehaviour:
   - RightLegPart
   - HeadPart
   - Tube
+  - Figures
   PuzzleViewTagArray:
   - Joystick
   - Binoculars
