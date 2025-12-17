@@ -152,7 +152,7 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   movementZ: -3.8
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 252197039}
   - component: {fileID: 252197041}
   - component: {fileID: 252197042}
+  - component: {fileID: 252197043}
   m_Layer: 0
   m_Name: trigger1 (5)
   m_TagString: Untagged
@@ -388,7 +389,36 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 965539830}
+  - {fileID: 252197038}
   puzzleCompleted: 0
+--- !u!114 &252197043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252197038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 0
+  willMove: 0
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 1
+  movementX: 0
+  movementY: 0
+  movementZ: 0
+  soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  linkedPuzzleCompleted: 0
 --- !u!1001 &276897884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1211,7 +1241,7 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   movementZ: 1.15
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -2024,7 +2054,7 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   movementZ: 1.15
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -2097,6 +2127,10 @@ PrefabInstance:
       propertyPath: rotationX
       value: -68
       objectReference: {fileID: 0}
+    - target: {fileID: 6087232440876155285, guid: 3c7aac08de4532648bf44096552cee58, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2154,7 +2188,7 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   movementZ: -25
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 9b9aaa26d5188374db78515c43ed059c, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -2332,7 +2366,7 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   movementZ: 1.15
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -2365,7 +2399,7 @@ MonoBehaviour:
   movementX: -1.4
   movementY: 0
   movementZ: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -2705,6 +2739,7 @@ GameObject:
   - component: {fileID: 1336614635}
   - component: {fileID: 1336614634}
   - component: {fileID: 1336614636}
+  - component: {fileID: 1336614637}
   m_Layer: 0
   m_Name: trigger1 (3)
   m_TagString: Untagged
@@ -2789,8 +2824,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleKeyTag: LeftLeg
   keyTotalAmount: 1
-  linkedMovementObjects: []
+  linkedMovementObjects:
+  - {fileID: 1336614632}
   puzzleCompleted: 0
+--- !u!114 &1336614637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336614632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 0
+  willMove: 0
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 1
+  movementX: 0
+  movementY: 0
+  movementZ: 0
+  soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  linkedPuzzleCompleted: 0
 --- !u!1 &1395308376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2924,6 +2988,7 @@ GameObject:
   - component: {fileID: 1401275736}
   - component: {fileID: 1401275735}
   - component: {fileID: 1401275737}
+  - component: {fileID: 1401275738}
   m_Layer: 0
   m_Name: trigger1 (2)
   m_TagString: Untagged
@@ -3008,8 +3073,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleKeyTag: RightArm
   keyTotalAmount: 1
-  linkedMovementObjects: []
+  linkedMovementObjects:
+  - {fileID: 1401275733}
   puzzleCompleted: 0
+--- !u!114 &1401275738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401275733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 0
+  willMove: 0
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 1
+  movementX: 0
+  movementY: 0
+  movementZ: 0
+  soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  linkedPuzzleCompleted: 0
 --- !u!1001 &1428304763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3655,7 +3749,7 @@ MonoBehaviour:
   movementX: 0
   movementY: -0.65
   movementZ: 0
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: d36bf7e8ba9d0464491f259a23a49ab6, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -3760,6 +3854,7 @@ GameObject:
   - component: {fileID: 1699671433}
   - component: {fileID: 1699671432}
   - component: {fileID: 1699671434}
+  - component: {fileID: 1699671435}
   m_Layer: 0
   m_Name: trigger1 (1)
   m_TagString: Untagged
@@ -3844,8 +3939,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleKeyTag: LeftArm
   keyTotalAmount: 1
-  linkedMovementObjects: []
+  linkedMovementObjects:
+  - {fileID: 1699671430}
   puzzleCompleted: 0
+--- !u!114 &1699671435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699671430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 0
+  willMove: 0
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 1
+  movementX: 0
+  movementY: 0
+  movementZ: 0
+  soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  linkedPuzzleCompleted: 0
 --- !u!1 &1710962883 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6865086189807628685, guid: 791a5bb4a91d4f848999b500f6b05e6b, type: 3}
@@ -3874,7 +3998,7 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   movementZ: 1.15
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -3907,7 +4031,7 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   movementZ: 1.15
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
@@ -3929,6 +4053,7 @@ GameObject:
   - component: {fileID: 1799200430}
   - component: {fileID: 1799200429}
   - component: {fileID: 1799200431}
+  - component: {fileID: 1799200432}
   m_Layer: 0
   m_Name: trigger1 (4)
   m_TagString: Untagged
@@ -4013,8 +4138,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleKeyTag: RightLeg
   keyTotalAmount: 1
-  linkedMovementObjects: []
+  linkedMovementObjects:
+  - {fileID: 1799200427}
   puzzleCompleted: 0
+--- !u!114 &1799200432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799200427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596f2c90d2d59124283db5db0358a3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willRotate: 0
+  willMove: 0
+  willAnimate: 0
+  rotationSpeed: 10
+  rotationX: 0
+  rotationY: 0
+  rotationZ: 0
+  movementSpeed: 1
+  movementX: 0
+  movementY: 0
+  movementZ: 0
+  soundEffect: {fileID: 8300000, guid: e49b24c5c2333214594fa6b37aaacc19, type: 3}
+  effectVolume: 1
+  isLocal: 1
+  playOnCompletion: 0
+  linkedPuzzleCompleted: 0
 --- !u!1 &1817582423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1213577500348750262, guid: c2a4badeb9760034cbb792687a4c9441, type: 3}
