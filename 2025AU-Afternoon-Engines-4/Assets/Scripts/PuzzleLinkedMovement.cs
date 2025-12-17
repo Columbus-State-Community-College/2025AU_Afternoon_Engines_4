@@ -45,6 +45,10 @@ public class PuzzleLinkedMovement : MonoBehaviour
     public bool playOnCompletion = false;
     private bool soundPlayed = false;
 
+    [Header("Progression Tracking")]
+    [Tooltip("Exact Puzzle.name string. Set for each Puzzle.")]
+    public string progressionTrackerName;
+
     private Vector3 objectPosition;
     private Quaternion rotationTarget;
     private Vector3 movementCalc;
@@ -108,6 +112,7 @@ public class PuzzleLinkedMovement : MonoBehaviour
                 PlaySoundEffect();
                 scriptCompleted = true;
             }
+            MainManager.Instance.SolvePuzzle(progressionTrackerName);
         }
     }
 

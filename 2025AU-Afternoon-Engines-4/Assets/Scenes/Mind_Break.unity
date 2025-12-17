@@ -156,6 +156,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &120457669
 PrefabInstance:
@@ -390,6 +391,7 @@ MonoBehaviour:
   linkedMovementObjects:
   - {fileID: 965539830}
   - {fileID: 252197038}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &252197043
 MonoBehaviour:
@@ -1245,6 +1247,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &479254995 stripped
 GameObject:
@@ -1484,6 +1487,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!4 &688469372
 Transform:
@@ -1969,6 +1973,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &892850763
 GameObject:
@@ -2200,6 +2205,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &965539829
 PrefabInstance:
@@ -2273,6 +2279,10 @@ PrefabInstance:
       propertyPath: soundEffect
       value: 
       objectReference: {fileID: 8300000, guid: 154a1ab81953bc949b827daaa5dc1ca3, type: 3}
+    - target: {fileID: 6087232440876155285, guid: 3c7aac08de4532648bf44096552cee58, type: 3}
+      propertyPath: progressionTrackerName
+      value: TreasureChestLockPuzzle01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2306,6 +2316,7 @@ MonoBehaviour:
   - {fileID: 688469370}
   - {fileID: 970883631}
   - {fileID: 870854905}
+  progressionTrackerName: TubePuzzle01
   puzzleCompleted: 0
 --- !u!114 &970883637
 MonoBehaviour:
@@ -2334,6 +2345,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: TubePuzzle01
   linkedPuzzleCompleted: 0
 --- !u!1 &981653163
 GameObject:
@@ -2512,6 +2524,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1001 &1210262876
 PrefabInstance:
@@ -2614,6 +2627,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: TubePuzzle02
   linkedPuzzleCompleted: 0
 --- !u!65 &1218250467
 BoxCollider:
@@ -3037,6 +3051,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 1336614632}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1336614637
 MonoBehaviour:
@@ -3286,6 +3301,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 1401275733}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1401275738
 MonoBehaviour:
@@ -3410,6 +3426,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 446429538}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!1 &1499696305
 GameObject:
@@ -3964,6 +3981,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &1638040699
 GameObject:
@@ -4019,6 +4037,7 @@ MonoBehaviour:
   - {fileID: 2056614540}
   - {fileID: 1195018707}
   - {fileID: 1218250459}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1657973182
 MonoBehaviour:
@@ -4047,6 +4066,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &1668671083 stripped
 GameObject:
@@ -4152,6 +4172,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 1699671430}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1699671435
 MonoBehaviour:
@@ -4213,6 +4234,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &1748072945 stripped
 GameObject:
@@ -4246,6 +4268,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &1775428138 stripped
 GameObject:
@@ -4351,6 +4374,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 1799200427}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &1799200432
 MonoBehaviour:
@@ -4811,6 +4835,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 479254995}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &2056614554
 MonoBehaviour:
@@ -4828,6 +4853,7 @@ MonoBehaviour:
   keyTotalAmount: 1
   linkedMovementObjects:
   - {fileID: 1710962883}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &2056614555
 MonoBehaviour:
@@ -4846,6 +4872,7 @@ MonoBehaviour:
   linkedMovementObjects:
   - {fileID: 2056614541}
   - {fileID: 1748072945}
+  progressionTrackerName: 
   puzzleCompleted: 0
 --- !u!114 &2056614556
 MonoBehaviour:
@@ -4874,6 +4901,7 @@ MonoBehaviour:
   effectVolume: 1
   isLocal: 1
   playOnCompletion: 0
+  progressionTrackerName: 
   linkedPuzzleCompleted: 0
 --- !u!1 &2079443800 stripped
 GameObject:
@@ -5700,6 +5728,10 @@ PrefabInstance:
     - target: {fileID: 815875294179027428, guid: d82296082dcb98f46ade8d805ab687ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036764992264648604, guid: d82296082dcb98f46ade8d805ab687ee, type: 3}
+      propertyPath: progressionTrackerName
+      value: TrapDoorKeyHolePuzzle01
       objectReference: {fileID: 0}
     - target: {fileID: 6036764992264648604, guid: d82296082dcb98f46ade8d805ab687ee, type: 3}
       propertyPath: linkedMovementObjects.Array.size

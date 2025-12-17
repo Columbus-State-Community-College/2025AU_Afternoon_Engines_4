@@ -187,6 +187,18 @@ public class MainManager : MonoBehaviour
         return neededHint;
     }
 
+    public void SolvePuzzle(string solvedPuzzleName)
+    {
+        foreach (var Puzzle in ProgressTracker)
+        {
+            if (solvedPuzzleName == Puzzle.name)
+            {
+                Puzzle.solvedStatus = true;
+            }
+        }
+
+    }
+
 
     
 

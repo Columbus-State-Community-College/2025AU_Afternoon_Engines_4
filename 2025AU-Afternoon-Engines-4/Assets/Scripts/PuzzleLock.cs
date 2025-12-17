@@ -14,6 +14,9 @@ public class PuzzleLock : MonoBehaviour
     [Tooltip("Link the GameObject that will move when this puzzle is completed (& has the movement script on it)")]
     public List<GameObject> linkedMovementObjects = new List<GameObject>();
     private List<PuzzleLinkedMovement> linkedMovementScript = new List<PuzzleLinkedMovement>();
+    [Header("Progression Tracking")]
+    [Tooltip("Exact Puzzle.name string. Set for each Puzzle.")]
+    public string progressionTrackerName;
 
     // Originally was gonna use this variable for linking (thats why its public & hidden) but never used it for that
     // Leaving it as such instead of changing to private incase it becomes useful later
@@ -72,7 +75,8 @@ public class PuzzleLock : MonoBehaviour
             }
             puzzleCompleted = true;
             
-            // TODO call to progression tracker
+            // call to progression tracker
+            MainManager.Instance.SolvePuzzle(progressionTrackerName);
         }
     }
 }
