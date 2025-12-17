@@ -276,6 +276,7 @@ public class PickupInventory : MonoBehaviour, IInteractable
         if (rb != null)
         {
             rb.isKinematic = false;
+            rb.useGravity = true;
             rb.AddForce(transform.forward * throwForce);
         }
         heldObject = null;
